@@ -1,8 +1,8 @@
-
 import time as timep
 import os
 
 import importlib.util
+
 spec = importlib.util.spec_from_file_location(
     "get_fb",
     "hmm_runners/hmm.py",
@@ -58,7 +58,7 @@ class FactoredHmmLm(nn.Module):
             lmstring = "lm" if not self.flat_clusters else "flm"
             path = f"clusters/{lmstring}-{num_clusters}/paths"
         elif config.dataset == "wikitext2":
-            #lmstring = "w2lm"
+            # lmstring = "w2lm"
             lmstring = "w2flm"
             path = f"clusters/{lmstring}-{num_clusters}/paths"
         elif config.dataset == "wikitext103":
@@ -110,14 +110,14 @@ class FactoredHmmLm(nn.Module):
         self.start_emb = StateEmbedding(
             self.C,
             config.hidden_dim,
-            num_embeddings1 = config.num_clusters if config.state == "fac" else None,
-            num_embeddings2 = config.states_per_word if config.state == "fac" else None,
+            num_embeddings1=config.num_clusters if config.state == "fac" else None,
+            num_embeddings2=config.states_per_word if config.state == "fac" else None,
         )
         self.start_mlp = nn.Sequential(
             ResidualLayer(
-                in_dim = config.hidden_dim,
-                out_dim = config.hidden_dim,
-                dropout = config.dropout,
+                in_dim=config.hidden_dim,
+                out_dim=config.hidden_dim,
+                dropout=config.dropout,
             ),
             nn.Dropout(config.dropout),
             nn.Linear(config.hidden_dim, 1),
@@ -127,36 +127,36 @@ class FactoredHmmLm(nn.Module):
         self.state_emb = StateEmbedding(
             self.C,
             config.hidden_dim,
-            num_embeddings1 = config.num_clusters if config.state == "fac" else None,
-            num_embeddings2 = config.states_per_word if config.state == "fac" else None,
+            num_embeddings1=config.num_clusters if config.state == "fac" else None,
+            num_embeddings2=config.states_per_word if config.state == "fac" else None,
         )
         self.trans_mlp = nn.Sequential(
             ResidualLayer(
-                in_dim = config.hidden_dim,
-                out_dim = config.hidden_dim,
-                dropout = config.dropout,
+                in_dim=config.hidden_dim,
+                out_dim=config.hidden_dim,
+                dropout=config.dropout,
             ),
             nn.Dropout(config.dropout),
         )
         self.next_state_emb = StateEmbedding(
             self.C,
             config.hidden_dim,
-            num_embeddings1 = config.num_clusters if config.state == "fac" else None,
-            num_embeddings2 = config.states_per_word if config.state == "fac" else None,
+            num_embeddings1=config.num_clusters if config.state == "fac" else None,
+            num_embeddings2=config.states_per_word if config.state == "fac" else None,
         )
 
         # p(xt | zt)
         self.preterminal_emb = StateEmbedding(
             self.C,
             config.hidden_dim,
-            num_embeddings1 = config.num_clusters if config.state == "fac" else None,
-            num_embeddings2 = config.states_per_word if config.state == "fac" else None,
+            num_embeddings1=config.num_clusters if config.state == "fac" else None,
+            num_embeddings2=config.states_per_word if config.state == "fac" else None,
         )
         self.terminal_mlp = nn.Sequential(
             ResidualLayer(
-                in_dim = config.hidden_dim,
-                out_dim = config.hidden_dim,
-                dropout = config.dropout,
+                in_dim=config.hidden_dim,
+                out_dim=config.hidden_dim,
+                dropout=config.dropout,
             ),
             nn.Dropout(config.dropout),
         )
@@ -181,20 +181,19 @@ class FactoredHmmLm(nn.Module):
         self.column_dropout = config.column_dropout > 0
 
         self.a = (th.arange(0, len(self.V))[:, None]
-            .expand(len(self.V), self.states_per_word)
-            .contiguous()
-            .view(-1)
-            .to(self.device)
-        )
+                  .expand(len(self.V), self.states_per_word)
+                  .contiguous()
+                  .view(-1)
+                  .to(self.device)
+                  )
         self.v = th.ones((len(self.V)) * self.states_per_word).to(self.device)
 
-
         self.ad = (th.arange(0, len(self.V))[:, None]
-            .expand(len(self.V), self.states_per_word_d)
-            .contiguous()
-            .view(-1)
-            .to(self.device)
-        )
+                   .expand(len(self.V), self.states_per_word_d)
+                   .contiguous()
+                   .view(-1)
+                   .to(self.device)
+                   )
         self.vd = th.ones((len(self.V)) * self.states_per_word_d).to(self.device)
 
         self.keep_counts = config.keep_counts > 0
@@ -211,7 +210,6 @@ class FactoredHmmLm(nn.Module):
         self.register_buffer("zero", th.zeros(1))
         self.register_buffer("one", th.ones(1))
 
-
     def init_state(self, bsz):
         return self.start.unsqueeze(0).expand(bsz, self.C)
 
@@ -221,9 +219,9 @@ class FactoredHmmLm(nn.Module):
 
     def start_chp(self, states=None):
         start_emb = (self.start_emb[states]
-            if states is not None
-            else self.start_emb
-        )
+                     if states is not None
+                     else self.start_emb
+                     )
         return checkpoint(
             lambda x: self.start_mlp(self.dropout(x)).squeeze(-1).log_softmax(-1),
             start_emb
@@ -265,9 +263,9 @@ class FactoredHmmLm(nn.Module):
 
     def emission_chp(self, word2state, states=None):
         preterminal_emb = (self.preterminal_emb.weight[states]
-            if states is not None
-            else self.preterminal_emb.weight
-        )
+                           if states is not None
+                           else self.preterminal_emb.weight
+                           )
         return checkpoint(
             lambda x: self.mask_emission(
                 self.terminal_mlp(self.dropout(x)),
@@ -276,36 +274,35 @@ class FactoredHmmLm(nn.Module):
             preterminal_emb
         )
 
-
     def clamp(
-        self, text, start, transition, emission, word2state,
-        reset = None,
+            self, text, start, transition, emission, word2state,
+            reset=None,
     ):
         clamped_states = word2state[text]
         batch, time = text.shape
         timem1 = time - 1
         log_potentials = transition[
-            clamped_states[:,:-1,:,None],
-            clamped_states[:,1:,None,:],
+            clamped_states[:, :-1, :, None],
+            clamped_states[:, 1:, None, :],
         ]
         if reset is not None:
-            eos_mask = text[:,:-1] == self.V["<eos>"]
+            eos_mask = text[:, :-1] == self.V["<eos>"]
             # reset words following eos
-            reset_states = word2state[text[:,1:][eos_mask]]
-            log_potentials[eos_mask] = reset[reset_states][:,None]
-        
+            reset_states = word2state[text[:, 1:][eos_mask]]
+            log_potentials[eos_mask] = reset[reset_states][:, None]
+
         b_idx = th.arange(batch, device=self.device)
         init = (
-            start[clamped_states[:,0]]
+            start[clamped_states[:, 0]]
             if start.ndim == 1
-            else start[b_idx[:,None], clamped_states[:,0]]
+            else start[b_idx[:, None], clamped_states[:, 0]]
         )
 
-        obs = emission[clamped_states[:,:,:,None], text[:,:,None,None]]
+        obs = emission[clamped_states[:, :, :, None], text[:, :, None, None]]
 
-        log_potentials[:,0] += init.unsqueeze(-1)
-        log_potentials += obs[:,1:].transpose(-1, -2)
-        log_potentials[:,0] += obs[:,0]
+        log_potentials[:, 0] += init.unsqueeze(-1)
+        log_potentials += obs[:, 1:].transpose(-1, -2)
+        log_potentials[:, 0] += obs[:, 0]
         return log_potentials.transpose(-1, -2)
 
     def trans_to(self, from_states, to_states):
@@ -315,9 +312,9 @@ class FactoredHmmLm(nn.Module):
         return (x @ next_state_proj.t()).log_softmax(-1)
 
     def compute_parameters(self, word2state,
-        states=None, word_mask=None,
-        lpz=None, last_states=None,
-    ):
+                           states=None, word_mask=None,
+                           lpz=None, last_states=None,
+                           ):
         if self.chp_theta:
             transition = self.transition_chp(states)
         else:
@@ -328,17 +325,17 @@ class FactoredHmmLm(nn.Module):
         else:
             # compute start from last_state
             start = (
-                lpz[:,:,None] + self.trans_to(last_states, states)
+                    lpz[:, :, None] + self.trans_to(last_states, states)
             ).logsumexp(1)
-             
+
         emission = self.mask_emission(self.emission_logits(states), word2state)
         return start, transition, emission
 
     def log_potentials(
-        self, text,
-        states = None,
-        lpz=None, last_states=None,
-        word_mask=None,
+            self, text,
+            states=None,
+            lpz=None, last_states=None,
+            word_mask=None,
     ):
         word2state = self.word2state_d if states is not None else self.word2state
 
@@ -352,42 +349,42 @@ class FactoredHmmLm(nn.Module):
 
         return self.clamp(
             text, start, transition, emission, word2state,
-            reset = reset,
+            reset=reset,
         )
 
     def compute_loss(
-        self,
-        log_potentials, mask, lengths,
-        keep_counts = False,
+            self,
+            log_potentials, mask, lengths,
+            keep_counts=False,
     ):
         N = lengths.shape[0]
         fb = self.fb_train if self.training else self.fb_test
         log_m, alphas = fb(log_potentials.clone(), mask=mask)
 
         idx = th.arange(N, device=self.device)
-        alpha_T = alphas[lengths-1, idx]
+        alpha_T = alphas[lengths - 1, idx]
         evidence = alpha_T.logsumexp(-1).sum()
-        elbo = (log_m.exp_() * log_potentials)[mask[:,1:]].sum()
+        elbo = (log_m.exp_() * log_potentials)[mask[:, 1:]].sum()
 
         return Pack(
-            elbo = elbo,
-            evidence = evidence,
-            loss = elbo,
+            elbo=elbo,
+            evidence=evidence,
+            loss=elbo,
         ), alpha_T.log_softmax(-1)
 
     def score(
-        self, text,
-        lpz=None, last_states=None,
-        mask=None, lengths=None,
+            self, text,
+            lpz=None, last_states=None,
+            mask=None, lengths=None,
     ):
         N, T = text.shape
         if self.training:
             I = (th.distributions.Gumbel(self.zero, self.one)
-                .sample(self.cluster2state.shape)
-                .squeeze(-1)
-                .topk(self.train_states_per_word, dim=-1)
-                .indices
-            )
+                 .sample(self.cluster2state.shape)
+                 .squeeze(-1)
+                 .topk(self.train_states_per_word, dim=-1)
+                 .indices
+                 )
             states = self.cluster2state.gather(1, I).view(-1)
         else:
             states = None
@@ -404,17 +401,16 @@ class FactoredHmmLm(nn.Module):
         with th.no_grad():
             log_m, alphas = fb(log_potentials.detach().clone(), mask=mask)
         idx = th.arange(N, device=self.device)
-        alpha_T = alphas[lengths-1, idx]
+        alpha_T = alphas[lengths - 1, idx]
         evidence = alpha_T.logsumexp(-1).sum()
-        elbo = (log_m.exp_() * log_potentials)[mask[:,1:]].sum()
+        elbo = (log_m.exp_() * log_potentials)[mask[:, 1:]].sum()
 
-        last_words = text[idx, lengths-1]
+        last_words = text[idx, lengths - 1]
         c2s = states.view(self.config.num_clusters, -1)
         end_states = c2s[self.word2cluster[last_words]]
 
         return Pack(
-            elbo = elbo,
-            evidence = evidence,
-            loss = elbo,
+            elbo=elbo,
+            evidence=evidence,
+            loss=elbo,
         ), alpha_T.log_softmax(-1), end_states
-

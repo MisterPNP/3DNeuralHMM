@@ -11,8 +11,9 @@ class StateEmbedding(nn.Module):
         num_embeddings1 = None,
         num_embeddings2 = None,
     ):
+
         super(StateEmbedding, self).__init__()
-        self.num_embeddigns = num_embeddings
+        self.num_embeddings = num_embeddings
         self.embedding_dim = embedding_dim
 
         self.factored = num_embeddings1 is not None and num_embeddings2 is not None

@@ -1,13 +1,13 @@
-from torchtext import data
-from data import Field
+import torchtext
 
-import datasets
+from datasets.lm import PennTreebank
 
-text_field = data.Field(batch_first=True)
+text_field = torchtext.data.Field(batch_first=True)
 
-train, valid, test = datasets.lm.PennTreebank.splits(text_field, newline_eos=True)
+train, valid, test = PennTreebank.splits(text_field, newline_eos=True)
 
 text_field.build_vocab(train)
 text_vocab = text_field.vocab
 
 print(text_vocab)
+print("finished")

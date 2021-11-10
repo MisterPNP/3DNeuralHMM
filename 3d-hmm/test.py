@@ -4,7 +4,7 @@ import torchtext
 
 from loadCloze import test
 
-test()
+result = test()
 
 # text_field = torchtext.data.Field(batch_first=True)
 #

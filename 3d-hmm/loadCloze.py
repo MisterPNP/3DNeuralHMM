@@ -8,6 +8,7 @@ import nltk.corpus
 import nltk.stem
 import nltk.tokenize
 
+import torch
 import torchtext
 
 
@@ -84,32 +85,14 @@ def preprocess_cloze_test():
 
 def load_cloze_test():
     with open("../data/test.json") as file:
-        sequences = json.load(file)
-        examples = torchtext.data.Example.fromlist(
-            sequences,
-            []
-        )
-        return examples
+        stories = json.load(file)
+        sentence_length = 0
+        for story in stories:
+            for sentence in story:
+                sentence_length = max(sentence_length, len(sentence))
+        for story in stories:
+            for i, sentence in enumerate(story):
+                story[i] += [-1] * (sentence_length - len(sentence))
+        return torch.tensor(stories)
 
-    # want to end up with torch tensor
-    # with [
-    #        [
-    #           [i i i i i]
-    #           [i i i _ _]
-    #           [i i i i _]
-    #           [i i i i i]
-    #           [i i i _ _]
-    #           [i i i i _]
-    #        ]
-    #        [
-    #           [i i i i i]
-    #           [i i i _ _]
-    #           [i i i i _]
-    #           [i i i i i]
-    #           [i i i _ _]
-    #           [i i i i _]
-    #        ]
-    #        ...
-    #     ]
-    #
-    # with batches!
+    # want to end up with batches!

@@ -3,8 +3,9 @@ import torchtext
 # from datasets.lm import PennTreebank
 
 from loadCloze import test
+from main import main
 
-result = test()
+result = main()
 
 # text_field = torchtext.data.Field(batch_first=True)
 #

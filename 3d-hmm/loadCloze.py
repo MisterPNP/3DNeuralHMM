@@ -10,6 +10,7 @@ import nltk.tokenize
 
 import torchtext
 
+
 def get_wordnet_pos(word):
     wordnet = nltk.corpus.wordnet
     tag = nltk.pos_tag([word])[0][1][0].upper()
@@ -19,13 +20,15 @@ def get_wordnet_pos(word):
                 "R": wordnet.ADV}
     return tag_dict.get(tag, wordnet.NOUN)
 
+
 def test():
-    return loadClozeTest()
+    return load_cloze_test()
 
     nltk.download('averaged_perceptron_tagger')
     nltk.download('punkt')
     nltk.download('stopwords')
     nltk.download('wordnet')
+
 
 def lemmatize(sentence):
     sentence = sentence.lower()
@@ -40,7 +43,8 @@ def lemmatize(sentence):
         lemmas.append(lemmatizer.lemmatize(token, pos))
     return lemmas
 
-def preprocessClozeTest():
+
+def preprocess_cloze_test():
     filepath = '../data/cloze_test_test__spring2016 - cloze_test_ALL_test.csv'
     df = pd.read_csv(filepath)
 
@@ -77,7 +81,8 @@ def preprocessClozeTest():
 
     print("done")
 
-def loadClozeTest():
+
+def load_cloze_test():
     with open("../data/test.json") as file:
         sequences = json.load(file)
         examples = torchtext.data.Example.fromlist(
@@ -86,7 +91,7 @@ def loadClozeTest():
         )
         return examples
 
-    # want to end up with (batches of) torch tensor
+    # want to end up with torch tensor
     # with [
     #        [
     #           [i i i i i]
@@ -106,3 +111,5 @@ def loadClozeTest():
     #        ]
     #        ...
     #     ]
+    #
+    # with batches!

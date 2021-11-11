@@ -4,15 +4,15 @@ from torch import nn
 class TransitionModel(torch.nn.Module):
     def __init__(self, states):
         super(TransitionModel, self).__init__()
-        self.N = N
+        self.states = states
         self.transition_matrix_unnormalized = torch.nn.Parameter(torch.randn(states, states))
 
 
 class EmissionModel(torch.nn.Module):
     def __init__(self, states, observations):
         super(EmissionModel, self).__init__()
-        self.N = N
-        self.M = M
+        self.states = states
+        self.observations = observations
         self.emission_matrix_unnormalized = torch.nn.Parameter(torch.randn(states, observations))
 
 
@@ -31,7 +31,7 @@ class ResidualLayer(nn.Module):
         # emission model
         self.emission_model = EmissionModel(self.out_dim, self.in_dim)
 
-        self.state_priors_unnormalized = torch.nn.Parameter(torch.randn(self.N))
+        self.state_priors_unnormalized = torch.nn.Parameter(torch.randn(self.states))
 
         # self.dropout = nn.Dropout(dropout)
 
@@ -122,7 +122,7 @@ class Neural3DHMM(nn.Module):
         log_transition = torch.nn.functional.log_softmax(self.transition_matrix_unnormalized, dim=0)
         return log_multiplication(log_transition, alpha.transpose(0, 1)).transpose(0, 1)
 
-    def log_multiplication(A, B):
+    def log_multiplication(self, A, B):
         m = A.shape[0]
         n = A.shape[1]
         p = B.shape[1]

@@ -1,16 +1,38 @@
 from torch import nn
 
 
+class TransitionModel(torch.nn.Module):
+    def __init__(self, states):
+        super(TransitionModel, self).__init__()
+        self.N = N
+        self.transition_matrix_unnormalized = torch.nn.Parameter(torch.randn(states, states))
+
+
+class EmissionModel(torch.nn.Module):
+    def __init__(self, states, observations):
+        super(EmissionModel, self).__init__()
+        self.N = N
+        self.M = M
+        self.emission_matrix_unnormalized = torch.nn.Parameter(torch.randn(states, observations))
+
+
 class ResidualLayer(nn.Module):
-    def __init__(self,
-                 in_dim,
-                 out_dim,
+    def __init__(self, in_dim, out_dim,
                  # dropout = 0.,
                  ):
         super(ResidualLayer, self).__init__()
         self.lin1 = nn.Linear(in_dim, out_dim)
         self.lin2 = nn.Linear(out_dim, out_dim)
         self.layer_norm = nn.LayerNorm(out_dim)
+
+        # A matrix in terms of number of states (out_dim)
+        self.transition_model = TransitionModel(self.out_dim)
+
+        # emission model
+        self.emission_model = EmissionModel(self.out_dim, self.in_dim)
+
+        self.state_priors_unnormalized = torch.nn.Parameter(torch.randn(self.N))
+
         # self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
@@ -70,6 +92,44 @@ class Neural3DHMM(nn.Module):
         # TODO transform to probabilities (softmax?)
 
         return starts, transitions, emissions
+
+    # forward algorithm
+    def forward(self, input_tensor, length, batch_size):
+        length_max = input_tensor.shape[1]
+
+        state_priors = torch.nn.functional.log_softmax(self.state_prior_unnormalized, dim=0)
+        alpha = torch.zeros(batch_size, length_max, self.N)
+
+        alpha[:, 0, :] = self.emission_model(input_tensor[:, 0]) + state_priors
+
+        for i in range(1, length_max):
+            alpha[:, i, :] = self.emission_model(input_tensor[:, t]) + self.transition_model(alpha[:, i - 1, :])
+
+        # make the log sum
+        sums_log = alpha.logsumexp(dim=2)
+        # calculate log probabilities
+        log_probabilities = torch.gather(sums_log, 1, length.view(-1, 1) - 1)
+
+        return log_probabilities
+
+    # emissions forward algorithm
+    def emissions_forward(self, x):
+        log_emission = torch.nn.functional.log_softmax(self.emission_matrix_unnormalized, dim=1)
+        return log_emission[:, x].transpose(0, 1)
+
+    # transitions forward algorithm
+    def transitions_forward(self, alpha):
+        log_transition = torch.nn.functional.log_softmax(self.transition_matrix_unnormalized, dim=0)
+        return log_multiplication(log_transition, alpha.transpose(0, 1)).transpose(0, 1)
+
+    def log_multiplication(A, B):
+        m = A.shape[0]
+        n = A.shape[1]
+        p = B.shape[1]
+
+        sum_log_elements = torch.reshape(log_A, (m, n, 1)) + torch.reshape(log_B, (1, n, p))
+
+        return torch.logsumexp(sum_log_elements, dim=1)
 
     def score(self, x):
         pass

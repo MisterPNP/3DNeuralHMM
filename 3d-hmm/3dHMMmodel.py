@@ -122,14 +122,14 @@ class Neural3DHMM(nn.Module):
     # transitions forward algorithm
     def transitions_forward(self, alpha):
         log_transition = torch.nn.functional.log_softmax(self.transition_matrix_unnormalized, dim=0)
-        return log_multiplication(log_transition, alpha.transpose(0, 1)).transpose(0, 1)
+        return self.log_multiplication(log_transition, alpha.transpose(0, 1)).transpose(0, 1)
 
     def log_multiplication(self, A, B):
         m = A.shape[0]
         n = A.shape[1]
         p = B.shape[1]
 
-        sum_log_elements = torch.reshape(log_A, (m, n, 1)) + torch.reshape(log_B, (1, n, p))
+        sum_log_elements = torch.reshape(A, (m, n, 1)) + torch.reshape(B, (1, n, p))
 
         return torch.logsumexp(sum_log_elements, dim=1)
 

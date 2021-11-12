@@ -27,14 +27,6 @@ class ResidualLayer(nn.Module):
         self.lin2 = nn.Linear(out_dim, out_dim)
         self.layer_norm = nn.LayerNorm(out_dim)
 
-        # A matrix in terms of number of states (out_dim)
-        self.transition_model = TransitionModel(self.out_dim)
-
-        # emission model
-        self.emission_model = EmissionModel(self.out_dim, self.in_dim)
-
-        self.state_priors_unnormalized = torch.nn.Parameter(torch.randn(self.states))
-
         # self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
@@ -53,6 +45,14 @@ class Neural3DHMM(nn.Module):
 
         self.states = nn.Embedding(num_states, state_embedding_dim)
         self.tokens = nn.Embedding(num_tokens, token_embedding_dim)
+
+        # A matrix in terms of number of states (out_dim)
+        self.transition_model = TransitionModel(self.xy_size)
+
+        # emission model
+        self.emission_model = EmissionModel(self.xy_size, self.z_size)
+
+        self.state_priors_unnormalized = torch.nn.Parameter(torch.randn(self.states))
 
         # p(z0)
         intermediate_dim = 256

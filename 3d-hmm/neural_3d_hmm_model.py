@@ -1,7 +1,7 @@
 
 import torch
 from torch import nn
-
+# from torch import tensor
 
 class TransitionModel(torch.nn.Module):
     def __init__(self, states):
@@ -11,11 +11,17 @@ class TransitionModel(torch.nn.Module):
 
 
 class EmissionModel(torch.nn.Module):
-    def __init__(self, states, observations):
+    def __init__(self, num_states, num_tokens, num_observations):
         super(EmissionModel, self).__init__()
-        self.states = states
-        self.observations = observations
-        self.emission_matrix_unnormalized = torch.nn.Parameter(torch.randn(states, observations))
+        self.states = num_states
+        self.observations = num_observations
+
+        self.emission_matrix_unnormalized = torch.nn.Linear(num_states, num_tokens)
+
+    def p(self, sentence_tensor):
+
+
+        return p
 
 
 class ResidualLayer(nn.Module):
@@ -39,6 +45,7 @@ class ResidualLayer(nn.Module):
 
 class Neural3DHMM(nn.Module):
     def __init__(self, xy_size, z_size, num_tokens):
+        super(Neural3DHMM, self).__init__()
         num_states = xy_size * xy_size * z_size
         state_embedding_dim = 256
         token_embedding_dim = 256
@@ -105,7 +112,7 @@ class Neural3DHMM(nn.Module):
         alpha[:, 0, :] = self.emission_model(input_tensor[:, 0]) + state_priors
 
         for i in range(1, length_max):
-            alpha[:, i, :] = self.emission_model(input_tensor[:, t]) + self.transition_model(alpha[:, i - 1, :])
+            alpha[:, i, :] = self.emission_model(input_tensor[:, i]) + self.transition_model(alpha[:, i - 1, :])
 
         # make the log sum
         sums_log = alpha.logsumexp(dim=2)

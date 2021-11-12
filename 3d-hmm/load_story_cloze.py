@@ -84,6 +84,7 @@ def preprocess_cloze_test():
 
 
 def load_cloze_test():
+    # load _correct_ five sentences instead
     with open("../data/test.json") as file:
         stories = json.load(file)
         sentence_length = 0

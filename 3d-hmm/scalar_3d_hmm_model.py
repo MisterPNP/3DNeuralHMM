@@ -4,6 +4,12 @@ from torch import nn
 # from torch import tensor
 
 
+def index2coord(state, xy_size):
+    z, state = divmod(state, xy_size * xy_size)
+    y, x = divmod(state, xy_size)
+    return torch.tensor([x, y, z])
+
+
 class TransitionModel(nn.Module):
     def __init__(self, states):
         super(TransitionModel, self).__init__()
@@ -86,7 +92,7 @@ class Scalar3DHMM(nn.Module):
                         * scores[:, prev]
 
         # make the log sum
-        sums_log = alpha.logsumexp(dim=2)
+        sums_log = scores.logsumexp(dim=2)
         # calculate log probabilities
         log_probabilities = torch.gather(sums_log, 1, length.view(-1, 1) - 1)
 

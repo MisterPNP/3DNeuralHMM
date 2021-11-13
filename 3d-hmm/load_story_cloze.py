@@ -11,6 +11,20 @@ import nltk.tokenize
 import torch
 import torchtext
 
+def test():
+
+    # TODO: parameterize preprocess and do both test + val with appropriate names
+
+    #preprocess_cloze_test()
+    return load_cloze_test()
+    return
+
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('punkt')
+    nltk.download('stopwords')
+    nltk.download('wordnet')
+
+# helper functions
 
 def get_wordnet_pos(word):
     wordnet = nltk.corpus.wordnet
@@ -20,16 +34,6 @@ def get_wordnet_pos(word):
                 "V": wordnet.VERB,
                 "R": wordnet.ADV}
     return tag_dict.get(tag, wordnet.NOUN)
-
-
-def test():
-    return load_cloze_test()
-
-    nltk.download('averaged_perceptron_tagger')
-    nltk.download('punkt')
-    nltk.download('stopwords')
-    nltk.download('wordnet')
-
 
 def lemmatize(sentence):
     sentence = sentence.lower()
@@ -44,7 +48,7 @@ def lemmatize(sentence):
         lemmas.append(lemmatizer.lemmatize(token, pos))
     return lemmas
 
-
+# gets the data from file and pre-processes it
 def preprocess_cloze_test():
     filepath = '../data/cloze_test_test__spring2016 - cloze_test_ALL_test.csv'
     df = pd.read_csv(filepath)
@@ -55,7 +59,16 @@ def preprocess_cloze_test():
     vocab = {}      # vocab counts across dataset
     for i in range(len(df)):
         sentences = []
-        for sentence in df.iloc[i, 1:7]:
+        for sentence in df.iloc[i, 1:5]:
+            lemmas = lemmatize(sentence)
+            for lemma in lemmas:
+                if lemma not in vocab:
+                    vocab[lemma] = 0
+                vocab[lemma] += 1
+            sentences.append(lemmas)
+        # make the correct ending come before the incorrect one
+        last_two = df.iloc[i, 5:7] if df.iloc[i, 7] == 1 else [df.iloc[i, 6], df.iloc[i, 5]]
+        for sentence in last_two:
             lemmas = lemmatize(sentence)
             for lemma in lemmas:
                 if lemma not in vocab:
@@ -82,7 +95,7 @@ def preprocess_cloze_test():
 
     print("done")
 
-
+# load the data from file if it has already been written by preprocess_cloze_test()
 def load_cloze_test():
     # load _correct_ five sentences instead
     with open("../data/test.json") as file:
@@ -97,3 +110,14 @@ def load_cloze_test():
         return torch.tensor(stories)
 
     # want to end up with batches!
+
+
+
+
+
+
+
+
+
+
+

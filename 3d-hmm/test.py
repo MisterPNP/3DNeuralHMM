@@ -1,10 +1,12 @@
 import torchtext
+import pprint
 
 # from datasets.lm import PennTreebank
 
-from loadCloze import test
+from load_story_cloze import test
 
 result = test()
+#print(result)
 
 # text_field = torchtext.data.Field(batch_first=True)
 #

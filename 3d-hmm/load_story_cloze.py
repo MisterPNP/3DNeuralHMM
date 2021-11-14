@@ -11,20 +11,17 @@ import nltk.tokenize
 import torch
 import torchtext
 
-def test():
+def get_processed_data():
+    preprocess_cloze_test('cloze_test_test__spring2016 - cloze_test_ALL_test.csv', 'story_cloze_2016_test')
+    preprocess_cloze_test('cloze_test_val__spring2016 - cloze_test_ALL_val.csv', 'story_cloze_2016_val')
 
-    # TODO: parameterize preprocess and do both test + val with appropriate names
+# HELPER FUNCTIONS
 
-    #preprocess_cloze_test()
-    return load_cloze_test()
-    return
-
+def required_downloads():
     nltk.download('averaged_perceptron_tagger')
     nltk.download('punkt')
     nltk.download('stopwords')
     nltk.download('wordnet')
-
-# helper functions
 
 def get_wordnet_pos(word):
     wordnet = nltk.corpus.wordnet
@@ -49,8 +46,8 @@ def lemmatize(sentence):
     return lemmas
 
 # gets the data from file and pre-processes it
-def preprocess_cloze_test():
-    filepath = '../data/cloze_test_test__spring2016 - cloze_test_ALL_test.csv'
+def preprocess_cloze_test(data_name, output_name):
+    filepath = '../data/' + data_name
     df = pd.read_csv(filepath)
 
     # TODO use validation file in constructing vocabulary?
@@ -86,11 +83,11 @@ def preprocess_cloze_test():
             for i, lemma in enumerate(lemmas):
                 lemmas[i] = lemma_to_i[lemma]
 
-    with open("../data/vocab_test.voc", "w") as out:
+    with open("../data/" + output_name + "_vocab.voc", "w") as out:
         for i, (lemma, count) in enumerate(vocab.items()):
             out.write("{}\t{}\t{}\n".format(i, lemma, count))
 
-    with open("../data/test.json", "w") as out:
+    with open("../data/" + output_name + ".json", "w") as out:
         json.dump(sequences, out, separators=(",", ":"))
 
     print("done")

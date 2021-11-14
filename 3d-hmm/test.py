@@ -3,9 +3,9 @@ import pprint
 
 # from datasets.lm import PennTreebank
 
-from load_story_cloze import test
+from load_story_cloze import get_processed_data
 
-result = test()
+result = get_processed_data()
 #print(result)
 
 # text_field = torchtext.data.Field(batch_first=True)

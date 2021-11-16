@@ -3,6 +3,9 @@ import torch
 from torch import nn
 # from torch import tensor
 
+id = torch.cuda.current_device()
+cuda = "cuda:"+str(id)
+device = torch.device(cuda)
 
 def index2coord(xy_size):
     def f(state):
@@ -81,6 +84,7 @@ class Scalar3DHMM(nn.Module):
         state_priors = nn.functional.log_softmax(self.state_priors_unnormalized, dim=0)
         # p(z0)*p(x0|z0) across all states z0, all first sentences x0 (N x Z)
         scores = self.emission_model.log_p(stories_tensor[:, 0]) + state_priors
+        scores = scores.to(cuda)
 
         # transitions = self.transition_model.log_p()
         #for i in range(1, story_length):
@@ -88,12 +92,10 @@ class Scalar3DHMM(nn.Module):
 
         for i in range(1, story_length):
             print(i, "SCORES", scores[:5]) # TODO testing
-            scores_next = torch.zeros(scores.shape)
+            scores_next = torch.zeros(scores.shape).to(cuda)
             for state in range(self.num_states):
                 print("\t", state)
                 for prev in range(self.num_states):
-                    print("\t\t", prev)
-                    print("")
                     scores_next[:, state] +=\
                         self.transition_model.log_p(state, prev, index2coord(self.xy_size))\
                         * self.emission_model.log_p(stories_tensor[:, i])[:,state]\

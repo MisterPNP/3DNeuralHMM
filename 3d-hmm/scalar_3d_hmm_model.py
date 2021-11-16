@@ -90,7 +90,10 @@ class Scalar3DHMM(nn.Module):
             print(i, "SCORES", scores[:5]) # TODO testing
             scores_next = torch.zeros(scores.shape)
             for state in range(self.num_states):
+                print("\t", state)
                 for prev in range(self.num_states):
+                    print("\t\t", prev)
+                    print("")
                     scores_next[:, state] +=\
                         self.transition_model.log_p(state, prev, index2coord(self.xy_size))\
                         * self.emission_model.log_p(stories_tensor[:, i])[:,state]\

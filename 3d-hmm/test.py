@@ -13,3 +13,4 @@ model = Scalar3DHMM(15, 6, 5557)
 for batch in batches[:1]:
     with torch.no_grad():
         model.forward(batch, 5, 0)
+print("DONE")

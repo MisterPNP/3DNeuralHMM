@@ -27,6 +27,7 @@ class Scalar3DHMM(nn.Module):
     def transition_log_p(self):
         transitions = nn.functional.log_softmax(self.transition_matrix_unnormalized, dim=-1)
 
+        # TODO use sparse matrix instead?
         out = torch.zeros(self.num_states, self.num_states).log()
 
         neighbors = [(0, 0, 0), (1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, 2)]
@@ -53,11 +54,13 @@ class Scalar3DHMM(nn.Module):
         emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)
         return emissions.sum(-1)  # TODO normalize??
 
-    # forward algorithm
-    def score(self, stories_tensor, story_length, length):
+    def score(self, stories_tensor, story_length):
+        return self.forward_log_p(stories_tensor, story_length)[-1].logsumexp(-1)
+
+    def forward_log_p(self, stories_tensor, story_length):
         assert(stories_tensor.shape[1] == story_length)
 
-        num_batches = stories_tensor.shape[0]
+        num_stories = stories_tensor.shape[0]
 
         # p(z0) across all states z0 (Z)
         state_priors = nn.functional.log_softmax(self.state_priors_unnormalized, dim=0)
@@ -66,34 +69,58 @@ class Scalar3DHMM(nn.Module):
         # p(z0)*p(x0|z0) across all states z0, all first sentences x0 (N x Z)
         emissions = self.emission_log_p(stories_tensor[:, 0])
         # print("EMITS INITIAL", emissions.exp())
-        scores = emissions + state_priors
+        scores = [emissions + state_priors]
         # print("SCORE INITIAL", scores.exp())
         # print("SCORE INITIAL", scores)
 
-        # TODO generate sparse matrix?
         transitions = self.transition_log_p()
         # print("TRANS", transitions.exp())  # shape is num_states x num_states
 
         for i in range(1, story_length):
-            # transitions = self.transition_model.log_p(self.num_states, index2coord(self.xy_size))
-            # print("\t\t", "TRANS", transitions.shape)  # shape is num_states x num_states
             emissions = self.emission_log_p(stories_tensor[:, i])
-            # print(i, "EMITS", emissions.exp())  # shape is num_batches x num_states
+            # print(i, "EMITS", emissions.exp())  # shape is num_stories x num_states
 
             # p(zi|zi-1)*p(xi|zi)*p(zi-1)
-            intermediate = (emissions.view(num_batches, -1, 1) + scores.view(num_batches, 1, -1))
+            intermediate = transitions + scores[-1].view(num_stories, 1, -1)
             # print(i, "INTER", intermediate.exp())
-            update = transitions + intermediate  # shape is num_batches x num_states x num_states
-            # print(i, "UPDATE", update.exp())
+            scores.append(emissions + intermediate.logsumexp(-1))
+            # print(i, "SCORES", scores[-1].exp())
+            # print(i, "SCORES", scores[-1])
 
-            scores = update.logsumexp(-1)
-            # print(i, "SCORES", scores.exp())
-            # print(i, "SCORES", scores)
-
-        return scores.logsumexp(-1)
+        return torch.stack(scores)
 
         # make the log sum
         # sums_log = scores.logsumexp(dim=2)
         # calculate log probabilities
         # TODO log_probabilities = sums_log.gather(1, length.view(-1, 1) - 1)
         # return log_probabilities
+
+    def backward_log_p(self, stories_tensor, story_length):
+        assert(stories_tensor.shape[1] == story_length)
+        num_stories = stories_tensor.shape[0]
+
+        scores = torch.ones(num_stories, self.num_states)  # N x Z
+        transitions = self.transition_log_p()  # Z x Z
+        for i in range(story_length - 1, 0, -1):
+            emissions = self.emission_log_p(stories_tensor[:, i])  # N x Z
+            intermediate = transitions + scores[-1].view(num_stories, -1, 1) \
+                           + emissions.view(num_stories, 1, -1)  # N x Z x Z
+            scores.append(intermediate.logsumexp(-1))  # N x Z
+
+        scores.reverse()
+        return torch.stack(scores)
+
+    def baum_welch_updates(self, story):
+        story_length = story.shape[0]
+        t = self.transition_log_p()  # Z x Z
+        e = self.emission_log_p(story)  # L x Z
+        a = self.forward_log_p(torch.tensor([story]), story_length).view(story_length, -1)  # L x Z
+        b = self.backward_log_p(torch.tensor([story]), story_length).view(story_length, -1)  # L x Z
+        p_state_given_story = a * b / (a * b).sum(-1)  # L x Z
+        p_pair_given_story = a[:story_length - 1].view(story_length, -1, 1) \
+                             * t * (e * b)[1:].view(story_length, 1, -1) / a[-1].sum()  # L x Z x Z
+        priors = p_state_given_story[0]  # Z x 1
+                                     # TODO only columns where the kth token is emitted at the zth step...
+        emissions = p_state_given_story[:].sum(0) / p_state_given_story.sum(0)  # Z x K
+        transitions = p_pair_given_story.sum(0) / p_state_given_story.sum(0)  # Z x Z
+        return priors, transitions, emissions

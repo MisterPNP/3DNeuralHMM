@@ -25,6 +25,7 @@ def required_downloads():
 
 def get_wordnet_pos(word):
     wordnet = nltk.corpus.wordnet
+    # TODO what is this doing?
     tag = nltk.pos_tag([word])[0][1][0].upper()
     tag_dict = {"J": wordnet.ADJ,
                 "N": wordnet.NOUN,
@@ -106,7 +107,6 @@ def load_cloze_test():
                 story[i] += [-1] * (sentence_length - len(sentence))
         return torch.tensor(stories)
 
-    # want to end up with batches!
 
 
 

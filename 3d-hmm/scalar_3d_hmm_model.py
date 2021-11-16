@@ -4,10 +4,12 @@ from torch import nn
 # from torch import tensor
 
 
-def index2coord(state, xy_size):
-    z, state = divmod(state, xy_size * xy_size)
-    y, x = divmod(state, xy_size)
-    return torch.tensor([x, y, z])
+def index2coord(xy_size):
+    def f(state):
+        z, state = divmod(state, xy_size * xy_size)
+        y, x = divmod(state, xy_size)
+        return torch.tensor([x, y, z])
+    return f
 
 
 class TransitionModel(nn.Module):
@@ -16,13 +18,14 @@ class TransitionModel(nn.Module):
         self.states = states
         self.transition_matrix_unnormalized = nn.Parameter(torch.randn(states, 7))
 
-    def log_p(self, state_next, state_prev):
-        x, y, z = index2coord(state_next, xy_size) - index2coord(state_prev, xy_size)
-        neighbors = [(0,0,0), (1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,2)]
+    def log_p(self, state_next, state_prev, index2coord):
+        x, y, z = index2coord(state_next) - index2coord(state_prev)
+        neighbors = [(0, 0, 0), (1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, 2)]
         if (x, y, z) in neighbors:
             # TODO is this correct, using `state_prev`?
             transitions = nn.functional.log_softmax(self.transition_matrix_unnormalized[state_prev], dim=-1)
             return transitions[neighbors.index((x,y,z))]
+        return torch.tensor(0).log() # TODO
 
 
 
@@ -71,32 +74,35 @@ class Scalar3DHMM(nn.Module):
         return starts, transitions, emissions
 
     # forward algorithm
-    def forward(self, stories_tensor, length, batch_size):
-        story_length = stories_tensor.shape[1]
+    def forward(self, stories_tensor, story_length, length):
+        assert(stories_tensor.shape[1] == story_length)
 
         # p(z0) across all states z0 (Z)
-        state_priors = nn.functional.log_softmax(self.state_prior_unnormalized, dim=0)
+        state_priors = nn.functional.log_softmax(self.state_priors_unnormalized, dim=0)
         # p(z0)*p(x0|z0) across all states z0, all first sentences x0 (N x Z)
         scores = self.emission_model.log_p(stories_tensor[:, 0]) + state_priors
 
-        transitions = self.transition_model.log_p()
-        for i in range(1, story_length):
-            scores = self.emission_model.log_p(stories_tensor[:, i]) + self.transition_model()
+        # transitions = self.transition_model.log_p()
+        #for i in range(1, story_length):
+        #    scores = self.emission_model.log_p(stories_tensor[:, i]) + self.transition_model()
 
         for i in range(1, story_length):
+            print(i, "SCORES", scores[:5]) # TODO testing
+            scores_next = torch.zeros(scores.shape)
             for state in range(self.num_states):
                 for prev in range(self.num_states):
                     scores_next[:, state] +=\
-                        self.transition_model.log_p(state, prev)\
+                        self.transition_model.log_p(state, prev, index2coord(self.xy_size))\
                         * self.emission_model.log_p(stories_tensor[:, i])[:,state]\
                         * scores[:, prev]
+            scores = scores_next
 
         # make the log sum
         sums_log = scores.logsumexp(dim=2)
         # calculate log probabilities
-        log_probabilities = torch.gather(sums_log, 1, length.view(-1, 1) - 1)
+        # TODO log_probabilities = sums_log.gather(1, length.view(-1, 1) - 1)
 
-        return log_probabilities
+        # return log_probabilities
 
     # emissions forward algorithm
     def emissions_forward(self, x):

@@ -50,6 +50,7 @@ class Scalar3DHMM(nn.Module):
         # sentences_tensor = sentences_tensor.clamp(max=11)  # TODO testing
 
         emission_matrix = nn.functional.log_softmax(self.emission_matrix_unnormalized, dim=1)
+        emission_matrix = torch.cat((emission_matrix, torch.zeros(emission_matrix.shape[0], 1)), 1)
         # TODO sentence_tensor = sentence_tensor[sentence_tensor > -1]
         emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)
         return emissions.sum(-1)  # TODO normalize??

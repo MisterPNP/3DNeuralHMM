@@ -3,6 +3,9 @@ import torch
 from load_story_cloze import load_cloze_test
 from scalar_3d_hmm_model import Scalar3DHMM
 
+# TODO: Stop wrap-around
+
+# TODO: Remove low-frequency tokens?
 
 def score_prediction_single_story(prediction_model, first_index, last_index):
     # input test.json

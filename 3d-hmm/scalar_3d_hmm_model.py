@@ -12,24 +12,18 @@ class Scalar3DHMM(nn.Module):
         self.num_states = xy_size * xy_size * z_size
         self.num_tokens = num_tokens
 
-        self.transition_matrix_unnormalized = nn.Parameter(torch.randn(self.num_states, 7))
-        self.emission_matrix_unnormalized = nn.Parameter(torch.randn(self.num_states, self.num_tokens))
-        print(self.emission_matrix_unnormalized.grad)
-        self.state_priors_unnormalized = nn.Parameter(torch.randn(self.num_states))
+        self.transitions = self.initialize_transitions()
+        self.emissions = nn.functional.softmax(torch.randn(self.num_states, self.num_tokens), dim=-1)
+        self.priors = nn.functional.softmax(torch.randn(self.num_states), dim=-1)
 
     def index2coord(self, state):
         z, state = divmod(state, self.xy_size * self.xy_size)
         y, x = divmod(state, self.xy_size)
         return torch.tensor([x, y, z])
 
-    def prior_log_p(self):
-        return nn.functional.log_softmax(self.state_priors_unnormalized, dim=0)
-
-    def transition_log_p(self):
-        # transitions = nn.functional.log_softmax(self.transition_matrix_unnormalized, dim=-1)
-
+    def initialize_transitions(self):
         # TODO use sparse matrix instead?
-        out = torch.zeros(self.num_states, self.num_states).log()
+        out = torch.zeros(self.num_states, self.num_states)
 
         neighbors = torch.tensor([[0, 0, 0], [1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, 2]])
         for h in range(self.num_states):
@@ -37,14 +31,14 @@ class Scalar3DHMM(nn.Module):
             coord = self.index2coord(h)
             neighbor_coords = neighbors + coord
             neighbor_coords = neighbor_coords[(
-                neighbor_coords[:, 0].div(self.xy_size, rounding_mode='floor') == 0
+                    neighbor_coords[:, 0].div(self.xy_size, rounding_mode='floor') == 0
             ).logical_and(
                 neighbor_coords[:, 1].div(self.xy_size, rounding_mode='floor') == 0
             ).logical_and(
                 neighbor_coords[:, 2].div(self.z_size, rounding_mode='floor') == 0
             )]
 
-            transitions = nn.functional.log_softmax(self.transition_matrix_unnormalized[h, :len(neighbor_coords)], dim=-1)
+            transitions = nn.functional.softmax(torch.randn(len(neighbor_coords)), dim=-1)
 
             for idx, neighbor in enumerate(neighbor_coords):
                 x, y, z = neighbor
@@ -54,10 +48,16 @@ class Scalar3DHMM(nn.Module):
 
         return out
 
+    def prior_log_p(self):
+        return self.priors.log()
+
+    def transition_log_p(self):
+        return self.transitions.log()
+
     def emission_log_p(self, sentences_tensor):
         # returns matrix with shape num_batches x num_states
 
-        emission_matrix = nn.functional.log_softmax(self.emission_matrix_unnormalized, dim=1)
+        emission_matrix = self.emissions.log()
         emission_matrix = torch.cat((emission_matrix, torch.zeros(emission_matrix.shape[0], 1)), 1)
         # TODO sentence_tensor = sentence_tensor[sentence_tensor > -1]
         emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)
@@ -112,8 +112,8 @@ class Scalar3DHMM(nn.Module):
         transitions = self.transition_log_p()  # Z x Z
         for i in range(story_length - 1, 0, -1):
             emissions = self.emission_log_p(stories_tensor[:, i])  # N x Z
-            intermediate = transitions + scores[-1].view(num_stories, -1, 1) \
-                           + emissions.view(num_stories, 1, -1)  # N x Z x Z
+            intermediate = (transitions + scores[-1].view(num_stories, -1, 1)
+                            + emissions.view(num_stories, 1, -1))  # N x Z x Z
             scores.append(intermediate.logsumexp(-1))  # N x Z
 
         scores.reverse()
@@ -123,31 +123,50 @@ class Scalar3DHMM(nn.Module):
         num_stories = stories_tensor.shape[0]
         story_length = stories_tensor.shape[1]
 
-        t = self.transition_log_p().exp()  # Z x Z
+        t = self.transition_log_p()  # Z x Z
         e = self.emission_log_p(
                 stories_tensor.view(num_stories * story_length, -1)
-            ).exp().view(num_stories, story_length, -1)  # N x L x Z
-        a = self.forward_log_p(stories_tensor, story_length).exp().transpose(0, 1)  # N x L x Z
-        b = self.backward_log_p(stories_tensor, story_length).exp().transpose(0, 1)  # N x L x Z
+            ).view(num_stories, story_length, -1)  # N x L x Z
+        a = self.forward_log_p(stories_tensor, story_length).transpose(0, 1)  # N x L x Z
+        b = self.backward_log_p(stories_tensor, story_length).transpose(0, 1)  # N x L x Z
 
-        print(t, e, a, b)
+        # print("TRANS", t.exp())
+        # print("EMITS", e.exp())
+        # print("FORWD", a.exp())
+        # print("BAKWD", b.exp())
 
-        p_state_given_story = ((a * b).T / (a * b).sum(-1).T).T  # N x L x Z
-        p_pair_given_story = ((a[:, :story_length - 1].view(num_stories, story_length - 1, -1, 1) * t
-                              * (e * b)[:, 1:].view(num_stories, story_length - 1, 1, -1)).T
-                              / a[:, -1].sum(-1)).T  # N x L-1 x Z x Z
+        p_state_given_story = ((a + b).T - (a + b).logsumexp(-1).T).T  # N x L x Z
+        p_pair_given_story = ((a[:, :story_length - 1].view(num_stories, story_length - 1, -1, 1) + t
+                               + (e + b)[:, 1:].view(num_stories, story_length - 1, 1, -1)).T
+                              - a[:, -1].logsumexp(-1).T).T  # N x L-1 x Z x Z
 
-        print(p_state_given_story, p_pair_given_story)  # TODO why are these NaN?
+        # TODO this normalization shouldn't be necessary
+        p_pair_given_story = (p_pair_given_story.T - p_pair_given_story.logsumexp((-1, -2)).T).T
 
-        priors = p_state_given_story[:, 0].mean(0)  # Z x 1
+        # print("p(STEP,STATE)", p_state_given_story.exp())
+        # print(p_state_given_story.logsumexp(-1).exp()) # this should be all ones
+        # print("p(STEP,PAIR) ", p_pair_given_story.exp())
+        # print(p_pair_given_story.logsumexp((-1, -2)).exp())  # this should be all ones
+
+        priors = p_state_given_story[:, 0].exp().mean(0)  # Z x 1
         emissions = torch.zeros(self.num_states, self.num_tokens)  # Z x K
         # TODO vectorize?
         for story in stories_tensor:
             for i, sentence in enumerate(story):
                 sentence_length = (sentence > -1).sum()
                 for token in sentence[sentence > -1]:
-                    emissions[:, token] += p_state_given_story[:, i].squeeze(1).sum(0) / sentence_length
-        emissions = (emissions.T / p_state_given_story.sum((0, 1))).T
-        transitions = p_pair_given_story.sum((0, 1)) / p_state_given_story.sum((0, 1))  # Z x Z
+                    emissions[:, token] += p_state_given_story[:, i].squeeze(1).logsumexp(0).exp() / sentence_length
+        emissions = (emissions.T / num_stories / p_state_given_story.logsumexp((0, 1)).exp()).T
+        transitions = (p_pair_given_story.logsumexp((0, 1)) - p_state_given_story.logsumexp((0, 1))).exp()  # Z x Z
+
+        # TODO this normalization shouldn't be necessary
+        transitions = (transitions.T / transitions.sum(-1).T).T
+
+        # print("PRIOR", priors)
+        # print(priors.sum(-1))  # should be one
+        # print("EMITS", emissions)
+        # print(emissions.sum(-1))  # should be ones
+        # print("TRANS", transitions)
+        # print(transitions.sum(-1))  # should be ones
 
         return priors, transitions, emissions

@@ -43,8 +43,8 @@ false_batch = stories[:64, torch.tensor([0, 1, 2, 3, 5])]
 model = Scalar3DHMM(6, 6, 5558)
 
 # SGD
-learning_rate = 0.001
-for epoch in range(1):
+learning_rate = 0.1
+for epoch in range(10):
     for idx, batch in enumerate(batches):
         print(idx)
         p = model.score(batch, 5) - model.emission_log_p(batch[:, -1]).logsumexp(-1)
@@ -52,12 +52,15 @@ for epoch in range(1):
 
         with torch.no_grad():
             print(p.mean())
-            print(model.score(false_batch, 5).mean())
+            print((model.score(false_batch, 5) - model.emission_log_p(false_batch[:, -1]).logsumexp(-1)).mean())
 
+            print(model.emission_matrix_unnormalized.grad.norm())
             model.emission_matrix_unnormalized += learning_rate * model.emission_matrix_unnormalized.grad
             model.emission_matrix_unnormalized.grad.zero_()
+            print(model.transition_matrix_unnormalized.grad.norm())
             model.transition_matrix_unnormalized += learning_rate * model.transition_matrix_unnormalized.grad
             model.transition_matrix_unnormalized.grad.zero_()
+            print(model.state_priors_unnormalized.grad.norm())
             model.state_priors_unnormalized += learning_rate * model.state_priors_unnormalized.grad
             model.state_priors_unnormalized.grad.zero_()
 print("DONE LEARNING")

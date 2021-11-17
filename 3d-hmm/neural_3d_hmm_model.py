@@ -1,27 +1,6 @@
 
 import torch
 from torch import nn
-# from torch import tensor
-
-class TransitionModel(torch.nn.Module):
-    def __init__(self, states):
-        super(TransitionModel, self).__init__()
-        self.states = states
-        self.transition_matrix_unnormalized = torch.nn.Parameter(torch.randn(states, states))
-
-
-class EmissionModel(torch.nn.Module):
-    def __init__(self, num_states, num_tokens, num_observations):
-        super(EmissionModel, self).__init__()
-        self.states = num_states
-        self.observations = num_observations
-
-        self.emission_matrix_unnormalized = torch.nn.Linear(num_states, num_tokens)
-
-    def p(self, sentence_tensor):
-
-
-        return p
 
 
 class ResidualLayer(nn.Module):
@@ -50,16 +29,11 @@ class Neural3DHMM(nn.Module):
         state_embedding_dim = 256
         token_embedding_dim = 256
 
-        self.states = nn.Embedding(num_states, state_embedding_dim)
-        self.tokens = nn.Embedding(num_tokens, token_embedding_dim)
+        # self.state_embeddings = nn.Embedding(num_states, state_embedding_dim)
+        # self.token_embeddings = nn.Embedding(num_tokens, token_embedding_dim)
 
-        # A matrix in terms of number of states (out_dim)
-        self.transition_model = TransitionModel(self.xy_size)
-
-        # emission model
-        self.emission_model = EmissionModel(self.xy_size, self.z_size)
-
-        self.state_priors_unnormalized = torch.nn.Parameter(torch.randn(self.states))
+        self.state_embeddings = nn.Parameter(torch.randn(num_states, state_embedding_dim))
+        self.token_embeddings = nn.Parameter(torch.randn(num_tokens, token_embedding_dim))
 
         # p(z0)
         intermediate_dim = 256
@@ -88,59 +62,50 @@ class Neural3DHMM(nn.Module):
             out_dim=token_embedding_dim,
         )
 
-    def compute_parameters(self):
-        starts = self.mlp_start(self.states)
+    def prior_log_p(self):
+        priors = self.mlp_start(self.state_embeddings).squeeze(-1)
+        return nn.functional.log_softmax(priors, dim=-1)
 
-        h_in = self.mlp_in(self.states)
-        h_out = self.mlp_out(self.states)
-        transitions = h_in @ h_out.t()
+    def transition_log_p(self):
+        h_in = self.mlp_in(self.state_embeddings)
+        h_out = self.mlp_out(self.state_embeddings)
+        transitions = h_in @ h_out.T
+        # TODO restrict to neighborhood
+        return nn.functional.log_softmax(transitions, dim=-1)
 
-        h_emit = self.mlp_emit(self.states)
-        emissions = h_emit @ self.token_embeddings
+    def compute_emission_matrix(self):
+        h_emit = self.mlp_emit(self.state_embeddings)
+        emissions = h_emit @ self.token_embeddings.T
+        self.emissions = nn.functional.log_softmax(emissions, dim=1)
 
-        # TODO transform to probabilities (softmax?)
+    def emission_log_p(self, sentences_tensor):
+        emissions = torch.cat((self.emissions, torch.zeros(self.emissions.shape[0], 1)), 1)
+        emissions = emissions[:, sentences_tensor].transpose(0, 1)
+        return emissions.sum(-1)
 
-        return starts, transitions, emissions
+    def score(self, stories_tensor, story_length):
+        return self.forward_log_p(stories_tensor, story_length)[-1].logsumexp(-1)
 
-    # forward algorithm
-    def forward(self, input_tensor, length, batch_size):
-        length_max = input_tensor.shape[1]
+    def forward_log_p(self, stories_tensor, story_length):
+        assert (stories_tensor.shape[1] == story_length)
 
-        state_priors = torch.nn.functional.log_softmax(self.state_prior_unnormalized, dim=0)
-        alpha = torch.zeros(batch_size, length_max, self.N)
+        num_stories = stories_tensor.shape[0]
 
-        alpha[:, 0, :] = self.emission_model(input_tensor[:, 0]) + state_priors
+        # p(z0) across all states z0 (Z)
+        state_priors = self.prior_log_p()
 
-        for i in range(1, length_max):
-            alpha[:, i, :] = self.emission_model(input_tensor[:, i]) + self.transition_model(alpha[:, i - 1, :])
+        # p(z0)*p(x0|z0) across all states z0, all first sentences x0 (N x Z)
+        self.compute_emission_matrix()
+        emissions = self.emission_log_p(stories_tensor[:, 0])
+        scores = [emissions + state_priors]
 
-        # make the log sum
-        sums_log = alpha.logsumexp(dim=2)
-        # calculate log probabilities
-        log_probabilities = torch.gather(sums_log, 1, length.view(-1, 1) - 1)
+        transitions = self.transition_log_p()
 
-        return log_probabilities
+        for i in range(1, story_length):
+            emissions = self.emission_log_p(stories_tensor[:, i])
 
-    # emissions forward algorithm
-    def emissions_forward(self, x):
-        log_emission = torch.nn.functional.log_softmax(self.emission_matrix_unnormalized, dim=1)
-        return log_emission[:, x].transpose(0, 1)
+            # p(zi|zi-1)*p(xi|zi)*p(zi-1)
+            intermediate = transitions + scores[-1].view(num_stories, 1, -1)
+            scores.append(emissions + intermediate.logsumexp(-1))
 
-    # transitions forward algorithm
-    def transitions_forward(self, alpha):
-        log_transition = torch.nn.functional.log_softmax(self.transition_matrix_unnormalized, dim=0)
-        return self.log_multiplication(log_transition, alpha.transpose(0, 1)).transpose(0, 1)
-
-    def log_multiplication(self, A, B):
-        m = A.shape[0]
-        n = A.shape[1]
-        p = B.shape[1]
-
-        sum_log_elements = torch.reshape(A, (m, n, 1)) + torch.reshape(B, (1, n, p))
-
-        return torch.logsumexp(sum_log_elements, dim=1)
-
-    def score(self, x):
-        pass
-        # TODO use parameters from compute_parameters
-        #      to score x with the forward algorithm
+        return torch.stack(scores)

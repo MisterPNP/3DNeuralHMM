@@ -1,9 +1,8 @@
 import torch
 
 from load_story_cloze import load_cloze_test
+from neural_3d_hmm_model import Neural3DHMM
 from scalar_3d_hmm_model import Scalar3DHMM
-
-# TODO: Stop wrap-around
 
 # TODO: Remove low-frequency tokens?
 

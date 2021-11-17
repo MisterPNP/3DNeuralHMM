@@ -6,8 +6,7 @@ from scalar_3d_hmm_model import Scalar3DHMM
 
 def score_prediction_single_story(prediction_model, first_index, last_index):
     # input test.json
-    test_stories = load_cloze_test()
-    story = test_stories[story_index]
+    test_stories = load_cloze_test()[first_index:(last_index+1)]
 
     # get true and false stories
     true_stories = test_stories[:, torch.tensor([0, 1, 2, 3, 4])]

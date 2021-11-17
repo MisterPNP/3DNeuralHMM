@@ -39,8 +39,8 @@ print(len(batches), batches[0].shape)
 
 false_batch = stories[:64, torch.tensor([0, 1, 2, 3, 5])]
 
-# model = Scalar3DHMM(2, 1, 5558)
-model = Scalar3DHMM(6, 6, 5558)
+model = Scalar3DHMM(2, 1, 5558)
+# model = Scalar3DHMM(6, 6, 5558)
 
 # SGD
 learning_rate = 0.1
@@ -67,4 +67,8 @@ print("DONE LEARNING")
 
 print(score_prediction_batch(0, 1000))
 # TODO backward algorithm, instead of SGD
-# ...
+# stories_correct = stories[:, torch.tensor([0, 1, 2, 3, 4])]
+# with torch.no_grad():
+#     for epoch in range(1):
+#         priors, transitions, emissions = model.baum_welch_updates(stories_correct)
+#         print(priors, transitions, emissions)

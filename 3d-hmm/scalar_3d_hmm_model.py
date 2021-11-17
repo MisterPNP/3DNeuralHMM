@@ -111,17 +111,30 @@ class Scalar3DHMM(nn.Module):
         scores.reverse()
         return torch.stack(scores)
 
-    def baum_welch_updates(self, story):
-        story_length = story.shape[0]
-        t = self.transition_log_p()  # Z x Z
-        e = self.emission_log_p(story)  # L x Z
-        a = self.forward_log_p(torch.tensor([story]), story_length).view(story_length, -1)  # L x Z
-        b = self.backward_log_p(torch.tensor([story]), story_length).view(story_length, -1)  # L x Z
-        p_state_given_story = a * b / (a * b).sum(-1)  # L x Z
-        p_pair_given_story = a[:story_length - 1].view(story_length, -1, 1) \
-                             * t * (e * b)[1:].view(story_length, 1, -1) / a[-1].sum()  # L x Z x Z
-        priors = p_state_given_story[0]  # Z x 1
-                                     # TODO only columns where the kth token is emitted at the zth step...
-        emissions = p_state_given_story[:].sum(0) / p_state_given_story.sum(0)  # Z x K
-        transitions = p_pair_given_story.sum(0) / p_state_given_story.sum(0)  # Z x Z
+    def baum_welch_updates(self, stories_tensor):
+        num_stories = stories_tensor.shape[0]
+        story_length = stories_tensor.shape[1]
+
+        t = self.transition_log_p().exp()  # Z x Z
+        e = self.emission_log_p(
+                stories_tensor.view(num_stories * story_length, -1)
+            ).exp().view(num_stories, story_length, -1)  # N x L x Z
+        a = self.forward_log_p(stories_tensor, story_length).exp().transpose(0, 1)  # N x L x Z
+        b = self.backward_log_p(stories_tensor, story_length).exp().transpose(0, 1)  # N x L x Z
+
+        p_state_given_story = a * b / (a * b).sum(-1)  # N x L x Z
+        p_pair_given_story = a[:, :story_length - 1].view(num_stories, story_length, -1, 1) * t\
+                             * (e * b)[:, 1:].view(num_stories, story_length, 1, -1) / a[:, -1].sum(-1)  # N x L x Z x Z
+
+        priors = p_state_given_story[:, 0].mean(0)  # Z x 1
+        emissions = torch.zeros(self.num_states, self.num_tokens)  # Z x K
+        # TODO vectorize?
+        for story in stories_tensor:
+            for i, sentence in enumerate(story):
+                sentence_length = (sentence > -1).sum()
+                for token in sentence[sentence > -1]:
+                    emissions[:, token] += p_state_given_story[:, i].squeeze(1).sum(0) / sentence_length
+        emissions /= p_state_given_story.sum((0, 1))
+        transitions = p_pair_given_story.sum((0, 1)) / p_state_given_story.sum((0, 1))  # Z x Z
+
         return priors, transitions, emissions

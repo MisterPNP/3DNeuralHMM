@@ -53,14 +53,31 @@ class Gradient3DHMM(nn.Module):
 
         return out
 
+    def compute_emission_matrix(self):
+        emission_matrix = nn.functional.log_softmax(self.emission_matrix_unnormalized, dim=-1)
+        # smoothing?
+        emission_matrix = emission_matrix.view(self.z_size, self.xy_size, self.xy_size, self.num_tokens)
+        lvert, rvert = emission_matrix[:, :, :1, :], emission_matrix[:, :, -1:, :]
+        lhorz, rhorz = emission_matrix[:, :1, :, :], emission_matrix[:, -1:, :, :]
+        c = torch.zeros(self.z_size, 1, 1, self.num_tokens)
+        t = torch.cat
+        up = t((t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2), t((c, rhorz, c), 2)), 1)
+        dn = t((t((c, lhorz, c), 2), t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2)), 1)
+        lf = t((t((lhorz, c, c), 2), t((emission_matrix, rvert, rvert), 2), t((rhorz, c, c), 2)), 1)
+        rt = t((t((c, c, lhorz), 2), t((lvert, lvert, emission_matrix), 2), t((c, c, rhorz), 2)), 1)
+        cr = t((t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2)), 1)
+        mean = torch.stack((up, dn, lf, rt, cr)).logsumexp(0) - torch.tensor(5).log()
+        emission_matrix = mean[:, 1:-1, 1:-1].contiguous().view(self.num_states, self.num_tokens)
+        # print(emission_matrix.logsumexp(-1).exp())  # should be ones
+        self.emission_matrix = emission_matrix
+
     def emission_log_p(self, sentences_tensor):
         # returns matrix with shape num_batches x num_states
 
-        emission_matrix = nn.functional.log_softmax(self.emission_matrix_unnormalized, dim=1)
-        emission_matrix = torch.cat((emission_matrix, torch.zeros(emission_matrix.shape[0], 1)), 1)
-        # TODO sentence_tensor = sentence_tensor[sentence_tensor > -1]
-        emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)
-        return emissions.sum(-1)  # TODO normalize??
+        # pad so that -1 indices won't change probability
+        emission_matrix = torch.cat((self.emission_matrix, torch.zeros(self.num_states, 1)), 1)
+        emissions = emission_matrix[:, sentences_tensor].transpose(0, 1).sum(-1)
+        return emissions  # TODO normalize??
 
     def score(self, stories_tensor, story_length):
         return self.forward_log_p(stories_tensor, story_length)[-1].logsumexp(-1)
@@ -75,6 +92,7 @@ class Gradient3DHMM(nn.Module):
         # print("PRIOR", state_priors.exp())
 
         # p(z0)*p(x0|z0) across all states z0, all first sentences x0 (N x Z)
+        self.compute_emission_matrix()
         emissions = self.emission_log_p(stories_tensor[:, 0])
         # print("EMITS INITIAL", emissions.exp())
         scores = [emissions + state_priors]

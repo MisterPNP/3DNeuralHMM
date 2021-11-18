@@ -25,20 +25,24 @@ class ResidualLayer(nn.Module):
 class Neural3DHMM(nn.Module):
     def __init__(self, xy_size, z_size, num_tokens, token_embeddings=None):
         super(Neural3DHMM, self).__init__()
-        num_states = xy_size * xy_size * z_size
-        state_embedding_dim = 256
-        token_embedding_dim = 256
+        self.xy_size = xy_size
+        self.z_size = z_size
+        self.num_states = xy_size * xy_size * z_size
+        self.num_tokens = num_tokens
+        state_embedding_dim = 10
+        token_embedding_dim = 100
 
-        # self.state_embeddings = nn.Embedding(num_states, state_embedding_dim)
+        # self.state_embeddings = nn.Embedding(self.num_states, state_embedding_dim)
         # self.token_embeddings = nn.Embedding(num_tokens, token_embedding_dim)
 
-        self.state_embeddings = nn.Parameter(torch.randn(num_states, state_embedding_dim))
+        self.state_embeddings = nn.Parameter(torch.randn(self.num_states, state_embedding_dim))
         if token_embeddings is None:
             self.token_embeddings = nn.Parameter(torch.randn(num_tokens, token_embedding_dim))
         else:
             assert(len(token_embeddings) == num_tokens)
             token_embedding_dim = token_embeddings.shape[1]
-            self.token_embeddings = nn.Parameter(token_embeddings)
+            # self.token_embeddings = nn.Parameter(token_embeddings)
+            self.token_embeddings = token_embeddings
 
         # p(z0)
         intermediate_dim = 256
@@ -81,10 +85,24 @@ class Neural3DHMM(nn.Module):
     def compute_emission_matrix(self):
         h_emit = self.mlp_emit(self.state_embeddings)
         emissions = h_emit @ self.token_embeddings.T
-        self.emissions = nn.functional.log_softmax(emissions, dim=1)
+        emission_matrix = nn.functional.log_softmax(emissions, dim=1)
+        # smoothing?
+        emission_matrix = emission_matrix.view(self.z_size, self.xy_size, self.xy_size, self.num_tokens)
+        lvert, rvert = emission_matrix[:, :, :1, :], emission_matrix[:, :, -1:, :]
+        lhorz, rhorz = emission_matrix[:, :1, :, :], emission_matrix[:, -1:, :, :]
+        c = torch.zeros(self.z_size, 1, 1, self.num_tokens)
+        t = torch.cat
+        up = t((t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2), t((c, rhorz, c), 2)), 1)
+        dn = t((t((c, lhorz, c), 2), t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2)), 1)
+        lf = t((t((lhorz, c, c), 2), t((emission_matrix, rvert, rvert), 2), t((rhorz, c, c), 2)), 1)
+        rt = t((t((c, c, lhorz), 2), t((lvert, lvert, emission_matrix), 2), t((c, c, rhorz), 2)), 1)
+        cr = t((t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2)), 1)
+        mean = torch.stack((up, dn, lf, rt, cr)).logsumexp(0) - torch.tensor(5).log()
+        emission_matrix = mean[:, 1:-1, 1:-1].contiguous().view(self.num_states, self.num_tokens)
+        self.emission_matrix = emission_matrix
 
     def emission_log_p(self, sentences_tensor):
-        emissions = torch.cat((self.emissions, torch.zeros(self.emissions.shape[0], 1)), 1)
+        emissions = torch.cat((self.emission_matrix, torch.zeros(self.num_states, 1)), 1)
         emissions = emissions[:, sentences_tensor].transpose(0, 1)
         return emissions.sum(-1)
 

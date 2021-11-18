@@ -18,7 +18,7 @@ batches = stories[:, torch.tensor([0, 1, 2, 3, 4])].split(batch_size)
 false_batch = stories[:batch_size, torch.tensor([0, 1, 2, 3, 5])]
 
 
-# model = Gradient3DHMM(6, 6, 5558)
+# model = Gradient3DHMM(6, 6, 11571)
 # learning_rate = 1e-4
 # num_epochs = 3
 
@@ -35,7 +35,7 @@ for _, row in vocab.iterrows():
     token_embeddings.append(emb)
 token_embeddings = torch.stack(token_embeddings)
 
-model = Neural3DHMM(6, 6, 5558, token_embeddings=token_embeddings)
+model = Neural3DHMM(6, 6, 11571, token_embeddings=token_embeddings)
 learning_rate = 1e-6
 num_epochs = 10
 

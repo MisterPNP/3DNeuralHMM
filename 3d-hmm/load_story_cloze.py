@@ -12,13 +12,9 @@ import torch
 import torchtext
 
 def get_processed_data():
-
+    # preprocess_cloze_test('cloze_test_test__spring2016 - cloze_test_ALL_test.csv', 'story_cloze_2016_test')
+    # preprocess_cloze_test('cloze_test_val__spring2016 - cloze_test_ALL_val.csv', 'story_cloze_2016_val')
     preprocess_ROC_test('ROCStories__spring2016 - ROCStories_spring2016.csv', 'ROC_stories_2016')
-    return
-
-
-    #preprocess_cloze_test('cloze_test_test__spring2016 - cloze_test_ALL_test.csv', 'story_cloze_2016_test')
-    #preprocess_cloze_test('cloze_test_val__spring2016 - cloze_test_ALL_val.csv', 'story_cloze_2016_val')
 
 # HELPER FUNCTIONS
 

@@ -12,20 +12,21 @@ from neural_3d_hmm_model import Neural3DHMM
 # TODO: Remove low-frequency tokens?
 
 
-stories = load_cloze_test()
+stories = load_roc_test()
 
 batch_size = 1000
 batches = stories[:, torch.tensor([0, 1, 2, 3, 4])].split(batch_size)
-false_batch = stories[:, torch.tensor([0, 1, 2, 3, 5])]
+# false_batch = stories[:, torch.tensor([0, 1, 2, 3, 5])]
 
-
-# model = Gradient3DHMM(6, 6, 11571)
+# model = Gradient3DHMM(6, 6, 19477)
 # learning_rate = 1e-4
 # num_epochs = 3
 
 
 token_embeddings = []
-vocab = pd.read_csv("../data/vocab_test.voc", sep="\t", names=('idx', 'word', 'count'))
+# vocab = pd.read_csv("../data/vocab_test.voc", sep="\t", names=('idx', 'word', 'count'))
+vocab = pd.read_csv("../data/ROC_stories_2016_vocab.voc", sep="\t", names=('idx', 'word', 'count'))
+
 embeddings = get_embeddings()
 for _, row in vocab.iterrows():
     if row['word'] not in embeddings:
@@ -38,7 +39,7 @@ token_embeddings = torch.stack(token_embeddings)
 
 model = Neural3DHMM(6, 6, len(token_embeddings), token_embeddings=token_embeddings)
 learning_rate = 1e-6
-num_epochs = 2
+num_epochs = 1
 
 
 analysis = train(model, batches, lr=learning_rate, num_epochs=num_epochs,

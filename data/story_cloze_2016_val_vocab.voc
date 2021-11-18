@@ -1,5559 +1,5522 @@
-0	rick	13
-1	grow	37
-2	troubled	2
-3	household	1
-4	never	176
-5	found	218
-6	good	128
-7	support	5
-8	family	120
-9	turn	82
-10	gang	5
-11	long	68
-12	get	710
-13	shot	25
-14	robbery	1
-15	incident	5
-16	cause	8
-17	new	290
-18	leaf	8
-19	happy	179
-20	join	36
-21	laverne	4
-22	need	123
-23	prepare	7
-24	something	53
-25	friend	379
-26	party	89
-27	decides	55
-28	bake	21
-29	batch	3
-30	brownie	3
-31	chooses	2
-32	recipe	22
-33	follow	16
-34	closely	2
-35	test	39
-36	one	432
-37	make	319
-38	sure	35
-39	delicious	28
-40	eats	8
-41	two	85
-42	go	880
-43	sarah	32
-44	dream	18
-45	visit	67
-46	europe	6
-47	year	135
-48	finally	132
-49	save	42
-50	enough	40
-51	trip	75
-52	land	22
-53	spain	3
-54	travel	20
-55	east	1
-56	across	25
-57	continent	1
-58	like	205
-59	different	30
-60	everything	36
-61	decide	567
-62	prefer	2
-63	home	257
-64	move	96
-65	gina	159
-66	worried	21
-67	cookie	6
-68	dough	1
-69	tube	4
-70	would	221
-71	gross	6
-72	find	109
-73	wrong	17
-74	cooky	13
-75	scratch	10
-76	intend	3
-77	eat	109
-78	2	20
-79	rest	28
-80	much	97
-81	ate	71
-82	sit	27
-83	give	173
-84	away	109
-85	church	8
-86	final	7
-87	performance	16
-88	march	2
-89	band	25
-90	play	178
-91	snare	1
-92	drum	6
-93	played	60
-94	thriller	1
-95	radar	2
-96	love	264
-97	flawless	1
-98	proud	48
-99	ashamed	20
-100	homeless	5
-101	man	97
-102	change	44
-103	everyday	23
-104	corner	11
-105	near	28
-106	house	170
-107	day	506
-108	drive	72
-109	neighborhood	13
-110	saw	142
-111	car	165
-112	soon	66
-113	emerge	2
-114	money	125
-115	next	110
-116	twenty	8
-117	dollar	33
-118	jim	59
-119	old	106
-120	disposable	1
-121	camera	14
-122	bottom	5
-123	junk	3
-124	drawer	3
-125	begin	92
-126	snap	4
-127	around	75
-128	counter	10
-129	clicked	1
-130	photo	16
-131	gravity	1
-132	situation	8
-133	dawn	2
-134	take	351
-135	time	281
-136	picture	31
-137	20	7
-138	ron	24
-139	start	175
-140	job	153
-141	landscaper	1
-142	today	52
-143	outdoors	10
-144	always	140
-145	enjoy	74
-146	work	291
-147	bos	42
-148	tell	24
-149	sod	1
-150	front	37
-151	yard	20
-152	mayor	1
-153	ecstatic	4
-154	thorough	1
-155	finish	40
-156	super	4
-157	early	31
-158	commends	1
-159	well	131
-160	do	30
-161	immediately	30
-162	fire	37
-163	insubordination	1
-164	john	96
-165	billy	22
-166	become	114
-167	skilled	1
-168	beer	14
-169	pong	6
-170	enter	19
-171	contest	26
-172	college	49
-173	advanced	4
-174	level	4
-175	sent	12
-176	vega	10
-177	compete	4
-178	eighty	1
-179	contestant	1
-180	disappointed	50
-181	caroline	8
-182	student	27
-183	medical	2
-184	school	190
-185	hard	97
-186	grade	18
-187	fail	15
-188	point	21
-189	frustrate	12
-190	continued	23
-191	study	39
-192	later	62
-193	pass	32
-194	trish	2
-195	hat	96
-196	convince	10
-197	camp	30
-198	show	78
-199	fish	34
-200	star	25
-201	eventually	64
-202	grudgingly	1
-203	come	165
-204	accept	2
-205	nature	7
-206	interest	9
-207	mating	1
-208	habit	5
-209	walk	151
-210	corey	6
-211	pumped	2
-212	gas	15
-213	guy	10
-214	admire	11
-215	conversation	4
-216	felt	164
-217	pump	2
-218	punch	5
-219	mind	20
-220	marcy	8
-221	receive	27
-222	valentine	3
-223	boyfriend	20
-224	card	28
-225	gift	30
-226	chocolate	13
-227	order	57
-228	ask	146
-229	big	72
-230	kiss	9
-231	say	107
-232	yes	13
-233	shrug	3
-234	shoulder	3
-235	reach	15
-236	tv	25
-237	remote	6
-238	cara	14
-239	food	95
-240	cart	10
-241	philadelphia	2
-242	stop	83
-243	amaze	24
-244	falafel	2
-245	believe	20
-246	every	90
-247	week	123
-248	told	170
-249	owner	21
-250	awful	6
-251	tony	12
-252	first	143
-253	cruise	2
-254	arrive	62
-255	dock	3
-256	ready	32
-257	luggage	4
-258	size	5
-259	board	11
-260	ship	1
-261	left	97
-262	scar	34
-263	ocean	6
-264	ignacio	5
-265	want	415
-266	sport	12
-267	since	38
-268	swimmer	3
-269	try	172
-270	swim	40
-271	team	91
-272	onto	8
-273	easily	4
-274	meet	16
-275	win	29
-276	second	22
-277	place	51
-278	silver	1
-279	medal	2
-280	danny	14
-281	bought	166
-282	boat	13
-283	nearby	13
-284	marina	3
-285	race	19
-286	best	57
-287	prepared	23
-288	sleep	44
-289	mary	58
-290	assignment	7
-291	write	32
-292	essay	4
-293	panda	5
-294	luckily	7
-295	excite	96
-296	boot	5
-297	computer	25
-298	knew	59
-299	research	9
-300	little	53
-301	wait	78
-302	present	18
-303	report	8
-304	disliked	4
-305	ellen	18
-306	prize	8
-307	rose	6
-308	plan	34
-309	special	15
-310	purple	1
-311	rise	13
-312	fair	6
-313	fertilize	1
-314	bush	1
-315	cover	24
-316	night	127
-317	beautiful	39
-318	end	65
-319	pay	32
-320	replacement	2
-321	fee	1
-322	library	26
-323	jesse	6
-324	fifth	3
-325	boy	62
-326	girl	80
-327	instead	59
-328	welcome	4
-329	social	5
-330	group	16
-331	happily	19
-332	picked	39
-333	park	71
-334	roger	1
-335	tiffany	3
-336	overwhelmed	2
-337	break	21
-338	tripped	13
-339	outside	68
-340	uneven	1
-341	pavement	2
-342	broke	49
-343	ankle	5
-344	couple	15
-345	month	62
-346	pain	17
-347	misplace	2
-348	phone	71
-349	grandparent	2
-350	living	24
-351	room	74
-352	nap	14
-353	grabbed	12
-354	dad	63
-355	key	12
-356	ran	75
-357	anymore	22
-358	alice	15
-359	married	19
-360	mother	137
-361	call	113
-362	forgot	27
-363	back	155
-364	angry	42
-365	message	9
-366	threaten	1
-367	wedding	12
-368	apologize	10
-369	profusely	3
-370	cute	16
-371	tinder	1
-372	ted	29
-373	movie	81
-374	see	156
-375	almost	26
-376	everyone	60
-377	vote	9
-378	oscar	4
-379	bet	10
-380	continue	5
-381	watch	115
-382	several	39
-383	nya	7
-384	paintball	3
-385	nervous	49
-386	anyways	3
-387	hop	40
-388	fun	58
-389	laugh	36
-390	whole	33
-391	vowed	12
-392	javier	5
-393	smartphones	1
-394	however	65
-395	still	37
-396	us	7
-397	style	3
-398	flip	3
-399	buy	112
-400	smartphone	4
-401	access	1
-402	internet	11
-403	everywhere	14
-404	miss	43
-405	rachel	15
-406	donate	6
-407	blood	7
-408	local	44
-409	doctor	49
-410	bad	65
-411	news	18
-412	tear	2
-413	moonwalking	1
-414	excitement	2
-415	high	36
-416	speed	16
-417	chase	11
-418	cop	9
-419	terrify	6
-420	caught	34
-421	applaud	5
-422	officer	16
-423	collect	13
-424	bottle	3
-425	cap	2
-426	sam	60
-427	belt	1
-428	match	23
-429	unfortunately	30
-430	gain	9
-431	weight	27
-432	small	41
-433	diet	11
-434	larry	25
-435	motorcycle	7
-436	look	187
-437	cool	21
-438	rid	18
-439	drop	24
-440	hurt	22
-441	leg	19
-442	hospital	29
-443	careful	9
-444	blind	6
-445	date	49
-446	ago	17
-447	friendly	15
-448	set	45
-449	co	3
-450	worker	12
-451	seem	16
-452	thing	56
-453	common	1
-454	girlfriend	38
-455	think	39
-456	marriage	4
-457	right	41
-458	sammy	4
-459	coffee	42
-460	grinder	1
-461	broken	19
-462	crush	11
-463	bean	4
-464	put	100
-465	plastic	6
-466	bag	33
-467	hammer	2
-468	last	98
-469	jared	4
-470	face	18
-471	oncoming	1
-472	traffic	12
-473	swerve	1
-474	quickly	39
-475	manage	6
-476	avoid	12
-477	collision	1
-478	accelerate	2
-479	bobby	29
-480	late	43
-481	hail	1
-482	taxi	3
-483	realize	83
-484	driver	15
-485	way	67
-486	chat	4
-487	restaurant	36
-488	joe	94
-489	pea	3
-490	garden	17
-491	brought	40
-492	inside	33
-493	shell	4
-494	cooked	13
-495	pot	10
-496	add	18
-497	ham	1
-498	bacon	2
-499	carrot	3
-500	thick	2
-501	soup	9
-502	thought	106
-503	yummy	2
-504	dumped	4
-505	aliza	3
-506	lose	84
-507	ex	2
-508	bound	2
-509	problem	23
-510	state	17
-511	use	95
-512	facebook	5
-513	kid	72
-514	sad	45
-515	contact	6
-516	fell	71
-517	lina	11
-518	candy	31
-519	cane	4
-520	dye	2
-521	hot	29
-522	stretch	3
-523	shiny	8
-524	shape	11
-525	let	41
-526	appreciation	5
-527	boring	14
-528	know	57
-529	neighbor	36
-530	mow	4
-531	kickball	2
-532	perfect	20
-533	opportunity	3
-534	ball	28
-535	door	48
-536	return	44
-537	threw	57
-538	close	29
-539	window	29
-540	bev	3
-541	weekend	25
-542	slept	12
-543	sunday	7
-544	exhaust	4
-545	mail	15
-546	fed	9
-547	newly	1
-548	sue	16
-549	cook	21
-550	husband	28
-551	terrible	20
-552	bob	117
-553	anyway	14
-554	anniversary	3
-555	cooking	17
-556	lesson	19
-557	frank	18
-558	pepe	2
-559	pizza	39
-560	shop	37
-561	three	45
-562	chain	5
-563	quite	12
-564	famous	6
-565	connecticut	2
-566	recently	11
-567	open	48
-568	boston	8
-569	beat	12
-570	crowd	7
-571	great	111
-572	5	16
-573	growl	1
-574	dog	109
-575	town	30
-576	bernice	6
-577	africa	2
-578	birthday	48
-579	price	13
-580	airline	2
-581	ticket	49
-582	addition	4
-583	hotel	9
-584	airplane	9
-585	reserve	2
-586	spinach	1
-587	sell	24
-588	five	24
-589	minute	34
-590	surprised	24
-591	thankful	5
-592	crazy	3
-593	randy	8
-594	direction	5
-595	suppose	4
-596	white	16
-597	backtrack	1
-598	continuously	1
-599	relieve	30
-600	kept	47
-601	bike	48
-602	ride	34
-603	brother	44
-604	head	35
-605	morning	52
-606	lot	106
-607	suddenly	27
-608	hit	43
-609	rock	11
-610	wheel	7
-611	badly	10
-612	crash	5
-613	anna	35
-614	salon	5
-615	nail	16
-616	tech	1
-617	expertly	1
-618	fashionable	1
-619	really	87
-620	hairstyle	1
-621	david	25
-622	childhood	7
-623	unexpected	2
-624	friday	20
-625	dinner	52
-626	talk	63
-627	life	57
-628	glad	46
-629	able	51
-630	catch	12
-631	aj	4
-632	mom	131
-633	grocery	19
-634	store	114
-635	cereal	4
-636	box	22
-637	feel	61
-638	panic	5
-639	step	15
-640	behind	22
-641	display	5
-642	sigh	1
-643	relief	3
-644	junkyard	1
-645	treasure	5
-646	dug	6
-647	stack	1
-648	clothes	32
-649	vintage	1
-650	shirt	16
-651	fit	8
-652	music	32
-653	afterwards	11
-654	priya	4
-655	drove	71
-656	cafe	4
-657	sat	39
-658	booth	2
-659	mimosa	1
-660	breakfast	24
-661	burrito	1
-662	karen	14
-663	assign	3
-664	roommate	27
-665	city	18
-666	concert	21
-667	agree	30
-668	absolutely	4
-669	exhilarate	2
-670	vacation	21
-671	beach	51
-672	spent	53
-673	reading	17
-674	stung	5
-675	horrible	9
-676	wasp	1
-677	arm	19
-678	swell	2
-679	painful	2
-680	heal	5
-681	swollen	1
-682	gotten	14
-683	together	71
-684	fix	25
-685	wife	59
-686	upset	47
-687	donald	2
-688	kind	13
-689	class	84
-690	clown	1
-691	president	3
-692	figure	17
-693	act	12
-694	idiot	1
-695	people	74
-696	yell	14
-697	foolish	5
-698	foolishness	1
-699	election	6
-700	eddie	8
-701	angela	1
-702	live	34
-703	stranger	9
-704	divorce	9
-705	courthouse	1
-706	file	8
-707	paperwork	1
-708	stayed	13
-709	forever	5
-710	adopt	15
-711	cat	86
-712	ten	18
-713	lethargic	1
-714	concerned	4
-715	vet	9
-716	developed	5
-717	cancer	11
-718	treat	15
-719	could	151
-720	hear	9
-721	pull	38
-722	yesterday	30
-723	explain	11
-724	overtime	5
-725	avocado	2
-726	sandwich	21
-727	mouth	8
-728	itchy	3
-729	tingly	1
-730	allergic	3
-731	paranoid	2
-732	charge	9
-733	100	6
-734	author	1
-735	trouble	22
-736	inspiration	3
-737	post	19
-738	apocalyptic	1
-739	world	7
-740	destiny	1
-741	hundred	9
-742	page	5
-743	manuscript	1
-744	publish	5
-745	uploaded	1
-746	video	32
-747	boris	4
-748	addict	2
-749	game	115
-750	psychologist	2
-751	help	100
-752	addiction	2
-753	waste	10
-754	wear	27
-755	dress	42
-756	police	30
-757	flu	3
-758	unable	6
-759	barely	8
-760	bed	55
-761	care	26
-762	okay	5
-763	drink	36
-764	badge	2
-765	gun	17
-766	jennifer	19
-767	stomach	12
-768	grumble	2
-769	couch	13
-770	kitchen	20
-771	meal	28
-772	hungry	24
-773	nathan	6
-774	lake	20
-775	summer	40
-776	leave	47
-777	lighter	1
-778	barefoot	1
-779	poor	13
-780	gravel	2
-781	road	24
-782	bring	16
-783	mean	7
-784	exercise	11
-785	jeremiah	4
-786	part	13
-787	earn	8
-788	employ	1
-789	flyer	2
-790	meeting	8
-791	tiresome	1
-792	reconsiders	1
-793	career	6
-794	path	7
-795	young	30
-796	woman	22
-797	mile	17
-798	run	62
-799	afb	1
-800	spot	21
-801	lone	1
-802	grey	1
-803	wolf	5
-804	blue	18
-805	eye	19
-806	scare	3
-807	toward	4
-808	clamber	1
-809	tree	38
-810	fine	9
-811	cliff	2
-812	gary	18
-813	brave	6
-814	child	57
-815	climb	7
-816	fence	3
-817	backyard	10
-818	parent	117
-819	swing	9
-820	timmy	18
-821	unpaid	1
-822	parking	4
-823	arrest	9
-824	jail	5
-825	another	48
-826	promote	5
-827	counselor	4
-828	favorite	49
-829	many	64
-830	poker	4
-831	minister	1
-832	useful	1
-833	amber	9
-834	list	17
-835	hurry	10
-836	relax	10
-837	hour	93
-838	brunch	1
-839	eve	7
-840	parlor	2
-841	afford	12
-842	secondhand	1
-843	deliver	7
-844	comfortable	10
-845	replace	2
-846	jason	16
-847	spider	7
-848	therapist	7
-849	discuss	4
-850	fear	12
-851	confront	6
-852	overcome	3
-853	homework	14
-854	basement	6
-855	large	24
-856	shower	33
-857	linda	11
-858	coworker	11
-859	bossing	1
-860	even	67
-861	issue	12
-862	mediate	1
-863	sara	23
-864	christmas	41
-865	shopping	30
-866	november	1
-867	deal	10
-868	saving	4
-869	wrap	8
-870	dozen	11
-871	holiday	6
-872	cheaper	2
-873	megan	3
-874	struggle	13
-875	drug	6
-876	distant	2
-877	stage	9
-878	intervention	1
-879	event	10
-880	rehab	3
-881	facility	2
-882	tyler	12
-883	unemployed	1
-884	diligently	3
-885	apply	18
-886	application	7
-887	reject	8
-888	rejection	1
-889	contribute	2
-890	feeling	2
-891	desperation	1
-892	realizes	10
-893	might	9
-894	public	7
-895	assistance	3
-896	thrill	15
-897	responsibility	4
-898	miranda	9
-899	enjoys	12
-900	quit	22
-901	ultimatum	1
-902	quits	2
-903	cousin	8
-904	experience	10
-905	babysitter	2
-906	hidden	1
-907	shake	5
-908	baby	56
-909	violently	2
-910	major	4
-911	sitter	1
-912	review	5
-913	huge	24
-914	cake	24
-915	jumped	23
-916	amuse	2
-917	mad	18
-918	lunch	37
-919	patio	2
-920	smile	15
-921	packed	17
-922	airport	11
-923	revisit	2
-924	someday	4
-925	fold	4
-926	laundry	18
-927	clean	35
-928	floor	21
-929	neatly	3
-930	pile	8
-931	filthy	2
-932	unfolded	1
-933	cartoon	1
-934	unless	1
-935	chore	5
-936	mess	11
-937	cleaning	13
-938	hall	8
-939	daughter	53
-940	invite	31
-941	area	8
-942	hawaii	8
-943	surprise	18
-944	fly	25
-945	4800	1
-946	craig	3
-947	dart	2
-948	bar	37
-949	hustle	1
-950	patron	5
-951	without	40
-952	pam	10
-953	dance	39
-954	hostess	3
-955	lousy	2
-956	smelly	1
-957	elly	1
-958	bath	12
-959	appalled	1
-960	negative	3
-961	attention	17
-962	credit	11
-963	graduate	12
-964	amount	5
-965	10	9
-966	000	3
-967	debt	3
-968	spend	12
-969	devise	1
-970	repayment	1
-971	tim	80
-972	baking	7
-973	donut	8
-974	judge	6
-975	vomit	3
-976	taste	18
-977	son	37
-978	refuse	19
-979	training	8
-980	pant	8
-981	beg	14
-982	diaper	1
-983	frustration	1
-984	remain	6
-985	naked	1
-986	potty	1
-987	protection	1
-988	service	8
-989	remove	6
-990	holly	7
-991	safely	5
-992	storm	18
-993	rag	2
-994	heard	35
-995	loud	18
-996	crack	11
-997	lightning	2
-998	beside	2
-999	fall	31
-1000	anything	31
-1001	kite	1
-1002	jill	38
-1003	infomercial	1
-1004	unbreakable	1
-1005	glass	24
-1006	cup	7
-1007	hardwood	1
-1008	dumb	1
-1009	hype	1
-1010	cloth	2
-1011	ripped	5
-1012	addie	5
-1013	mall	21
-1014	hollister	1
-1015	strange	13
-1016	steal	16
-1017	guard	4
-1018	deep	7
-1019	breath	7
-1020	calm	10
-1021	crime	4
-1022	sean	21
-1023	interview	31
-1024	business	7
-1025	manager	21
-1026	interviewed	3
-1027	understand	13
-1028	perform	9
-1029	fred	44
-1030	daily	3
-1031	fast	29
-1032	skip	14
-1033	confident	8
-1034	cancel	18
-1035	skydive	2
-1036	instructor	6
-1037	plane	26
-1038	air	10
-1039	scream	23
-1040	terribly	4
-1041	afraid	26
-1042	height	6
-1043	woke	42
-1044	already	15
-1045	afternoon	20
-1046	aunt	9
-1047	grandma	21
-1048	kaya	2
-1049	upcoming	3
-1050	spring	8
-1051	formal	2
-1052	nice	39
-1053	coral	3
-1054	color	26
-1055	expensive	18
-1056	worth	11
-1057	resist	1
-1058	antique	5
-1059	vase	9
-1060	balloon	11
-1061	ton	4
-1062	blew	3
-1063	tire	54
-1064	jimmy	18
-1065	skateboard	11
-1066	third	4
-1067	practice	70
-1068	learn	73
-1069	trick	11
-1070	maxine	6
-1071	usually	10
-1072	hate	22
-1073	shave	7
-1074	razor	1
-1075	occasion	4
-1076	laser	2
-1077	removal	4
-1078	ryan	14
-1079	customize	1
-1080	lead	5
-1081	light	22
-1082	frame	4
-1083	ebay	6
-1084	assemble	3
-1085	spaghetti	6
-1086	boil	7
-1087	noodle	9
-1088	sauce	15
-1089	stove	9
-1090	burn	11
-1091	stuck	16
-1092	pan	7
-1093	heat	6
-1094	nick	10
-1095	challenged	5
-1096	volleyball	10
-1097	mercilessly	1
-1098	strike	3
-1099	tournament	8
-1100	strategy	1
-1101	tough	7
-1102	6	3
-1103	pleased	24
-1104	michelle	5
-1105	fat	2
-1106	tuxedo	1
-1107	poster	1
-1108	keep	33
-1109	name	46
-1110	sock	12
-1111	neil	56
-1112	ireland	6
-1113	train	23
-1114	derry	1
-1115	disembarked	1
-1116	gorgeous	5
-1117	fairy	1
-1118	tale	1
-1119	bird	25
-1120	flew	13
-1121	pooped	1
-1122	poop	1
-1123	ruin	9
-1124	scott	6
-1125	someone	26
-1126	package	10
-1127	porch	5
-1128	surveillance	1
-1129	least	8
-1130	thief	2
-1131	footage	2
-1132	perpetrator	3
-1133	apprehend	1
-1134	tuesday	3
-1135	spin	4
-1136	gym	18
-1137	hardest	2
-1138	ever	32
-1139	numb	2
-1140	marathon	13
-1141	colin	3
-1142	budget	3
-1143	drank	18
-1144	sally	36
-1145	debate	10
-1146	whether	3
-1147	pick	36
-1148	wallet	17
-1149	force	6
-1150	jordan	4
-1151	planning	6
-1152	mexico	9
-1153	spanish	9
-1154	purchasing	2
-1155	language	7
-1156	program	2
-1157	amazon	3
-1158	conversational	1
-1159	taco	13
-1160	ann	21
-1161	astrology	1
-1162	fact	6
-1163	met	37
-1164	astronomy	3
-1165	pregnant	8
-1166	dilemma	1
-1167	meaningful	1
-1168	search	30
-1169	veterinarian	5
-1170	brand	7
-1171	personal	7
-1172	trainer	6
-1173	rate	3
-1174	routine	3
-1175	online	39
-1176	free	18
-1177	decision	11
-1178	season	10
-1179	amy	88
-1180	hopeful	4
-1181	chance	12
-1182	ahead	5
-1183	coach	10
-1184	else	11
-1185	four	13
-1186	miscarriage	2
-1187	row	6
-1188	despair	1
-1189	emily	21
-1190	pour	13
-1191	warn	7
-1192	accidentally	11
-1193	knock	12
-1194	shatter	3
-1195	cheerfully	1
-1196	forgave	2
-1197	promise	8
-1198	future	6
-1199	cheeseburger	3
-1200	hockey	9
-1201	borrow	8
-1202	gear	5
-1203	rink	1
-1204	competition	13
-1205	baseball	12
-1206	blanket	14
-1207	30	7
-1208	disappear	4
-1209	cam	3
-1210	bookseller	1
-1211	4	10
-1212	book	65
-1213	garage	15
-1214	simply	2
-1215	collection	6
-1216	insure	1
-1217	belonging	3
-1218	rosie	12
-1219	teacher	60
-1220	grandmother	10
-1221	teach	15
-1222	draw	9
-1223	sunflower	2
-1224	drew	11
-1225	paint	19
-1226	watercolor	1
-1227	detention	10
-1228	jon	18
-1229	fridge	8
-1230	company	30
-1231	repair	9
-1232	noon	2
-1233	television	26
-1234	clock	10
-1235	contain	3
-1236	six	17
-1237	blown	2
-1238	fuse	1
-1239	jar	5
-1240	pickle	1
-1241	complaint	2
-1242	process	4
-1243	refund	3
-1244	furious	5
-1245	reputable	2
-1246	tom	63
-1247	dick	1
-1248	truck	21
-1249	desert	2
-1250	kick	8
-1251	dirt	5
-1252	cost	7
-1253	harry	37
-1254	theme	3
-1255	rode	13
-1256	roller	5
-1257	coaster	5
-1258	presentation	7
-1259	art	19
-1260	although	15
-1261	allow	8
-1262	repeat	2
-1263	correct	5
-1264	stood	7
-1265	discus	4
-1266	suggest	17
-1267	pursue	2
-1268	leah	12
-1269	cheer	11
-1270	short	14
-1271	hand	47
-1272	handful	2
-1273	ava	11
-1274	notice	68
-1275	wrinkle	3
-1276	cream	30
-1277	checked	17
-1278	carefully	10
-1279	toothpaste	2
-1280	purchase	34
-1281	damage	5
-1282	annoyed	5
-1283	retailer	1
-1284	complain	14
-1285	jasper	7
-1286	real	11
-1287	previous	2
-1288	office	27
-1289	opening	5
-1290	butcher	2
-1291	applies	2
-1292	successfully	3
-1293	cut	34
-1294	dead	7
-1295	animal	28
-1296	gathering	2
-1297	item	16
-1298	throw	21
-1299	fond	4
-1300	longer	18
-1301	ad	7
-1302	offer	28
-1303	miserable	9
-1304	british	1
-1305	classmate	10
-1306	tea	13
-1307	lemon	1
-1308	scone	2
-1309	tasty	2
-1310	ashley	22
-1311	tax	1
-1312	paul	14
-1313	accepted	15
-1314	advise	4
-1315	harvey	5
-1316	tease	5
-1317	thin	3
-1318	egotistical	1
-1319	football	23
-1320	player	20
-1321	ping	6
-1322	expect	7
-1323	nationally	1
-1324	ranked	1
-1325	choked	1
-1326	mathematician	1
-1327	restock	1
-1328	check	20
-1329	math	16
-1330	red	18
-1331	mileage	1
-1332	multiple	4
-1333	dealership	5
-1334	moped	1
-1335	die	19
-1336	highway	9
-1337	plug	4
-1338	seat	13
-1339	backseat	4
-1340	bore	18
-1341	far	13
-1342	brat	1
-1343	tantrum	2
-1344	electronics	2
-1345	bang	1
-1346	disturbed	1
-1347	peace	4
-1348	slam	8
-1349	wind	13
-1350	noise	7
-1351	dolphin	8
-1352	closest	3
-1353	downtown	6
-1354	alan	3
-1355	18th	2
-1356	range	4
-1357	shoot	5
-1358	persevere	2
-1359	hunt	10
-1360	jay	31
-1361	mcdonald	2
-1362	trash	18
-1363	promo	1
-1364	happen	18
-1365	piece	14
-1366	fry	14
-1367	peel	2
-1368	nothing	13
-1369	burger	10
-1370	king	3
-1371	awesome	4
-1372	factory	5
-1373	result	10
-1374	outstanding	1
-1375	kim	31
-1376	unload	2
-1377	toddler	3
-1378	roll	12
-1379	danger	2
-1380	lunge	1
-1381	breathlessly	1
-1382	kev	4
-1383	consider	9
-1384	cruelty	1
-1385	artist	11
-1386	delight	4
-1387	hire	13
-1388	everglades	1
-1389	field	21
-1390	sightsee	3
-1391	forest	6
-1392	also	32
-1393	water	70
-1394	bus	29
-1395	invigorate	1
-1396	mechanical	3
-1397	turk	4
-1398	forum	6
-1399	form	2
-1400	clique	1
-1401	demand	4
-1402	power	9
-1403	andy	8
-1404	haughtily	1
-1405	stomp	5
-1406	rule	1
-1407	donna	5
-1408	ty	4
-1409	clipped	2
-1410	grown	5
-1411	asleep	31
-1412	quietly	5
-1413	easy	9
-1414	wish	24
-1415	wake	10
-1416	desk	15
-1417	tension	1
-1418	vivienne	4
-1419	france	3
-1420	america	4
-1421	immigration	1
-1422	intention	1
-1423	goal	9
-1424	aspiration	2
-1425	grant	6
-1426	visa	2
-1427	fill	15
-1428	sister	59
-1429	attack	8
-1430	effective	1
-1431	enrol	4
-1432	marine	2
-1433	biology	6
-1434	matt	38
-1435	ground	23
-1436	bent	3
-1437	gold	7
-1438	ring	21
-1439	lucky	3
-1440	24	2
-1441	walgreen	1
-1442	nearly	8
-1443	toothbrush	8
-1444	pack	13
-1445	guilty	4
-1446	forget	2
-1447	nicely	2
-1448	talkative	1
-1449	likable	1
-1450	impressed	12
-1451	comment	4
-1452	ben	52
-1453	orange	4
-1454	juice	8
-1455	none	9
-1456	halve	1
-1457	juicer	1
-1458	freshly	1
-1459	squeeze	1
-1460	sip	1
-1461	apple	13
-1462	contently	1
-1463	reg	3
-1464	snow	46
-1465	overnight	4
-1466	snowman	5
-1467	carbonate	1
-1468	beverage	3
-1469	soda	11
-1470	challenge	5
-1471	gulp	1
-1472	cindy	12
-1473	marshmallow	6
-1474	roast	7
-1475	suggestion	2
-1476	deli	4
-1477	customer	10
-1478	brown	5
-1479	toss	5
-1480	appreciative	1
-1481	terror	6
-1482	safety	4
-1483	feature	1
-1484	luxor	1
-1485	tour	11
-1486	egyptian	2
-1487	history	10
-1488	picnic	15
-1489	bank	10
-1490	nile	1
-1491	educational	1
-1492	cultural	1
-1493	interested	10
-1494	adventurous	1
-1495	bite	9
-1496	slimy	1
-1497	papaya	2
-1498	farm	9
-1499	capital	3
-1500	investment	1
-1501	pair	22
-1502	account	6
-1503	alex	20
-1504	shoe	33
-1505	untied	1
-1506	block	13
-1507	shoelace	2
-1508	resolve	1
-1509	nina	7
-1510	skate	7
-1511	slowly	12
-1512	basketball	22
-1513	sal	21
-1514	magic	2
-1515	rabbit	3
-1516	thus	2
-1517	congratulate	5
-1518	lisa	14
-1519	ingredient	9
-1520	handball	3
-1521	intimidate	3
-1522	summon	1
-1523	courage	5
-1524	actually	9
-1525	regularly	3
-1526	convenience	1
-1527	gordon	2
-1528	control	6
-1529	aa	2
-1530	battery	11
-1531	toy	14
-1532	mim	3
-1533	emergency	6
-1534	snack	8
-1535	faster	4
-1536	law	14
-1537	buying	13
-1538	betsy	13
-1539	foot	22
-1540	cast	2
-1541	tennis	5
-1542	afterward	1
-1543	horrify	4
-1544	cry	45
-1545	playground	2
-1546	attempt	7
-1547	swung	3
-1548	melt	5
-1549	malamute	3
-1550	sniffed	1
-1551	slide	9
-1552	platform	1
-1553	sick	30
-1554	remember	20
-1555	frankie	4
-1556	aloof	1
-1557	cheat	7
-1558	nancy	7
-1559	science	9
-1560	building	14
-1561	ian	2
-1562	sneak	10
-1563	pie	16
-1564	directly	3
-1565	humiliate	1
-1566	george	5
-1567	internship	2
-1568	full	27
-1569	prove	7
-1570	smart	4
-1571	position	7
-1572	eagerly	5
-1573	ultimately	5
-1574	kevin	8
-1575	fiance	1
-1576	obsess	2
-1577	penny	2
-1578	miser	1
-1579	payment	3
-1580	accountant	6
-1581	paid	29
-1582	furiously	2
-1583	sven	5
-1584	robbed	1
-1585	shortly	5
-1586	charity	3
-1587	diagnose	6
-1588	bone	1
-1589	defeat	4
-1590	enroll	3
-1591	chemotherapy	1
-1592	fight	11
-1593	disease	4
-1594	meat	5
-1595	ignore	9
-1596	warning	1
-1597	health	3
-1598	juicy	1
-1599	heart	8
-1600	vegetarian	2
-1601	celebrate	9
-1602	steak	6
-1603	energy	4
-1604	quiet	5
-1605	completely	11
-1606	opposite	1
-1607	rent	13
-1608	selection	3
-1609	horror	5
-1610	popcorn	12
-1611	scarey	1
-1612	overall	2
-1613	dissatisfied	1
-1614	sandy	12
-1615	louie	4
-1616	puppy	40
-1617	stay	25
-1618	lonely	16
-1619	lia	5
-1620	fatty	2
-1621	treadmill	1
-1622	50	11
-1623	pound	9
-1624	cleaner	4
-1625	soak	7
-1626	wipe	2
-1627	brush	4
-1628	bit	19
-1629	sparkle	3
-1630	volunteer	3
-1631	shelter	14
-1632	staff	7
-1633	chipped	1
-1634	touch	3
-1635	unappreciated	2
-1636	susan	19
-1637	eight	6
-1638	nauseate	1
-1639	pregnancy	2
-1640	positive	1
-1641	fancy	11
-1642	candle	6
-1643	middle	8
-1644	surround	1
-1645	sibling	4
-1646	heavy	5
-1647	chewed	1
-1648	disgust	9
-1649	stare	1
-1650	greg	11
-1651	pamela	7
-1652	urn	3
-1653	sale	18
-1654	decor	2
-1655	ash	1
-1656	jane	43
-1657	normal	4
-1658	schedule	8
-1659	kate	11
-1660	viral	1
-1661	campaign	5
-1662	citizen	1
-1663	create	4
-1664	overwhelm	2
-1665	response	1
-1666	wiper	1
-1667	headlight	2
-1668	smell	22
-1669	dirty	7
-1670	forward	11
-1671	receives	1
-1672	specialty	1
-1673	maker	4
-1674	cappuccino	1
-1675	25	2
-1676	switch	3
-1677	teeth	11
-1678	listen	20
-1679	chose	15
-1680	happier	4
-1681	dental	2
-1682	dry	11
-1683	survive	3
-1684	within	8
-1685	cardinal	1
-1686	hopped	5
-1687	throughout	6
-1688	count	5
-1689	34	1
-1690	delivery	5
-1691	shout	1
-1692	share	19
-1693	bowl	13
-1694	ipad	1
-1695	lou	3
-1696	regimen	2
-1697	hose	2
-1698	sprayed	2
-1699	spill	11
-1700	gooey	1
-1701	lick	2
-1702	plate	5
-1703	sixteenth	1
-1704	monogram	1
-1705	necklace	3
-1706	wore	22
-1707	monogrammed	1
-1708	14	3
-1709	joy	13
-1710	pastor	2
-1711	asks	3
-1712	sing	12
-1713	tonight	17
-1714	faint	1
-1715	juggling	2
-1716	chemo	1
-1717	loose	2
-1718	hair	42
-1719	wig	3
-1720	snake	15
-1721	spade	1
-1722	side	10
-1723	foundation	1
-1724	wall	12
-1725	juanita	5
-1726	scary	9
-1727	nightlight	4
-1728	frighten	7
-1729	soundly	2
-1730	nightmare	1
-1731	extra	17
-1732	psychology	3
-1733	experiment	7
-1734	participate	6
-1735	weekly	3
-1736	lottery	10
-1737	patiently	3
-1738	half	19
-1739	number	12
-1740	read	32
-1741	reservation	1
-1742	7	3
-1743	waiter	6
-1744	grill	1
-1745	chicken	14
-1746	menu	1
-1747	james	26
-1748	table	19
-1749	loses	2
-1750	joyce	9
-1751	netflix	4
-1752	stream	4
-1753	instant	2
-1754	lester	12
-1755	academic	2
-1756	professor	16
-1757	recruit	1
-1758	margin	1
-1759	jessica	15
-1760	pony	4
-1761	jumping	7
-1762	rope	4
-1763	twist	2
-1764	brace	6
-1765	jump	8
-1766	julie	14
-1767	egg	25
-1768	dump	2
-1769	8	9
-1770	perfectly	10
-1771	busy	11
-1772	zoo	17
-1773	zebra	3
-1774	rocket	1
-1775	nickname	2
-1776	jose	9
-1777	track	7
-1778	everybody	4
-1779	compliment	9
-1780	embarrass	11
-1781	course	10
-1782	pet	31
-1783	information	5
-1784	peter	18
-1785	halloween	9
-1786	arrives	2
-1787	slice	10
-1788	pumpkin	6
-1789	whip	2
-1790	dan	24
-1791	bowling	7
-1792	taught	11
-1793	often	21
-1794	father	31
-1795	fully	3
-1796	clothed	1
-1797	methodical	1
-1798	disorganize	1
-1799	mike	40
-1800	saturday	16
-1801	dealer	2
-1802	potential	1
-1803	jeep	3
-1804	karate	2
-1805	thankfully	11
-1806	gregory	1
-1807	pottery	2
-1808	sculpture	3
-1809	tall	11
-1810	stitch	2
-1811	ice	43
-1812	alone	23
-1813	thousand	7
-1814	pocket	7
-1815	twice	4
-1816	random	3
-1817	hid	2
-1818	librarian	5
-1819	thanked	13
-1820	quinn	3
-1821	lawn	5
-1822	reflect	2
-1823	impression	2
-1824	matter	6
-1825	region	1
-1826	experienced	2
-1827	drought	1
-1828	restriction	1
-1829	method	5
-1830	less	12
-1831	flourish	2
-1832	rain	15
-1833	thursday	2
-1834	quick	6
-1835	italy	3
-1836	represent	1
-1837	flag	5
-1838	usual	5
-1839	cheryl	3
-1840	appointment	9
-1841	tomorrow	12
-1842	prayed	3
-1843	tattoo	8
-1844	sketch	1
-1845	neat	1
-1846	design	9
-1847	mutual	3
-1848	regret	12
-1849	shawn	7
-1850	beaten	1
-1851	bother	4
-1852	din	5
-1853	ill	8
-1854	seafood	2
-1855	sometime	1
-1856	content	6
-1857	embezzle	1
-1858	employer	3
-1859	mistake	6
-1860	chess	4
-1861	2000	2
-1862	blazer	2
-1863	trend	1
-1864	inspire	5
-1865	imitate	1
-1866	starbucks	3
-1867	seatbelt	2
-1868	accident	8
-1869	safe	6
-1870	insurance	4
-1871	determine	9
-1872	fault	2
-1873	pilot	2
-1874	devastate	4
-1875	worry	3
-1876	retire	4
-1877	confiscate	1
-1878	santa	12
-1879	december	2
-1880	interact	3
-1881	blow	5
-1882	bubblegum	1
-1883	bubble	2
-1884	measurement	1
-1885	popped	3
-1886	candice	9
-1887	purse	7
-1888	hike	27
-1889	u	29
-1890	weather	9
-1891	trail	7
-1892	pleasantly	1
-1893	matty	1
-1894	flea	15
-1895	medicine	4
-1896	presidential	1
-1897	winner	5
-1898	drawn	2
-1899	opponent	4
-1900	ellie	9
-1901	tank	8
-1902	aquarium	2
-1903	fresh	6
-1904	lastly	1
-1905	rase	4
-1906	planetarium	2
-1907	exhibit	5
-1908	sign	22
-1909	trial	1
-1910	juan	9
-1911	guitar	14
-1912	hardworking	2
-1913	patient	7
-1914	impatient	1
-1915	partner	3
-1916	failure	3
-1917	yield	1
-1918	men	7
-1919	instruct	3
-1920	proper	2
-1921	chip	11
-1922	subject	3
-1923	scan	2
-1924	article	5
-1925	pork	5
-1926	chick	1
-1927	fil	1
-1928	line	16
-1929	spicy	1
-1930	lotto	3
-1931	jackpot	2
-1932	1	2
-1933	million	2
-1934	except	4
-1935	millionaire	1
-1936	youtube	5
-1937	overcame	1
-1938	distraction	1
-1939	topic	3
-1940	dungeon	2
-1941	dragon	3
-1942	joseph	3
-1943	elf	1
-1944	ensemble	1
-1945	broomstick	1
-1946	sword	1
-1947	laney	1
-1948	stick	9
-1949	respective	1
-1950	character	7
-1951	imagination	3
-1952	either	5
-1953	overjoyed	3
-1954	swallow	3
-1955	cube	5
-1956	throat	1
-1957	panicked	5
-1958	gulped	1
-1959	portland	1
-1960	venue	2
-1961	sadly	11
-1962	due	10
-1963	sickness	2
-1964	museum	11
-1965	rex	12
-1966	gymnast	2
-1967	athletic	1
-1968	encourage	5
-1969	cartwheel	3
-1970	hal	4
-1971	judy	7
-1972	van	5
-1973	pal	1
-1974	recess	1
-1975	driveway	2
-1976	niece	13
-1977	unsafe	1
-1978	giraffe	2
-1979	monkey	3
-1980	elephant	4
-1981	feed	12
-1982	market	9
-1983	jenny	31
-1984	sunburn	2
-1985	sun	10
-1986	raise	8
-1987	wherever	1
-1988	ed	10
-1989	gather	13
-1990	weigh	1
-1991	golfing	2
-1992	brandon	7
-1993	tooth	10
-1994	pillow	3
-1995	cent	4
-1996	kelsi	4
-1997	pool	20
-1998	cave	4
-1999	elate	5
-2000	oatmeal	9
-2001	quality	3
-2002	cocoa	4
-2003	powder	3
-2004	tight	4
-2005	torus	10
-2006	regard	2
-2007	atm	1
-2008	anne	8
-2009	violin	2
-2010	recital	3
-2011	blank	1
-2012	bow	4
-2013	string	7
-2014	wonderful	14
-2015	instrument	2
-2016	pond	7
-2017	froze	3
-2018	winter	7
-2019	3	12
-2020	slid	1
-2021	along	17
-2022	curl	4
-2023	stone	5
-2024	unattended	1
-2025	florida	10
-2026	teen	1
-2027	straw	2
-2028	carry	8
-2029	top	11
-2030	shelf	5
-2031	speech	10
-2032	clue	2
-2033	samuel	2
-2034	fiction	1
-2035	story	16
-2036	hg	2
-2037	jules	1
-2038	verne	1
-2039	copy	3
-2040	island	5
-2041	dr	1
-2042	moreau	1
-2043	scout	3
-2044	frozen	4
-2045	yogurt	4
-2046	assume	1
-2047	vanilla	5
-2048	tad	3
-2049	dunkin	1
-2050	nascar	1
-2051	surprisingly	2
-2052	timer	3
-2053	seriously	2
-2054	injured	6
-2055	paisley	3
-2056	chest	2
-2057	trimmer	1
-2058	drain	3
-2059	waxed	1
-2060	glue	5
-2061	stroke	4
-2062	2011	2
-2063	center	9
-2064	release	7
-2065	charles	6
-2066	pink	10
-2067	kelly	50
-2068	flight	16
-2069	engross	2
-2070	forgotten	13
-2071	unhappy	11
-2072	vest	4
-2073	tag	2
-2074	bewilder	1
-2075	unwrapped	1
-2076	dollhouse	1
-2077	connie	4
-2078	overweight	4
-2079	recommend	2
-2080	body	6
-2081	value	3
-2082	privacy	3
-2083	filter	2
-2084	mobile	1
-2085	install	1
-2086	relaxed	8
-2087	smack	2
-2088	argue	8
-2089	abuse	1
-2090	sympathize	1
-2091	horse	9
-2092	mount	1
-2093	envelop	2
-2094	kurtis	4
-2095	mountain	13
-2096	tent	5
-2097	grizzly	1
-2098	bear	5
-2099	approach	14
-2100	tremble	2
-2101	fright	2
-2102	campfire	3
-2103	journeying	1
-2104	asia	1
-2105	south	2
-2106	australia	3
-2107	australian	1
-2108	culture	3
-2109	prospect	1
-2110	exotic	2
-2111	moment	7
-2112	koala	1
-2113	surf	5
-2114	california	2
-2115	jeb	12
-2116	fifty	2
-2117	loan	6
-2118	held	9
-2119	accountable	1
-2120	unfair	2
-2121	apology	3
-2122	funny	4
-2123	bakery	6
-2124	lady	11
-2125	insult	2
-2126	flavor	8
-2127	wasabi	1
-2128	though	18
-2129	rory	3
-2130	gluten	1
-2131	strawberry	3
-2132	newspaper	2
-2133	bicycle	8
-2134	lynn	6
-2135	climbed	17
-2136	scold	4
-2137	greet	5
-2138	warmly	2
-2139	tory	3
-2140	conditioner	1
-2141	ac	1
-2142	unit	2
-2143	cooler	2
-2144	promotion	11
-2145	grab	3
-2146	benefit	1
-2147	zookeeper	2
-2148	rhino	4
-2149	cage	7
-2150	latch	1
-2151	properly	9
-2152	escape	7
-2153	rampant	1
-2154	lamp	5
-2155	stand	14
-2156	united	2
-2157	country	12
-2158	england	5
-2159	war	6
-2160	prevail	1
-2161	american	3
-2162	revolution	1
-2163	cole	10
-2164	vegetable	10
-2165	excess	1
-2166	grateful	16
-2167	kindness	2
-2168	member	3
-2169	thank	3
-2170	accent	1
-2171	bleacher	1
-2172	daydream	2
-2173	deer	7
-2174	bumper	2
-2175	pulverize	1
-2176	daze	1
-2177	forehead	2
-2178	horseback	1
-2179	la	3
-2180	slot	3
-2181	machine	10
-2182	chelsea	1
-2183	question	7
-2184	abusive	2
-2185	jerk	1
-2186	honor	3
-2187	austin	3
-2188	artwork	1
-2189	apartment	25
-2190	gallery	2
-2191	idea	18
-2192	material	4
-2193	similar	2
-2194	robert	10
-2195	sharon	15
-2196	marry	7
-2197	grandchild	2
-2198	2005	1
-2199	st	1
-2200	anselm	1
-2201	colleague	2
-2202	streak	1
-2203	hope	10
-2204	qualify	1
-2205	izzy	3
-2206	involve	5
-2207	denny	2
-2208	dy	2
-2209	aneurysm	1
-2210	heartbroken	3
-2211	strong	8
-2212	lift	9
-2213	gradually	2
-2214	heavier	1
-2215	anticipation	2
-2216	gertrude	1
-2217	notoriously	2
-2218	clumsy	1
-2219	awkward	3
-2220	may	17
-2221	soccer	9
-2222	unexpectedly	1
-2223	naturally	2
-2224	leeza	3
-2225	wood	21
-2226	avail	4
-2227	crawl	5
-2228	street	21
-2229	autumn	4
-2230	plant	26
-2231	flower	22
-2232	seed	6
-2233	april	1
-2234	appear	5
-2235	protect	2
-2236	laid	8
-2237	rang	8
-2238	shut	5
-2239	lie	6
-2240	rainy	14
-2241	noah	4
-2242	thrift	5
-2243	curiously	1
-2244	widen	2
-2245	press	4
-2246	leafed	1
-2247	clover	1
-2248	spigot	1
-2249	handle	3
-2250	wash	17
-2251	600	1
-2252	envelope	1
-2253	belong	2
-2254	selfless	1
-2255	honest	2
-2256	dishonest	2
-2257	important	7
-2258	oliver	3
-2259	radio	9
-2260	pro	2
-2261	unwanted	1
-2262	advice	10
-2263	tommy	21
-2264	frown	2
-2265	relationship	4
-2266	helen	11
-2267	washington	3
-2268	canada	2
-2269	meant	5
-2270	difficult	10
-2271	lazy	5
-2272	host	7
-2273	dive	8
-2274	outdoor	3
-2275	safari	2
-2276	leopard	4
-2277	albert	4
-2278	cpr	1
-2279	certify	1
-2280	choke	1
-2281	rush	17
-2282	heimlich	1
-2283	maneuver	1
-2284	word	6
-2285	spell	7
-2286	pre	1
-2287	monday	4
-2288	ultimate	1
-2289	frisbee	4
-2290	upon	6
-2291	arrival	2
-2292	pickup	1
-2293	tina	13
-2294	single	6
-2295	function	1
-2296	jaris	4
-2297	wildflower	1
-2298	national	2
-2299	40	3
-2300	bible	3
-2301	spiritual	1
-2302	christian	10
-2303	micky	3
-2304	thinner	1
-2305	fad	1
-2306	calorie	1
-2307	rude	3
-2308	jealous	6
-2309	loser	2
-2310	lauren	7
-2311	shift	3
-2312	moon	2
-2313	stroll	2
-2314	bright	7
-2315	refresh	2
-2316	treehouse	2
-2317	ladder	3
-2318	lay	5
-2319	ammo	1
-2320	trench	1
-2321	sight	8
-2322	sprint	1
-2323	towards	16
-2324	celina	2
-2325	hip	2
-2326	sore	3
-2327	obtain	1
-2328	walker	1
-2329	limerick	1
-2330	lovely	3
-2331	river	4
-2332	shannon	2
-2333	stupid	4
-2334	handily	1
-2335	devour	3
-2336	lack	5
-2337	slip	9
-2338	eyeliner	3
-2339	anyone	13
-2340	wet	7
-2341	considers	1
-2342	somewhere	1
-2343	umbrella	2
-2344	brings	4
-2345	misty	4
-2346	fluffy	2
-2347	kitty	4
-2348	doorstep	1
-2349	mommy	1
-2350	huckle	2
-2351	derek	7
-2352	stuff	9
-2353	veronica	3
-2354	desperately	1
-2355	product	2
-2356	stumble	2
-2357	fruit	19
-2358	infuser	1
-2359	hold	6
-2360	healthfully	1
-2361	thirtieth	1
-2362	coast	1
-2363	chilly	1
-2364	foggy	1
-2365	drizzly	1
-2366	discover	11
-2367	whale	2
-2368	pier	3
-2369	york	7
-2370	person	19
-2371	cash	7
-2372	fan	7
-2373	recover	4
-2374	episode	2
-2375	binge	4
-2376	popular	6
-2377	film	7
-2378	phrase	1
-2379	explode	3
-2380	rage	1
-2381	lita	4
-2382	insist	4
-2383	drag	2
-2384	basket	6
-2385	pepperoni	2
-2386	liv	3
-2387	startle	1
-2388	pop	5
-2389	bulb	3
-2390	burning	3
-2391	footstool	1
-2392	wobble	1
-2393	bathroom	12
-2394	lunchtime	1
-2395	fifteen	2
-2396	mud	6
-2397	pester	1
-2398	behavior	7
-2399	hector	7
-2400	brew	2
-2401	brewing	1
-2402	5k	1
-2403	award	5
-2404	shock	7
-2405	age	4
-2406	tenth	1
-2407	recognition	2
-2408	laurie	4
-2409	explore	5
-2410	historic	1
-2411	railroad	1
-2412	scranton	1
-2413	pennsylvania	1
-2414	depot	1
-2415	delete	1
-2416	dread	4
-2417	joint	2
-2418	gaudy	1
-2419	nautical	1
-2420	uniform	2
-2421	don	1
-2422	sailor	1
-2423	suit	6
-2424	outfit	7
-2425	artistic	1
-2426	sits	2
-2427	orchid	4
-2428	hang	7
-2429	pablo	4
-2430	worm	6
-2431	olive	1
-2432	oil	7
-2433	view	9
-2434	delicacy	1
-2435	kira	1
-2436	japanese	2
-2437	glen	6
-2438	mood	2
-2439	jacket	4
-2440	sidewalk	4
-2441	bust	2
-2442	knee	9
-2443	limp	2
-2444	swore	3
-2445	jesus	2
-2446	polish	5
-2447	furniture	7
-2448	survey	2
-2449	polished	2
-2450	passing	3
-2451	exit	6
-2452	cold	22
-2453	steel	1
-2454	apologetic	1
-2455	whenever	3
-2456	improve	14
-2457	salad	12
-2458	scoop	3
-2459	smash	2
-2460	22	1
-2461	38	1
-2462	memory	6
-2463	rehearse	1
-2464	audition	6
-2465	jackie	9
-2466	designate	1
-2467	eighth	2
-2468	monitor	1
-2469	envy	1
-2470	jeopardy	1
-2471	principal	5
-2472	suspend	3
-2473	rowdy	1
-2474	crashed	3
-2475	ok	3
-2476	flatten	1
-2477	vehicle	1
-2478	sings	2
-2479	princess	3
-2480	dribble	2
-2481	court	9
-2482	glance	2
-2483	scoreboard	1
-2484	defender	1
-2485	teammate	2
-2486	pointer	2
-2487	buzzer	1
-2488	iva	1
-2489	brant	2
-2490	conceive	2
-2491	success	4
-2492	express	2
-2493	discouragement	1
-2494	broadly	1
-2495	kidnap	1
-2496	catherine	6
-2497	intrigue	3
-2498	athlete	2
-2499	session	3
-2500	francis	4
-2501	license	12
-2502	accomplishment	5
-2503	rather	6
-2504	transportation	1
-2505	nutcracker	1
-2506	dancer	2
-2507	grace	8
-2508	drowsily	1
-2509	dorm	2
-2510	poem	8
-2511	hallway	2
-2512	confesses	2
-2513	slap	2
-2514	carlos	8
-2515	speak	12
-2516	french	8
-2517	enrolls	2
-2518	pretty	19
-2519	paris	2
-2520	lars	6
-2521	photography	3
-2522	excellent	2
-2523	photographer	4
-2524	simple	4
-2525	image	2
-2526	flatscreen	1
-2527	definition	1
-2528	employee	3
-2529	warranty	2
-2530	case	8
-2531	retrieve	3
-2532	purpose	2
-2533	jen	26
-2534	upload	5
-2535	resume	7
-2536	format	1
-2537	transfer	1
-2538	template	1
-2539	update	3
-2540	dish	10
-2541	fez	3
-2542	ethnic	1
-2543	cuisine	1
-2544	souvenir	3
-2545	performer	2
-2546	note	4
-2547	require	6
-2548	leash	2
-2549	warm	16
-2550	halfway	3
-2551	ups	1
-2552	knife	2
-2553	coat	4
-2554	newborn	2
-2555	punish	2
-2556	1000	2
-2557	scholarship	1
-2558	drake	4
-2559	attend	15
-2560	flat	12
-2561	jack	25
-2562	iron	2
-2563	bolt	2
-2564	email	9
-2565	tablet	1
-2566	invest	3
-2567	laptop	3
-2568	reply	4
-2569	postal	1
-2570	jake	33
-2571	professional	10
-2572	haircut	1
-2573	stamp	7
-2574	letter	20
-2575	destination	1
-2576	chuck	8
-2577	coworkers	6
-2578	nasty	3
-2579	zoltar	1
-2580	compel	1
-2581	environment	1
-2582	forego	1
-2583	reuseable	1
-2584	reusable	2
-2585	portrait	3
-2586	project	6
-2587	reasonable	1
-2588	satisfied	4
-2589	smoking	7
-2590	nicotine	1
-2591	patch	2
-2592	double	2
-2593	cigarette	5
-2594	smoke	9
-2595	appeal	1
-2596	fireplace	1
-2597	rob	19
-2598	normally	4
-2599	dentist	17
-2600	nurse	9
-2601	bum	1
-2602	colonoscopy	1
-2603	bitten	2
-2604	chew	1
-2605	rollercoaster	1
-2606	generous	1
-2607	thoughtless	3
-2608	carly	2
-2609	answer	12
-2610	empty	6
-2611	hiding	3
-2612	grin	1
-2613	apparent	1
-2614	reason	3
-2615	defend	1
-2616	fist	1
-2617	effort	6
-2618	hug	8
-2619	becky	6
-2620	tampon	1
-2621	sleeper	1
-2622	barking	5
-2623	fantasize	1
-2624	unleash	1
-2625	fredonia	1
-2626	campus	2
-2627	novocaine	1
-2628	expression	1
-2629	ford	5
-2630	gpa	1
-2631	successful	6
-2632	lawyer	3
-2633	achieve	2
-2634	passion	6
-2635	hobby	5
-2636	unmarried	2
-2637	costume	15
-2638	veronika	3
-2639	furnish	1
-2640	tracey	3
-2641	woodpecker	1
-2642	root	1
-2643	thirsty	5
-2644	station	12
-2645	cashier	11
-2646	columbia	1
-2647	university	2
-2648	tami	12
-2649	folder	1
-2650	trapper	1
-2651	keeper	3
-2652	chastise	1
-2653	chair	8
-2654	worn	4
-2655	guest	7
-2656	cheese	7
-2657	baguette	1
-2658	bread	9
-2659	journey	2
-2660	ali	3
-2661	championship	4
-2662	tie	8
-2663	quarterback	1
-2664	pas	7
-2665	receiver	1
-2666	score	16
-2667	wildly	2
-2668	booed	1
-2669	loudly	5
-2670	partly	1
-2671	branch	3
-2672	cable	4
-2673	connection	1
-2674	keyboard	5
-2675	excitedly	2
-2676	staffed	1
-2677	watson	2
-2678	steve	16
-2679	patrol	1
-2680	blast	1
-2681	praise	10
-2682	profit	2
-2683	reaction	3
-2684	complete	6
-2685	wound	3
-2686	brick	2
-2687	paper	20
-2688	thirty	6
-2689	stargaze	1
-2690	upright	2
-2691	twinkle	1
-2692	jet	2
-2693	geology	1
-2694	meg	7
-2695	obscenity	1
-2696	bunch	9
-2697	banana	13
-2698	dangle	2
-2699	whack	1
-2700	hoe	1
-2701	shed	2
-2702	beth	18
-2703	illness	1
-2704	rhonda	3
-2705	mixed	1
-2706	sort	4
-2707	sea	4
-2708	marcus	7
-2709	cower	1
-2710	cabin	5
-2711	lap	4
-2712	cuddle	3
-2713	adorable	1
-2714	kitten	12
-2715	choice	4
-2716	novel	4
-2717	crossword	3
-2718	puzzle	7
-2719	record	14
-2720	flash	2
-2721	proceed	2
-2722	assault	2
-2723	adventure	5
-2724	breathing	3
-2725	readied	1
-2726	mentally	1
-2727	pride	3
-2728	poorly	2
-2729	song	21
-2730	snowstorm	2
-2731	roof	5
-2732	buckle	1
-2733	janitor	4
-2734	inspect	3
-2735	shook	4
-2736	dictionary	2
-2737	remind	5
-2738	scent	2
-2739	paragon	2
-2740	1963	1
-2741	ferry	1
-2742	rowes	1
-2743	wharf	1
-2744	carousel	2
-2745	caterpillar	1
-2746	skeeball	1
-2747	wizard	3
-2748	oz	3
-2749	immerse	2
-2750	jogging	2
-2751	rash	1
-2752	poison	6
-2753	ivy	10
-2754	meow	3
-2755	nose	2
-2756	leap	2
-2757	maul	2
-2758	arabian	1
-2759	oryx	1
-2760	african	2
-2761	antelope	1
-2762	illustrate	1
-2763	nag	1
-2764	pitch	3
-2765	pitcher	5
-2766	spoil	1
-2767	milk	16
-2768	mark	33
-2769	wisdom	2
-2770	agrees	1
-2771	surgery	3
-2772	procedure	1
-2773	lulu	6
-2774	dishwasher	3
-2775	load	8
-2776	compartment	1
-2777	soap	8
-2778	farmer	4
-2779	bill	53
-2780	cow	8
-2781	grain	1
-2782	bin	1
-2783	terry	12
-2784	dishearten	1
-2785	thumb	3
-2786	condition	3
-2787	brie	3
-2788	hiss	2
-2789	tile	3
-2790	instal	3
-2791	dave	12
-2792	nickelback	1
-2793	helicopter	1
-2794	cemetery	1
-2795	199	1
-2796	grave	2
-2797	12	5
-2798	casket	2
-2799	wept	1
-2800	mourn	2
-2801	loss	2
-2802	rejoice	1
-2803	boxing	1
-2804	dominate	1
-2805	round	6
-2806	hook	3
-2807	seven	6
-2808	forth	3
-2809	affair	4
-2810	injury	4
-2811	potato	9
-2812	bedroom	4
-2813	ant	2
-2814	cub	1
-2815	derby	2
-2816	matchbox	1
-2817	brian	8
-2818	skiing	13
-2819	commotion	1
-2820	slope	2
-2821	avalanche	2
-2822	hung	13
-2823	ski	6
-2824	uphill	1
-2825	entire	14
-2826	anxiety	4
-2827	crib	1
-2828	fuss	2
-2829	horribly	2
-2830	pearl	4
-2831	cd	3
-2832	ugly	3
-2833	jazz	1
-2834	photoshopped	1
-2835	stole	7
-2836	sank	1
-2837	implore	1
-2838	seek	4
-2839	revenge	1
-2840	please	1
-2841	tide	2
-2842	urchin	1
-2843	starfish	1
-2844	incredible	2
-2845	wonder	11
-2846	shore	2
-2847	brianna	3
-2848	bitterly	2
-2849	munch	1
-2850	gaze	1
-2851	starry	1
-2852	sky	12
-2853	awe	3
-2854	more	3
-2855	shay	11
-2856	retrace	2
-2857	troy	5
-2858	56	1
-2859	trophy	1
-2860	perhaps	3
-2861	simon	3
-2862	inform	8
-2863	arnold	11
-2864	distance	4
-2865	adam	10
-2866	bb	1
-2867	screen	6
-2868	kip	4
-2869	whine	1
-2870	snowflake	2
-2871	piano	15
-2872	spare	9
-2873	tutor	6
-2874	dedicate	2
-2875	benson	2
-2876	bully	7
-2877	expel	1
-2878	space	8
-2879	bury	5
-2880	dig	2
-2881	upstate	1
-2882	joey	15
-2883	log	3
-2884	diana	1
-2885	toilet	4
-2886	scrub	1
-2887	nauseous	2
-2888	india	5
-2889	hindi	3
-2890	fluent	2
-2891	bilingual	1
-2892	todd	16
-2893	irritated	2
-2894	silent	2
-2895	treatment	5
-2896	hamburger	4
-2897	passerby	1
-2898	sometimes	7
-2899	rich	4
-2900	prof	1
-2901	truth	2
-2902	lansing	1
-2903	golf	4
-2904	energetic	1
-2905	earlier	5
-2906	hole	4
-2907	depressed	10
-2908	depression	1
-2909	lindsey	1
-2910	os	4
-2911	dare	10
-2912	sorority	1
-2913	imagine	2
-2914	loophole	1
-2915	allison	7
-2916	25th	1
-2917	bingo	6
-2918	fourth	2
-2919	parade	3
-2920	subway	2
-2921	altogether	1
-2922	madeline	4
-2923	saks	1
-2924	department	7
-2925	sunlight	3
-2926	possible	4
-2927	yu	1
-2928	darvish	1
-2929	texas	6
-2930	ranger	4
-2931	accord	2
-2932	healthy	13
-2933	leader	1
-2934	avery	7
-2935	task	4
-2936	chester	4
-2937	foolishly	1
-2938	scenery	1
-2939	meghan	7
-2940	server	3
-2941	runner	1
-2942	despite	5
-2943	ipod	3
-2944	audible	1
-2945	ari	2
-2946	haunt	4
-2947	tentatively	1
-2948	snuggle	1
-2949	beam	4
-2950	safer	1
-2951	ouija	1
-2952	banging	1
-2953	sound	14
-2954	freak	6
-2955	jan	9
-2956	commercial	1
-2957	advertising	2
-2958	map	3
-2959	warmer	1
-2960	skier	4
-2961	iran	2
-2962	enthral	2
-2963	countryside	1
-2964	andrew	11
-2965	introduce	6
-2966	hysterically	5
-2967	security	8
-2968	speaker	1
-2969	gate	8
-2970	stewardess	1
-2971	ana	12
-2972	tan	3
-2973	doze	1
-2974	mirror	2
-2975	extremely	9
-2976	sunburnt	1
-2977	pale	2
-2978	army	4
-2979	weak	5
-2980	undeterred	1
-2981	navy	4
-2982	mouse	6
-2983	warehouse	2
-2984	rodent	2
-2985	feline	1
-2986	russia	2
-2987	tourist	1
-2988	site	8
-2989	colorful	3
-2990	vibrant	1
-2991	stimulate	1
-2992	dull	2
-2993	channel	4
-2994	black	14
-2995	entertainment	2
-2996	spending	8
-2997	trunk	1
-2998	sunshine	2
-2999	creepy	2
-3000	craigslist	2
-3001	entry	1
-3002	r	1
-3003	cheapskate	1
-3004	energize	1
-3005	chicago	1
-3006	beatle	2
-3007	spotlight	1
-3008	uncontrollably	1
-3009	maggie	22
-3010	bat	10
-3011	ceiling	1
-3012	hide	10
-3013	exterminator	1
-3014	jeff	21
-3015	dark	9
-3016	advertised	1
-3017	noticeable	1
-3018	difference	2
-3019	warmth	1
-3020	uncle	5
-3021	marble	5
-3022	11am	1
-3023	alarm	8
-3024	gunshot	1
-3025	petrify	1
-3026	jeffries	1
-3027	rechargeable	1
-3028	biking	5
-3029	progress	2
-3030	19	1
-3031	camped	2
-3032	strand	3
-3033	bug	4
-3034	classroom	4
-3035	totally	1
-3036	edge	1
-3037	greatly	3
-3038	overestimate	1
-3039	boutique	1
-3040	wild	4
-3041	kindergarten	2
-3042	reprimand	2
-3043	familiar	6
-3044	enthusiastically	2
-3045	till	1
-3046	separate	4
-3047	samantha	5
-3048	textbook	1
-3049	unprepared	3
-3050	collide	2
-3051	polite	1
-3052	gabe	2
-3053	plywood	1
-3054	built	11
-3055	awoke	4
-3056	jerry	12
-3057	classify	1
-3058	posting	1
-3059	desirable	1
-3060	recruiter	3
-3061	unemployment	1
-3062	emile	3
-3063	chef	7
-3064	serve	7
-3065	ella	15
-3066	fork	1
-3067	watermelon	3
-3068	hypothermia	1
-3069	joline	3
-3070	manicure	2
-3071	technician	4
-3072	trim	1
-3073	secretly	4
-3074	fake	4
-3075	darken	1
-3076	goo	2
-3077	wrestler	2
-3078	wrestling	4
-3079	professionally	1
-3080	joan	10
-3081	sushi	1
-3082	unlike	1
-3083	assertive	1
-3084	tiara	1
-3085	juliette	3
-3086	scientist	8
-3087	must	5
-3088	vinegar	1
-3089	volcano	2
-3090	jaclyn	4
-3091	robs	1
-3092	snide	1
-3093	remark	4
-3094	concrete	1
-3095	slave	3
-3096	trader	3
-3097	god	2
-3098	wicked	1
-3099	conversion	1
-3100	sled	2
-3101	unscathed	1
-3102	steph	2
-3103	simpler	1
-3104	portion	1
-3105	healthier	8
-3106	talent	6
-3107	theater	10
-3108	cell	8
-3109	e	2
-3110	usher	2
-3111	lobby	1
-3112	ordeal	1
-3113	margie	1
-3114	cactus	4
-3115	bloom	1
-3116	desi	2
-3117	goldfish	1
-3118	goodbye	5
-3119	straight	7
-3120	almanac	1
-3121	bay	2
-3122	weird	3
-3123	ariel	1
-3124	fussy	2
-3125	gum	6
-3126	hell	1
-3127	amelia	7
-3128	claus	1
-3129	crumb	1
-3130	reindeer	1
-3131	thanksgiving	4
-3132	lab	10
-3133	equipment	4
-3134	government	1
-3135	fund	1
-3136	suffer	7
-3137	captain	1
-3138	division	1
-3139	rival	2
-3140	advantage	2
-3141	deuce	1
-3142	forfeit	1
-3143	out	2
-3144	dunn	2
-3145	protest	2
-3146	unleashed	1
-3147	suitable	2
-3148	barber	1
-3149	wifi	1
-3150	password	1
-3151	enhance	1
-3152	lane	1
-3153	josiah	4
-3154	jingled	1
-3155	rattle	2
-3156	grope	1
-3157	inch	2
-3158	mini	2
-3159	pig	2
-3160	singer	4
-3161	supportive	2
-3162	lexy	1
-3163	prom	3
-3164	lexi	3
-3165	shyanne	2
-3166	code	4
-3167	p	1
-3168	await	2
-3169	collapse	2
-3170	past	9
-3171	ally	5
-3172	coin	1
-3173	300	3
-3174	rider	1
-3175	carelessly	1
-3176	kleenex	1
-3177	gutter	1
-3178	9	5
-3179	lit	2
-3180	spite	1
-3181	laundromat	2
-3182	medicinal	1
-3183	herb	1
-3184	headphone	5
-3185	patronage	1
-3186	jigsaw	1
-3187	yet	4
-3188	rarely	3
-3189	visitor	2
-3190	tidy	1
-3191	vacuum	3
-3192	exam	7
-3193	ace	6
-3194	photograph	1
-3195	oblige	1
-3196	munich	1
-3197	background	2
-3198	closet	7
-3199	stink	1
-3200	jj	2
-3201	bedtime	1
-3202	pajama	1
-3203	sang	5
-3204	hunter	2
-3205	location	4
-3206	distract	4
-3207	buck	5
-3208	glade	1
-3209	struck	6
-3210	yawn	1
-3211	percent	1
-3212	club	19
-3213	companion	2
-3214	shorter	3
-3215	brittany	2
-3216	harass	1
-3217	fought	4
-3218	gender	1
-3219	nicer	2
-3220	carnival	2
-3221	activity	1
-3222	ferris	1
-3223	typed	3
-3224	lyric	1
-3225	google	3
-3226	al	6
-3227	val	3
-3228	twin	3
-3229	alike	3
-3230	terminal	1
-3231	lonelier	1
-3232	teenager	1
-3233	oregon	5
-3234	learns	2
-3235	straighten	5
-3236	tighten	1
-3237	jayne	3
-3238	alden	1
-3239	own	6
-3240	harvest	3
-3241	veggie	3
-3242	labor	5
-3243	destroy	1
-3244	seth	5
-3245	conditioning	2
-3246	supervisor	3
-3247	announces	1
-3248	fuel	1
-3249	tow	4
-3250	rod	3
-3251	barry	19
-3252	register	3
-3253	polling	1
-3254	johnny	25
-3255	bumpiness	1
-3256	closer	5
-3257	lease	1
-3258	anybody	3
-3259	adoption	3
-3260	cathy	5
-3261	approve	2
-3262	monica	10
-3263	knit	4
-3264	scarf	3
-3265	homemade	4
-3266	orphanage	1
-3267	suspect	7
-3268	unlocked	1
-3269	push	10
-3270	calmly	1
-3271	hometown	1
-3272	podium	1
-3273	stir	2
-3274	cheap	2
-3275	unsatisfied	1
-3276	rewrite	2
-3277	produce	2
-3278	accomplish	2
-3279	carpenter	1
-3280	lumber	1
-3281	stain	3
-3282	luck	3
-3283	grumpy	2
-3284	lean	2
-3285	length	1
-3286	fascinate	6
-3287	luchador	2
-3288	therapy	2
-3289	organic	2
-3290	unhealthy	3
-3291	rufus	8
-3292	apprehensive	1
-3293	ralph	8
-3294	introduces	1
-3295	chemistry	4
-3296	geometry	1
-3297	dangerous	2
-3298	hummingbird	2
-3299	agitate	1
-3300	particular	3
-3301	territorial	2
-3302	swoop	1
-3303	nowhere	4
-3304	rat	1
-3305	garbage	6
-3306	io	2
-3307	hoop	5
-3308	skirt	5
-3309	anywhere	3
-3310	craft	2
-3311	lo	2
-3312	beatles	3
-3313	flora	5
-3314	mine	2
-3315	pat	12
-3316	urge	1
-3317	hooky	1
-3318	voice	6
-3319	text	5
-3320	silly	5
-3321	pretend	4
-3322	alleyway	1
-3323	judged	1
-3324	chili	1
-3325	johnson	3
-3326	avid	1
-3327	outdoorsman	1
-3328	meanwhile	1
-3329	pete	10
-3330	insecure	2
-3331	strength	3
-3332	cruel	1
-3333	split	4
-3334	eyebrow	1
-3335	fracture	3
-3336	graveyard	2
-3337	lorelei	5
-3338	teethe	4
-3339	sooth	1
-3340	gentle	1
-3341	soothe	1
-3342	biscuit	6
-3343	duck	10
-3344	fashion	4
-3345	graham	1
-3346	selfie	2
-3347	plunge	1
-3348	lewis	6
-3349	cavers	1
-3350	darkness	2
-3351	entrance	1
-3352	viola	1
-3353	chris	12
-3354	martha	3
-3355	expert	6
-3356	seamstress	1
-3357	stray	2
-3358	tokyo	1
-3359	carpet	6
-3360	dirtier	1
-3361	sugar	3
-3362	wing	11
-3363	buffalo	4
-3364	authentic	1
-3365	lasagna	1
-3366	divide	2
-3367	announcement	1
-3368	rudder	1
-3369	wave	4
-3370	chosen	2
-3371	grader	1
-3372	crayon	1
-3373	odd	3
-3374	appreciate	5
-3375	client	1
-3376	refinement	1
-3377	rework	1
-3378	bagel	1
-3379	restroom	1
-3380	cabinet	1
-3381	sink	3
-3382	settle	3
-3383	rinse	2
-3384	bell	2
-3385	emmy	3
-3386	diploma	1
-3387	frequently	1
-3388	lima	1
-3389	reasonably	1
-3390	kyle	5
-3391	extensive	2
-3392	action	2
-3393	marvel	2
-3394	hero	3
-3395	superman	1
-3396	ridiculous	1
-3397	construct	2
-3398	francine	3
-3399	heel	3
-3400	retested	1
-3401	formula	1
-3402	genome	1
-3403	others	10
-3404	elementary	2
-3405	foreign	2
-3406	translation	1
-3407	deb	4
-3408	cutback	1
-3409	sulk	1
-3410	alright	2
-3411	bethany	1
-3412	self	3
-3413	conscious	1
-3414	illinois	2
-3415	squish	1
-3416	creep	2
-3417	lemonade	7
-3418	few	1
-3419	navigation	3
-3420	system	5
-3421	hybrid	1
-3422	liger	1
-3423	jorie	2
-3424	amsterdam	1
-3425	beforehand	1
-3426	admit	3
-3427	emotional	1
-3428	comedy	4
-3429	upstairs	2
-3430	clara	6
-3431	lock	3
-3432	clutter	2
-3433	underneath	4
-3434	confuse	2
-3435	sweetheart	1
-3436	outstare	1
-3437	unaware	1
-3438	blink	2
-3439	nictitate	1
-3440	membrane	1
-3441	stonehenge	2
-3442	drinking	10
-3443	towel	2
-3444	mopped	1
-3445	arthur	4
-3446	sudden	8
-3447	hester	3
-3448	appearance	2
-3449	salesman	2
-3450	trade	2
-3451	jaden	4
-3452	forgetful	1
-3453	quentin	8
-3454	sail	2
-3455	pancake	10
-3456	diner	1
-3457	remake	1
-3458	furry	1
-3459	automatically	1
-3460	wilt	1
-3461	evaluate	1
-3462	controller	1
-3463	videogames	1
-3464	buffy	2
-3465	vampire	3
-3466	slayer	1
-3467	doorway	1
-3468	criminal	1
-3469	build	9
-3470	obey	1
-3471	hardboiled	1
-3472	solution	3
-3473	website	6
-3474	quarter	6
-3475	spitball	1
-3476	archenemy	1
-3477	ear	6
-3478	giant	2
-3479	upper	1
-3480	deck	4
-3481	angie	4
-3482	mturk	1
-3483	diligent	1
-3484	requester	5
-3485	respond	3
-3486	detail	1
-3487	donovan	2
-3488	trina	5
-3489	suzy	1
-3490	milkshake	5
-3491	owe	1
-3492	sixty	1
-3493	ned	9
-3494	cotton	4
-3495	puddle	2
-3496	sebastian	7
-3497	sunny	3
-3498	rashid	3
-3499	unusual	2
-3500	transaction	1
-3501	reverse	1
-3502	painting	7
-3503	hence	1
-3504	waterfall	1
-3505	kentucky	2
-3506	louisiana	1
-3507	humane	1
-3508	society	1
-3509	gymnastics	1
-3510	balance	3
-3511	foyer	1
-3512	choose	7
-3513	pup	1
-3514	discount	2
-3515	heartland	1
-3516	idaho	3
-3517	hound	1
-3518	community	3
-3519	particularly	2
-3520	chaperone	1
-3521	hampshire	2
-3522	befriend	1
-3523	bouncer	2
-3524	hill	3
-3525	tornado	7
-3526	dewey	1
-3527	decimal	1
-3528	touchdown	3
-3529	desperate	2
-3530	lullaby	2
-3531	sung	2
-3532	gently	1
-3533	pee	1
-3534	adult	1
-3535	peed	1
-3536	wad	1
-3537	inhaler	1
-3538	asthma	1
-3539	interviewer	4
-3540	enrage	1
-3541	elaine	6
-3542	therefore	1
-3543	deliberate	1
-3544	achievement	2
-3545	submit	2
-3546	acceptance	2
-3547	drunk	6
-3548	bindu	3
-3549	samosa	1
-3550	doogh	1
-3551	cupcake	2
-3552	skill	10
-3553	thomas	2
-3554	lately	4
-3555	checkup	3
-3556	cholesterol	1
-3557	diabetes	1
-3558	forty	4
-3559	doorbell	4
-3560	unsure	2
-3561	creaked	1
-3562	peer	3
-3563	stephanie	3
-3564	applesauce	1
-3565	orchard	7
-3566	wrist	1
-3567	roy	3
-3568	source	3
-3569	refrigerator	3
-3570	fisher	1
-3571	provide	2
-3572	repaid	1
-3573	curse	2
-3574	handsome	1
-3575	toga	1
-3576	gown	1
-3577	banner	3
-3578	advertise	2
-3579	ban	1
-3580	delighted	3
-3581	fur	3
-3582	granddad	1
-3583	grandpa	6
-3584	birdwatching	1
-3585	marked	2
-3586	sighting	1
-3587	notebook	2
-3588	grandad	1
-3589	hesitation	2
-3590	rita	1
-3591	laurence	3
-3592	hermit	1
-3593	crab	2
-3594	scour	1
-3595	westin	2
-3596	intoxicate	2
-3597	weston	1
-3598	clear	7
-3599	buzzing	1
-3600	bee	10
-3601	nest	4
-3602	rake	3
-3603	spread	3
-3604	bodybuilder	1
-3605	250	2
-3606	lb	1
-3607	determination	1
-3608	henry	8
-3609	bumped	1
-3610	tryout	8
-3611	8th	1
-3612	anticipate	1
-3613	strip	2
-3614	gloria	5
-3615	lily	4
-3616	daffodil	1
-3617	chrysanthemum	1
-3618	gesture	2
-3619	josh	16
-3620	whoever	1
-3621	skinny	3
-3622	jean	7
-3623	proudly	1
-3624	tropical	1
-3625	paradise	1
-3626	sonny	1
-3627	heater	1
-3628	chad	6
-3629	choir	2
-3630	nerve	2
-3631	ronald	4
-3632	deeply	2
-3633	glowed	2
-3634	wednesday	1
-3635	beady	1
-3636	main	3
-3637	biologist	3
-3638	poll	1
-3639	degree	5
-3640	alcoholic	3
-3641	quinton	3
-3642	evict	1
-3643	income	1
-3644	disbelief	2
-3645	igor	2
-3646	muffin	4
-3647	tara	3
-3648	alternative	1
-3649	horn	6
-3650	brass	1
-3651	fellow	2
-3652	lover	3
-3653	futile	1
-3654	dc	1
-3655	abruptly	1
-3656	drumstick	1
-3657	cymbal	1
-3658	nyc	3
-3659	huddle	2
-3660	aladdin	1
-3661	teller	1
-3662	signing	2
-3663	mac	1
-3664	vegan	1
-3665	groan	2
-3666	alfredo	1
-3667	cashew	1
-3668	creamy	1
-3669	meatloaf	1
-3670	raccoon	1
-3671	cone	2
-3672	syrup	2
-3673	gay	2
-3674	geocache	2
-3675	humor	3
-3676	brigid	2
-3677	grand	4
-3678	renowned	1
-3679	insensitive	1
-3680	shotgun	1
-3681	amendment	1
-3682	tip	2
-3683	montauk	1
-3684	windswept	1
-3685	shield	1
-3686	typewriter	1
-3687	erase	1
-3688	type	6
-3689	fascination	1
-3690	telescope	6
-3691	kristen	1
-3692	rug	2
-3693	melanie	1
-3694	35	1
-3695	beater	1
-3696	rundown	1
-3697	trailer	1
-3698	tracked	1
-3699	amicably	1
-3700	confess	1
-3701	progressively	1
-3702	elaborate	2
-3703	shoplift	1
-3704	doritos	3
-3705	ray	16
-3706	sleepover	1
-3707	finger	12
-3708	brushing	2
-3709	guide	2
-3710	comic	5
-3711	consistently	2
-3712	annabelle	5
-3713	offend	2
-3714	uki	2
-3715	mamba	1
-3716	antidote	1
-3717	plenty	5
-3718	fluid	1
-3719	starve	1
-3720	hobo	2
-3721	nut	2
-3722	gravy	1
-3723	highly	1
-3724	rebecca	4
-3725	13	1
-3726	jakels	1
-3727	musical	2
-3728	conquer	1
-3729	hurriedly	2
-3730	wetsuit	1
-3731	kay	7
-3732	raft	4
-3733	plank	1
-3734	scrap	4
-3735	float	2
-3736	firewood	3
-3737	max	4
-3738	vivid	2
-3739	creativity	1
-3740	funeral	1
-3741	marley	1
-3742	specialist	1
-3743	aspire	1
-3744	journalist	2
-3745	medium	4
-3746	lizzy	4
-3747	tropic	2
-3748	plantation	1
-3749	1997	1
-3750	1957	1
-3751	transit	1
-3752	suburban	1
-3753	bryan	6
-3754	itch	2
-3755	ointment	1
-3756	antibiotic	2
-3757	fierce	2
-3758	blacktop	1
-3759	evenly	1
-3760	blowout	1
-3761	robin	6
-3762	ab	1
-3763	carton	1
-3764	rachelle	1
-3765	wendy	10
-3766	bonding	1
-3767	sucker	3
-3768	alive	2
-3769	romania	1
-3770	transylvania	3
-3771	castle	3
-3772	marc	1
-3773	series	1
-3774	disappoint	1
-3775	stunt	5
-3776	harness	1
-3777	eject	1
-3778	paralyze	2
-3779	flirt	4
-3780	astronaut	2
-3781	mission	1
-3782	outerspace	1
-3783	organize	2
-3784	hailey	8
-3785	playdate	1
-3786	argument	1
-3787	maybelle	1
-3788	peppermint	6
-3789	remembers	1
-3790	cupboard	1
-3791	valerie	3
-3792	german	4
-3793	germany	1
-3794	waterproof	1
-3795	unfamiliar	1
-3796	nelly	3
-3797	dash	1
-3798	exactly	5
-3799	alec	6
-3800	develop	4
-3801	scientific	3
-3802	structure	2
-3803	verbal	1
-3804	ability	2
-3805	murder	4
-3806	crept	1
-3807	kill	3
-3808	sentence	1
-3809	prison	4
-3810	deputy	1
-3811	youth	1
-3812	retro	1
-3813	smoothie	1
-3814	blender	3
-3815	smoothy	1
-3816	minor	3
-3817	cello	2
-3818	sand	4
-3819	hangover	2
-3820	ronnie	3
-3821	commend	1
-3822	dedication	2
-3823	burke	4
-3824	scowl	1
-3825	reverts	1
-3826	interference	1
-3827	jogger	1
-3828	cross	1
-3829	fiddle	1
-3830	individuality	1
-3831	ovation	1
-3832	creative	4
-3833	decorate	5
-3834	decoration	2
-3835	deserve	4
-3836	tia	6
-3837	glycerin	1
-3838	blossom	1
-3839	label	1
-3840	investigate	1
-3841	scene	1
-3842	evidence	1
-3843	flashcard	1
-3844	marsha	3
-3845	envision	1
-3846	fantastic	2
-3847	burnt	2
-3848	overcook	1
-3849	rice	4
-3850	solomon	4
-3851	related	2
-3852	unique	1
-3853	bracelet	3
-3854	kelley	1
-3855	spouse	1
-3856	uplifted	1
-3857	stacey	4
-3858	suv	1
-3859	destroyed	3
-3860	diane	3
-3861	senior	1
-3862	cornell	1
-3863	regrettably	1
-3864	reilly	3
-3865	goat	7
-3866	estrange	2
-3867	hospice	1
-3868	laura	16
-3869	specifically	1
-3870	celebrity	1
-3871	stylist	1
-3872	bulgaria	1
-3873	sofia	1
-3874	low	8
-3875	leapt	1
-3876	grayson	3
-3877	pawn	1
-3878	lance	7
-3879	deployed	1
-3880	bullet	2
-3881	repay	1
-3882	spoke	7
-3883	attendance	1
-3884	operate	1
-3885	reassure	3
-3886	petition	1
-3887	trumpet	1
-3888	buffet	5
-3889	indulge	1
-3890	awhile	6
-3891	kenny	3
-3892	jungle	4
-3893	mag	2
-3894	chinese	7
-3895	takeout	1
-3896	stressful	2
-3897	lilly	3
-3898	cranberry	3
-3899	sour	1
-3900	sweet	5
-3901	dec	1
-3902	michael	9
-3903	squirrel	19
-3904	dumpster	4
-3905	landfill	1
-3906	fare	1
-3907	salsa	1
-3908	rare	2
-3909	variety	2
-3910	dove	1
-3911	harder	3
-3912	sneakily	2
-3913	fret	1
-3914	convict	1
-3915	connect	3
-3916	cricket	1
-3917	creak	1
-3918	tore	3
-3919	apart	2
-3920	focus	3
-3921	burgeon	1
-3922	worthy	1
-3923	magazine	3
-3924	relent	3
-3925	orphan	3
-3926	tammy	15
-3927	refuel	1
-3928	errand	1
-3929	aerobics	1
-3930	intense	2
-3931	workout	4
-3932	valuable	2
-3933	abigail	3
-3934	strict	3
-3935	dexter	1
-3936	wheelchair	2
-3937	elevator	2
-3938	mental	2
-3939	medication	4
-3940	driven	2
-3941	rear	1
-3942	livid	1
-3943	leak	1
-3944	spark	1
-3945	carmen	6
-3946	version	1
-3947	cauliflower	1
-3948	crust	2
-3949	domino	1
-3950	fingernail	5
-3951	tap	2
-3952	herman	4
-3953	dresser	1
-3954	securit	1
-3955	peach	6
-3956	assortment	1
-3957	original	2
-3958	succeed	4
-3959	tiny	4
-3960	roach	1
-3961	nugget	1
-3962	toaster	3
-3963	oven	5
-3964	initiative	1
-3965	confidence	1
-3966	ideal	1
-3967	factoid	1
-3968	trivia	1
-3969	include	3
-3970	booklet	1
-3971	print	2
-3972	coffeeeee	1
-3973	reader	1
-3974	5000	1
-3975	rover	2
-3976	fetch	3
-3977	bounce	4
-3978	weave	1
-3979	false	1
-3980	brake	4
-3981	cedar	3
-3982	nobody	4
-3983	claimed	2
-3984	construction	2
-3985	unsettle	1
-3986	gray	3
-3987	dyed	2
-3988	blonde	1
-3989	weirdly	1
-3990	modify	1
-3991	inspection	1
-3992	trent	8
-3993	suitcase	1
-3994	seventy	1
-3995	total	1
-3996	clearwater	1
-3997	fishing	5
-3998	regular	2
-3999	fisherman	1
-4000	surfer	2
-4001	engagement	1
-4002	jewelry	3
-4003	diamond	2
-4004	clerk	4
-4005	opera	2
-4006	talented	2
-4007	payday	1
-4008	mistreat	1
-4009	cinnamon	3
-4010	frail	1
-4011	ballet	2
-4012	11	1
-4013	breathe	2
-4014	excel	2
-4015	pointe	2
-4016	engage	2
-4017	6th	1
-4018	grass	3
-4019	daylight	1
-4020	mower	3
-4021	intently	1
-4022	uneasy	1
-4023	fox	3
-4024	grandfather	10
-4025	lept	1
-4026	brad	17
-4027	inner	1
-4028	route	3
-4029	pothole	3
-4030	steer	1
-4031	disabled	1
-4032	charm	1
-4033	aurelia	2
-4034	brainstorming	1
-4035	miriam	4
-4036	constantly	4
-4037	pedantic	1
-4038	permission	1
-4039	topping	2
-4040	45	1
-4041	poked	1
-4042	softball	3
-4043	batting	1
-4044	hitter	1
-4045	fielding	1
-4046	partially	1
-4047	mug	2
-4048	motivate	2
-4049	defense	2
-4050	unnecessary	2
-4051	expense	2
-4052	financial	1
-4053	betty	6
-4054	sixteen	4
-4055	equally	1
-4056	beverly	1
-4057	disaster	1
-4058	evacuate	3
-4059	fever	1
-4060	felipe	4
-4061	pacific	1
-4062	northwest	1
-4063	dunk	1
-4064	lary	6
-4065	coal	3
-4066	miner	1
-4067	mining	1
-4068	vein	1
-4069	ore	1
-4070	economical	1
-4071	socialize	1
-4072	earl	3
-4073	granddaughter	1
-4074	mosh	1
-4075	seller	1
-4076	sexy	1
-4077	lingerie	1
-4078	jelly	1
-4079	pb	1
-4080	j	1
-4081	sandwhich	1
-4082	satiate	1
-4083	hunger	1
-4084	elda	3
-4085	crave	4
-4086	bubbling	1
-4087	golden	4
-4088	pianist	3
-4089	susie	5
-4090	send	4
-4091	mika	3
-4092	complication	1
-4093	birth	3
-4094	brendon	3
-4095	serious	2
-4096	scariest	3
-4097	rickety	1
-4098	uninhabited	1
-4099	witch	1
-4100	lorraine	6
-4101	lucy	12
-4102	pip	1
-4103	vlogging	1
-4104	skit	2
-4105	expressway	1
-4106	undamaged	1
-4107	indian	1
-4108	levi	2
-4109	wax	1
-4110	mold	2
-4111	majority	1
-4112	dennis	3
-4113	wilson	1
-4114	compost	3
-4115	wetland	1
-4116	geese	1
-4117	flock	1
-4118	gunfire	1
-4119	janice	5
-4120	formally	2
-4121	khaki	1
-4122	blouse	2
-4123	canoe	2
-4124	peacefully	1
-4125	awake	3
-4126	stork	1
-4127	jody	4
-4128	charlie	7
-4129	chihuahua	2
-4130	crown	1
-4131	triumph	1
-4132	dismayed	1
-4133	accuse	2
-4134	timesheets	1
-4135	accusation	1
-4136	nora	2
-4137	deaf	2
-4138	communicate	2
-4139	pen	9
-4140	miniature	1
-4141	schnauzer	2
-4142	keith	7
-4143	occasional	1
-4144	earthquake	3
-4145	aid	2
-4146	kit	1
-4147	skid	1
-4148	yacht	2
-4149	reef	1
-4150	fresco	1
-4151	beyond	1
-4152	somewhat	1
-4153	enthuse	1
-4154	compare	1
-4155	mercy	1
-4156	rene	4
-4157	arcade	1
-4158	bangkok	3
-4159	curly	1
-4160	straightener	1
-4161	italian	3
-4162	pasta	4
-4163	tracy	6
-4164	doug	12
-4165	commitment	1
-4166	vow	4
-4167	apprehension	1
-4168	confirm	4
-4169	downstairs	2
-4170	dublin	2
-4171	irish	5
-4172	lively	1
-4173	trinity	1
-4174	ancient	1
-4175	kells	1
-4176	mp3	1
-4177	woken	1
-4178	annoy	2
-4179	freezer	2
-4180	harrison	4
-4181	net	2
-4182	oppose	1
-4183	address	5
-4184	diary	4
-4185	reference	1
-4186	turkey	1
-4187	istanbul	1
-4188	architecture	1
-4189	joss	4
-4190	exchange	5
-4191	honestly	2
-4192	reminisce	1
-4193	quieter	1
-4194	robbie	7
-4195	pub	2
-4196	pint	1
-4197	tipsy	1
-4198	influence	1
-4199	francisco	8
-4200	sai	3
-4201	tedious	1
-4202	sweater	3
-4203	rotten	1
-4204	alycia	3
-4205	katie	9
-4206	oompah	1
-4207	mariachi	1
-4208	impromptu	1
-4209	jam	1
-4210	incompatible	1
-4211	resident	3
-4212	eric	14
-4213	marshall	1
-4214	peanut	5
-4215	cycling	1
-4216	knot	1
-4217	natural	3
-4218	rebel	1
-4219	alicia	2
-4220	trustworthy	1
-4221	dismay	3
-4222	raincoat	1
-4223	sicken	1
-4224	tab	2
-4225	basic	2
-4226	jio	1
-4227	nate	7
-4228	conference	1
-4229	disruptive	1
-4230	counsel	1
-4231	prescription	1
-4232	promptly	5
-4233	realtor	2
-4234	contract	2
-4235	amusement	3
-4236	misread	1
-4237	skin	4
-4238	jackson	3
-4239	alcohol	4
-4240	impair	1
-4241	judgement	1
-4242	spit	2
-4243	frog	8
-4244	spy	1
-4245	swam	5
-4246	buzz	1
-4247	dessert	4
-4248	backwards	1
-4249	phil	4
-4250	blackjack	1
-4251	casino	3
-4252	gamble	2
-4253	leukemia	1
-4254	bravery	1
-4255	claim	2
-4256	matthew	7
-4257	abandon	4
-4258	tine	3
-4259	bonbon	1
-4260	stalk	1
-4261	canyon	1
-4262	pause	1
-4263	angle	1
-4264	needle	4
-4265	discomfort	1
-4266	unattractive	1
-4267	riley	4
-4268	makeover	1
-4269	traumatize	1
-4270	aya	3
-4271	model	4
-4272	annual	1
-4273	outcome	4
-4274	dust	4
-4275	crosswalk	1
-4276	cloud	1
-4277	sportscars	1
-4278	ebook	1
-4279	photoshop	1
-4280	creation	2
-4281	b	1
-4282	picky	2
-4283	sisal	3
-4284	daniel	8
-4285	establish	1
-4286	writer	1
-4287	slow	2
-4288	actual	1
-4289	thoughtfulness	1
-4290	daddy	1
-4291	counting	2
-4292	container	1
-4293	checkout	1
-4294	stress	3
-4295	meditation	3
-4296	skeptical	1
-4297	immensely	1
-4298	comfort	6
-4299	mash	5
-4300	greasy	1
-4301	relish	1
-4302	windy	2
-4303	palm	1
-4304	frond	1
-4305	blowing	1
-4306	instruction	4
-4307	necessary	2
-4308	supply	4
-4309	unconventional	1
-4310	sunset	1
-4311	tallest	3
-4312	tower	5
-4313	current	2
-4314	developer	2
-4315	designer	2
-4316	jacksonville	1
-4317	pose	1
-4318	sends	1
-4319	gawked	1
-4320	liz	5
-4321	babysitting	4
-4322	frantic	1
-4323	giggle	3
-4324	limit	1
-4325	flute	6
-4326	commit	1
-4327	aisle	3
-4328	grape	1
-4329	eater	1
-4330	lion	4
-4331	unmotivated	1
-4332	hearing	2
-4333	kayla	6
-4334	cripple	1
-4335	suicidal	1
-4336	ricky	2
-4337	identify	1
-4338	belle	4
-4339	recall	1
-4340	kroger	2
-4341	oni	4
-4342	audience	2
-4343	punishes	1
-4344	latte	1
-4345	lenny	3
-4346	hollywood	1
-4347	bra	1
-4348	60	1
-4349	assure	1
-4350	bid	2
-4351	elect	3
-4352	impeach	1
-4353	honolulu	1
-4354	corruption	1
-4355	chief	1
-4356	bribe	1
-4357	mcat	1
-4358	capture	1
-4359	pricked	2
-4360	prior	1
-4361	responsible	4
-4362	stewart	2
-4363	shiver	1
-4364	freeze	1
-4365	anthony	5
-4366	speaks	1
-4367	fluently	1
-4368	linguistic	1
-4369	joanie	5
-4370	dryer	2
-4371	cornelia	7
-4372	rearrange	1
-4373	arrangement	1
-4374	arrange	4
-4375	wreck	1
-4376	nursing	2
-4377	general	2
-4378	admission	1
-4379	dependent	1
-4380	technology	1
-4381	coupon	1
-4382	kidney	3
-4383	contemplate	1
-4384	gallon	2
-4385	saltwater	1
-4386	clownfish	1
-4387	trigger	1
-4388	diverse	1
-4389	lee	15
-4390	saddly	1
-4391	holy	1
-4392	reggie	2
-4393	jamal	2
-4394	salt	2
-4395	resolution	4
-4396	resignation	1
-4397	atop	2
-4398	bookcase	1
-4399	debit	1
-4400	draft	1
-4401	layover	1
-4402	pace	1
-4403	app	1
-4404	overheard	1
-4405	memorize	2
-4406	prepped	1
-4407	ritz	3
-4408	born	3
-4409	litter	2
-4410	mia	12
-4411	indoors	1
-4412	propane	1
-4413	collar	2
-4414	recent	1
-4415	widow	1
-4416	pension	3
-4417	antenna	1
-4418	broadcast	1
-4419	hd	1
-4420	victor	3
-4421	pistachio	3
-4422	sweatshirt	1
-4423	unknown	1
-4424	planter	1
-4425	assumption	1
-4426	swig	1
-4427	mechanic	3
-4428	grid	3
-4429	outer	1
-4430	mar	1
-4431	assist	1
-4432	waitress	3
-4433	calendar	1
-4434	saint	1
-4435	patrick	6
-4436	hilarious	2
-4437	stock	3
-4438	90	1
-4439	earnings	2
-4440	preparation	2
-4441	county	2
-4442	hello	2
-4443	reluctant	1
-4444	agoraphobic	1
-4445	tranquil	1
-4446	severely	1
-4447	sandstorm	1
-4448	fortunately	1
-4449	secret	3
-4450	stash	1
-4451	skatepark	2
-4452	sensation	1
-4453	seattle	1
-4454	aaa	1
-4455	announce	2
-4456	blame	2
-4457	avenue	1
-4458	coconut	1
-4459	fantasy	3
-4460	league	3
-4461	buddy	1
-4462	shovel	6
-4463	reporter	2
-4464	jeremy	7
-4465	distinct	1
-4466	personality	1
-4467	unflattering	1
-4468	manner	1
-4469	workplace	2
-4470	demeanor	1
-4471	fran	3
-4472	crane	3
-4473	overrun	1
-4474	fatal	1
-4475	unified	1
-4476	gratify	2
-4477	concept	2
-4478	sought	1
-4479	sophie	6
-4480	nana	2
-4481	terminally	1
-4482	locket	1
-4483	swat	2
-4484	evade	1
-4485	zack	2
-4486	considerable	1
-4487	herd	3
-4488	portia	2
-4489	sneaker	2
-4490	muddy	1
-4491	donates	1
-4492	resize	1
-4493	honesty	1
-4494	wasteful	1
-4495	per	1
-4496	stadium	2
-4497	various	1
-4498	wine	5
-4499	trap	2
-4500	remy	3
-4501	heather	1
-4502	newlywed	1
-4503	whim	1
-4504	azalea	2
-4505	backstage	1
-4506	january	1
-4507	anorexic	1
-4508	semester	1
-4509	flashlight	5
-4510	clip	1
-4511	advent	1
-4512	metro	1
-4513	parker	3
-4514	auto	1
-4515	reluctantly	1
-4516	maddie	2
-4517	mid	2
-4518	august	1
-4519	requirement	1
-4520	hunan	1
-4521	spicier	1
-4522	szechuan	1
-4523	province	1
-4524	aloud	1
-4525	escort	1
-4526	amanda	6
-4527	acorn	3
-4528	efficient	1
-4529	watchful	1
-4530	interactive	1
-4531	physic	2
-4532	demonstration	1
-4533	kaylee	7
-4534	propose	2
-4535	proposal	1
-4536	spa	1
-4537	massage	3
-4538	hydrotherapy	1
-4539	magnificently	1
-4540	bonus	5
-4541	fend	2
-4542	distraught	2
-4543	bunny	1
-4544	hooked	2
-4545	howard	3
-4546	hardhat	1
-4547	tool	1
-4548	medic	1
-4549	careless	1
-4550	sangria	1
-4551	likely	1
-4552	17	1
-4553	punk	1
-4554	somebody	1
-4555	cameron	4
-4556	sympathy	1
-4557	ghostbusters	1
-4558	lace	3
-4559	nine	2
-4560	metal	5
-4561	detector	2
-4562	rolex	1
-4563	babysit	1
-4564	nephew	5
-4565	san	1
-4566	slightly	1
-4567	thoughtful	2
-4568	rubbed	1
-4569	belly	2
-4570	mario	2
-4571	butterfly	3
-4572	zeke	8
-4573	cozumel	2
-4574	neither	1
-4575	select	4
-4576	slipper	2
-4577	iphone	2
-4578	reward	2
-4579	graduation	3
-4580	egypt	1
-4581	pyramid	2
-4582	ornate	1
-4583	scale	3
-4584	beauty	1
-4585	bleach	2
-4586	tinge	1
-4587	discolor	1
-4588	instantly	2
-4589	sheryl	3
-4590	curator	3
-4591	attorney	1
-4592	48	1
-4593	angel	2
-4594	greta	4
-4595	invitation	2
-4596	shari	1
-4597	ceremony	1
-4598	forecast	2
-4599	festivity	1
-4600	hitch	1
-4601	tend	1
-4602	bountiful	1
-4603	scissors	1
-4604	hannah	9
-4605	discourage	1
-4606	keira	4
-4607	impressive	2
-4608	cannot	2
-4609	shepherd	4
-4610	pasture	1
-4611	sheep	4
-4612	walter	2
-4613	harsh	1
-4614	tumbleweed	1
-4615	disorient	1
-4616	powerball	1
-4617	agent	2
-4618	nervously	1
-4619	photosynthesis	1
-4620	complex	1
-4621	depth	1
-4622	jittery	1
-4623	congratulatory	1
-4624	quadcopters	1
-4625	hint	2
-4626	gratefully	1
-4627	appetizer	1
-4628	entree	1
-4629	unpack	2
-4630	storage	2
-4631	thoroughly	1
-4632	vinny	4
-4633	denzel	1
-4634	drown	3
-4635	lifeguard	1
-4636	smith	3
-4637	abroad	1
-4638	european	1
-4639	forlorn	1
-4640	fragrance	1
-4641	goodnight	1
-4642	sloth	3
-4643	discovers	2
-4644	cure	3
-4645	teddy	3
-4646	caramel	1
-4647	yvonne	3
-4648	23	1
-4649	iced	2
-4650	consume	1
-4651	hamster	2
-4652	basically	1
-4653	maureen	3
-4654	profession	1
-4655	woodworking	1
-4656	nightstand	1
-4657	chopped	2
-4658	bo	3
-4659	utah	1
-4660	mustang	3
-4661	corvette	2
-4662	putt	2
-4663	18	2
-4664	videoed	1
-4665	onion	1
-4666	timeout	1
-4667	campsite	1
-4668	marker	1
-4669	haley	5
-4670	will	1
-4671	appraiser	2
-4672	civilization	1
-4673	ache	2
-4674	dizzy	2
-4675	dehydrate	2
-4676	exert	1
-4677	hydrate	1
-4678	bloat	1
-4679	kathy	5
-4680	fairly	1
-4681	frostbite	1
-4682	movement	1
-4683	boxer	3
-4684	jab	1
-4685	knockout	1
-4686	lodge	3
-4687	gentleman	2
-4688	uncomfortable	2
-4689	allie	4
-4690	texted	1
-4691	honk	1
-4692	narrowly	1
-4693	elle	4
-4694	putter	1
-4695	costly	1
-4696	lump	2
-4697	emit	1
-4698	possum	3
-4699	wildlife	2
-4700	rescue	4
-4701	expose	1
-4702	shame	1
-4703	embarrassment	1
-4704	costco	1
-4705	membership	1
-4706	backstroke	5
-4707	avoids	2
-4708	parallel	1
-4709	bistro	1
-4710	jess	2
-4711	lower	1
-4712	elegant	1
-4713	lonnie	6
-4714	modern	1
-4715	clearing	1
-4716	howl	1
-4717	rustle	1
-4718	initial	1
-4719	chapter	1
-4720	nita	4
-4721	rummy	3
-4722	wager	1
-4723	incredibly	2
-4724	taj	2
-4725	mahal	2
-4726	obvious	1
-4727	builder	1
-4728	sponge	1
-4729	saturate	1
-4730	brenda	1
-4731	exclude	1
-4732	vince	5
-4733	yogurtland	1
-4734	ounce	1
-4735	panhandle	1
-4736	planet	1
-4737	attractive	1
-4738	barista	2
-4739	wander	3
-4740	sander	1
-4741	rally	1
-4742	arena	1
-4743	bernie	1
-4744	staunch	1
-4745	republican	1
-4746	researcher	3
-4747	ethan	4
-4748	kindly	1
-4749	outgrew	1
-4750	engineering	1
-4751	jaime	4
-4752	scaredy	1
-4753	demonstrate	1
-4754	cowardice	1
-4755	pierce	2
-4756	studio	3
-4757	fasten	1
-4758	stud	1
-4759	piercings	1
-4760	earring	2
-4761	handcuffed	1
-4762	pin	1
-4763	seventeen	1
-4764	homerun	2
-4765	ninth	1
-4766	massive	1
-4767	darlene	4
-4768	status	1
-4769	gap	1
-4770	subpar	1
-4771	toby	3
-4772	stale	1
-4773	selena	3
-4774	authority	1
-4775	waffle	3
-4776	irritate	1
-4777	deteriorate	1
-4778	louder	1
-4779	profanity	1
-4780	logan	6
-4781	maria	6
-4782	script	1
-4783	actor	1
-4784	1st	1
-4785	july	1
-4786	genius	1
-4787	statistic	1
-4788	bumping	1
-4789	cider	3
-4790	dedicates	1
-4791	outlaw	1
-4792	gulch	1
-4793	sheriff	1
-4794	josie	4
-4795	lysol	1
-4796	leather	1
-4797	ken	9
-4798	scuba	1
-4799	certification	1
-4800	hostage	2
-4801	terrorism	1
-4802	violence	1
-4803	chop	4
-4804	barbecuing	1
-4805	brain	3
-4806	gag	3
-4807	behave	1
-4808	globe	1
-4809	microwave	4
-4810	button	2
-4811	perfection	1
-4812	swinger	1
-4813	nan	1
-4814	00	2
-4815	deny	2
-4816	repaint	1
-4817	especially	3
-4818	stabbed	1
-4819	stagger	1
-4820	recuperate	1
-4821	cafeteria	1
-4822	jordy	2
-4823	countless	1
-4824	gleeful	1
-4825	yelp	1
-4826	thoughtfully	1
-4827	harold	4
-4828	mailman	1
-4829	mysterious	1
-4830	database	1
-4831	afterall	1
-4832	footlong	1
-4833	sub	1
-4834	spirit	1
-4835	sunscreen	3
-4836	reapply	1
-4837	juggle	1
-4838	consult	1
-4839	juggler	2
-4840	untalented	1
-4841	shy	2
-4842	opinion	3
-4843	bella	4
-4844	dandruff	3
-4845	anti	1
-4846	shampoo	2
-4847	generosity	1
-4848	baggage	1
-4849	sense	2
-4850	paige	6
-4851	craving	1
-4852	stomachache	1
-4853	muscle	1
-4854	physique	1
-4855	cristin	4
-4856	festival	8
-4857	kristin	1
-4858	taker	1
-4859	thru	1
-4860	dj	2
-4861	vend	1
-4862	caffeine	1
-4863	pepsi	2
-4864	reba	4
-4865	killer	1
-4866	deed	1
-4867	nun	1
-4868	boldly	1
-4869	fountain	1
-4870	pelikan	1
-4871	m800	1
-4872	carol	2
-4873	idol	1
-4874	sample	1
-4875	stuffed	2
-4876	volume	2
-4877	amateur	1
-4878	prospector	1
-4879	green	1
-4880	appraise	1
-4881	worthless	1
-4882	suggests	1
-4883	bucket	2
-4884	property	1
-4885	teresa	5
-4886	otherwise	1
-4887	slob	1
-4888	atrocious	1
-4889	pleasant	1
-4890	macintosh	1
-4891	pc	6
-4892	operating	1
-4893	correctly	1
-4894	mlk	1
-4895	leisurely	1
-4896	prairie	1
-4897	surfed	1
-4898	mix	1
-4899	hungrily	1
-4900	keri	4
-4901	weekday	1
-4902	overcharge	1
-4903	spends	1
-4904	erica	4
-4905	crossroad	1
-4906	pm	1
-4907	shadow	1
-4908	tricked	1
-4909	yellow	1
-4910	alley	3
-4911	melissa	5
-4912	obsession	1
-4913	journalism	1
-4914	nbc	1
-4915	dot	3
-4916	superhero	1
-4917	glove	3
-4918	fort	1
-4919	snowball	1
-4920	sunbathe	1
-4921	garry	6
-4922	english	1
-4923	nike	1
-4924	evan	3
-4925	unfinished	1
-4926	yoga	4
-4927	humble	1
-4928	neglectful	1
-4929	ii	1
-4930	evaluation	1
-4931	core	3
-4932	swept	1
-4933	rubix	1
-4934	solve	4
-4935	elusive	1
-4936	romantic	3
-4937	getaway	1
-4938	bahamas	1
-4939	suzie	3
-4940	mushroom	1
-4941	seasoning	1
-4942	complicate	1
-4943	gabby	1
-4944	minimum	2
-4945	wage	2
-4946	annie	4
-4947	transplant	2
-4948	bridge	3
-4949	divert	1
-4950	sweat	3
-4951	loom	1
-4952	thinker	1
-4953	excuse	2
-4954	binh	2
-4955	bathtub	1
-4956	coaxed	1
-4957	squeaky	1
-4958	humberto	3
-4959	trampoline	4
-4960	nightclub	1
-4961	emma	6
-4962	windowsill	1
-4963	janet	7
-4964	sweep	1
-4965	elena	2
-4966	unfounded	1
-4967	daria	2
-4968	darla	2
-4969	thorn	1
-4970	prick	1
-4971	infect	2
-4972	amputate	1
-4973	gracious	1
-4974	curb	3
-4975	karmen	3
-4976	tanzania	1
-4977	ensure	1
-4978	ordinarily	1
-4979	mister	1
-4980	spice	1
-4981	sodium	2
-4982	active	2
-4983	devil	4
-4984	evil	1
-4985	franz	4
-4986	terrific	1
-4987	toad	4
-4988	starvation	1
-4989	cv	1
-4990	hiccup	1
-4991	machinery	1
-4992	shipment	1
-4993	dal	3
-4994	accounting	2
-4995	raid	1
-4996	crossfire	1
-4997	complement	1
-4998	nila	6
-4999	death	1
-5000	foster	3
-5001	sacrifice	1
-5002	montessori	1
-5003	education	4
-5004	bark	1
-5005	suntan	1
-5006	lotion	2
-5007	compensation	1
-5008	bruise	2
-5009	permanently	1
-5010	wisconsin	1
-5011	alaska	1
-5012	buyer	1
-5013	remorse	1
-5014	amayah	3
-5015	redbox	1
-5016	depart	1
-5017	paula	3
-5018	spoken	2
-5019	poetry	1
-5020	representative	2
-5021	jamaica	1
-5022	iris	3
-5023	bikini	4
-5024	unpredictable	1
-5025	homeowner	3
-5026	evie	1
-5027	nook	1
-5028	cranny	1
-5029	quiz	4
-5030	brilliantly	1
-5031	ease	1
-5032	flee	1
-5033	profile	1
-5034	sami	1
-5035	marco	4
-5036	necktie	1
-5037	overseas	1
-5038	china	1
-5039	conceal	1
-5040	lucked	1
-5041	mystery	3
-5042	flour	1
-5043	swimsuit	1
-5044	statue	1
-5045	turtle	7
-5046	dani	4
-5047	icu	1
-5048	ruth	1
-5049	enemy	1
-5050	fade	1
-5051	kenya	1
-5052	compose	1
-5053	album	1
-5054	jawbreaker	1
-5055	disco	1
-5056	secure	1
-5057	nursery	1
-5058	opt	1
-5059	bonsai	1
-5060	gymnasium	1
-5061	dirk	3
-5062	eva	3
-5063	butter	3
-5064	lanyard	3
-5065	bracket	1
-5066	sheet	2
-5067	allowance	2
-5068	renee	3
-5069	halen	1
-5070	electric	1
-5071	amp	1
-5072	option	1
-5073	available	1
-5074	musician	1
-5075	tigger	4
-5076	indeed	1
-5077	prescribed	2
-5078	laboratory	2
-5079	journal	1
-5080	betrayed	1
-5081	admirably	1
-5082	planner	1
-5083	tiptoed	1
-5084	durability	1
-5085	viking	2
-5086	thermador	1
-5087	jasmine	2
-5088	ingenuity	1
-5089	los	1
-5090	angeles	1
-5091	darren	2
-5092	sew	1
-5093	911	1
-5094	handstand	1
-5095	everytime	1
-5096	plain	1
-5097	twelve	2
-5098	grows	1
-5099	copywriter	1
-5100	sabotage	1
-5101	fairness	1
-5102	abby	4
-5103	friendship	1
-5104	electricity	1
-5105	lydia	3
-5106	canvas	1
-5107	sack	1
-5108	yolanda	4
-5109	happiest	1
-5110	traditional	1
-5111	crochet	1
-5112	yarn	1
-5113	melinda	5
-5114	lamar	3
-5115	houseguest	1
-5116	rmv	1
-5117	secretary	1
-5118	lela	4
-5119	mate	1
-5120	horatio	2
-5121	raw	2
-5122	oyster	3
-5123	cape	1
-5124	cod	1
-5125	cattle	1
-5126	alyssa	1
-5127	spilt	1
-5128	scald	1
-5129	camaro	1
-5130	makeup	1
-5131	decline	1
-5132	320	1
-5133	driest	1
-5134	pill	1
-5135	cope	1
-5136	sex	1
-5137	zoey	5
-5138	taunt	1
-5139	prerequisite	1
-5140	sherry	1
-5141	creek	3
-5142	bending	1
-5143	rust	1
-5144	breezy	1
-5145	dorothy	3
-5146	lifestyle	1
-5147	21	2
-5148	finance	1
-5149	can	1
-5150	butt	1
-5151	undressed	1
-5152	impatiently	1
-5153	barbell	2
-5154	cardio	1
-5155	hammock	1
-5156	anytime	1
-5157	carl	13
-5158	military	1
-5159	happiness	1
-5160	traumatic	1
-5161	disorder	2
-5162	walnut	3
-5163	cracker	1
-5164	backpack	1
-5165	binoculars	1
-5166	ihop	1
-5167	benjamin	3
-5168	upside	1
-5169	neurological	1
-5170	jog	1
-5171	accumulate	1
-5172	satisfaction	1
-5173	ginny	1
-5174	suspicion	2
-5175	true	1
-5176	racketball	1
-5177	perry	4
-5178	sydney	1
-5179	washer	1
-5180	detergent	1
-5181	fabric	1
-5182	softener	1
-5183	hurricane	1
-5184	shamble	1
-5185	snicker	1
-5186	jabbing	1
-5187	pebble	1
-5188	moose	1
-5189	antler	1
-5190	briefcase	1
-5191	alexia	3
-5192	kernel	1
-5193	shaggy	1
-5194	kennel	1
-5195	bare	1
-5196	anxious	1
-5197	immigrant	2
-5198	stiff	3
-5199	inflexible	1
-5200	flexibility	1
-5201	stiffer	1
-5202	collective	1
-5203	carla	2
-5204	overextend	1
-5205	arrow	2
-5206	carve	1
-5207	makeshift	1
-5208	taylor	4
-5209	scarier	1
-5210	skeleton	1
-5211	role	3
-5212	debut	1
-5213	nationwide	1
-5214	delayed	1
-5215	marge	4
-5216	curvy	1
-5217	pang	1
-5218	keychain	1
-5219	whinny	1
-5220	irritably	1
-5221	jones	3
-5222	oat	1
-5223	naughty	1
-5224	snuck	1
-5225	willpower	2
-5226	stan	4
-5227	plead	2
-5228	tub	1
-5229	trust	1
-5230	partiers	1
-5231	matilda	4
-5232	recipient	1
-5233	column	1
-5234	digit	1
-5235	thunderstorm	1
-5236	janey	1
-5237	lynne	2
-5238	janie	1
-5239	compromise	1
-5240	comedic	1
-5241	oliva	2
-5242	olivia	1
-5243	07	1
-5244	newport	1
-5245	nickie	4
-5246	doll	8
-5247	ineffective	1
-5248	jamie	2
-5249	stair	4
-5250	tomato	3
-5251	seedling	1
-5252	carpentry	1
-5253	pencil	1
-5254	classic	2
-5255	accompany	1
-5256	wooden	2
-5257	border	1
-5258	anime	3
-5259	criticize	1
-5260	criticism	1
-5261	jimbo	3
-5262	infatuate	1
-5263	christina	2
-5264	graphic	1
-5265	leisure	1
-5266	section	3
-5267	julia	1
-5268	frost	3
-5269	whit	2
-5270	snore	1
-5271	human	1
-5272	gasped	1
-5273	sweaty	1
-5274	pinwheel	4
-5275	afar	1
-5276	substitute	1
-5277	lunchbox	1
-5278	einstein	3
-5279	theory	2
-5280	relativity	2
-5281	documentary	1
-5282	bonnie	3
-5283	employment	1
-5284	listing	1
-5285	nanny	1
-5286	slither	1
-5287	shriek	1
-5288	ambulance	3
-5289	morgue	1
-5290	sponsor	1
-5291	sting	1
-5292	squint	1
-5293	rae	6
-5294	stepfather	1
-5295	broom	1
-5296	plumber	2
-5297	boredom	1
-5298	alternate	1
-5299	understood	1
-5300	dip	1
-5301	dipped	1
-5302	chemical	1
-5303	mish	1
-5304	limited	1
-5305	stocking	1
-5306	flaw	1
-5307	merely	1
-5308	mumble	1
-5309	powerful	1
-5310	morris	3
-5311	skater	1
-5312	overslept	1
-5313	coke	2
-5314	alert	2
-5315	tsunami	1
-5316	scurry	2
-5317	receipt	1
-5318	yelped	1
-5319	breeze	1
-5320	seam	1
-5321	uncomfortably	1
-5322	blister	1
-5323	commuter	1
-5324	lettuce	1
-5325	engine	2
-5326	roar	1
-5327	historical	1
-5328	london	2
-5329	backup	1
-5330	1200	1
-5331	forgiveness	1
-5332	chalk	2
-5333	sausage	1
-5334	teenage	1
-5335	smitten	1
-5336	receptive	1
-5337	flier	1
-5338	circle	1
-5339	mention	1
-5340	subtle	1
-5341	bribed	1
-5342	tune	1
-5343	overdue	1
-5344	patricia	3
-5345	microscope	2
-5346	marisse	1
-5347	auction	1
-5348	registration	1
-5349	deposit	1
-5350	locker	1
-5351	marissa	1
-5352	suspicious	1
-5353	maid	1
-5354	admonish	2
-5355	vacuumed	1
-5356	ori	2
-5357	memorable	1
-5358	gorilla	1
-5359	lizard	1
-5360	vianna	3
-5361	dreadful	1
-5362	regardless	2
-5363	ditch	1
-5364	disney	1
-5365	dizziness	1
-5366	symptom	1
-5367	narrow	1
-5368	haired	1
-5369	scavenger	3
-5370	appropriate	1
-5371	esteem	1
-5372	heritage	1
-5373	custom	1
-5374	snowboard	1
-5375	electrical	1
-5376	appliance	1
-5377	frayed	1
-5378	cord	1
-5379	extinguisher	1
-5380	toast	1
-5381	processor	1
-5382	jointly	1
-5383	biff	4
-5384	western	5
-5385	favor	2
-5386	period	1
-5387	tick	2
-5388	1968	1
-5389	1981	1
-5390	1991	1
-5391	beagle	1
-5392	backpacking	1
-5393	dover	1
-5394	pad	1
-5395	geologist	1
-5396	charger	1
-5397	acid	2
-5398	theorize	1
-5399	resort	1
-5400	uncaring	1
-5401	somehow	1
-5402	farther	1
-5403	tortilla	1
-5404	casserole	1
-5405	lena	4
-5406	vitamin	1
-5407	fart	1
-5408	unusually	1
-5409	lactose	1
-5410	intolerant	1
-5411	dairy	1
-5412	toe	2
-5413	composure	1
-5414	morgan	3
-5415	kart	1
-5416	tender	1
-5417	instinct	1
-5418	tasered	1
-5419	ida	3
-5420	attendee	1
-5421	overhead	1
-5422	executive	4
-5423	vibe	1
-5424	speculation	1
-5425	fruitful	1
-5426	anger	2
-5427	sassy	1
-5428	germ	1
-5429	locate	1
-5430	nimbly	1
-5431	burner	2
-5432	outreached	1
-5433	whisk	1
-5434	decade	1
-5435	retriever	2
-5436	steady	1
-5437	faithful	1
-5438	endeavor	1
-5439	tutorial	1
-5440	rakesh	4
-5441	lobster	5
-5442	corn	1
-5443	cob	1
-5444	pedal	1
-5445	cautious	1
-5446	wrapper	1
-5447	benedict	1
-5448	paulo	5
-5449	council	2
-5450	cocktail	1
-5451	heavyset	1
-5452	celtic	3
-5453	opposition	1
-5454	damon	3
-5455	id	2
-5456	profound	1
-5457	angrily	2
-5458	purr	1
-5459	suzi	2
-5460	catfish	1
-5461	react	1
-5462	apprehensively	1
-5463	flush	1
-5464	decent	1
-5465	theatre	1
-5466	disqualify	1
-5467	playtime	1
-5468	strangle	1
-5469	corpse	1
-5470	cycle	1
-5471	neiter	1
-5472	helmet	1
-5473	nod	1
-5474	attentiveness	1
-5475	provider	1
-5476	acknowledge	1
-5477	operator	1
-5478	closing	1
-5479	paragraph	1
-5480	error	1
-5481	restart	1
-5482	molly	1
-5483	bandage	1
-5484	flicker	1
-5485	battle	2
-5486	claustrophobia	1
-5487	firefighter	1
-5488	babysat	1
-5489	pedophilia	1
-5490	senator	1
-5491	eager	1
-5492	derail	1
-5493	magistrate	1
-5494	uncontested	1
-5495	hubby	1
-5496	mama	3
-5497	indonesia	1
-5498	malaria	1
-5499	vaccine	1
-5500	reckless	2
-5501	subside	1
-5502	cosmos	1
-5503	naive	1
-5504	physically	1
-5505	recklessly	1
-5506	cyclist	1
-5507	whisper	2
-5508	breaker	1
-5509	tediously	1
-5510	argentina	3
-5511	organ	3
-5512	negotiate	1
-5513	beautifully	1
-5514	web	1
-5515	sandra	3
-5516	feeder	1
-5517	pinecone	4
-5518	ribbon	1
-5519	attach	1
-5520	han	2
-5521	leia	3
-5522	fool	1
-5523	meditate	1
-5524	housecoat	1
-5525	jersey	2
-5526	commute	2
-5527	considerate	1
-5528	roomate	1
-5529	clare	3
-5530	rack	1
-5531	comfortably	1
-5532	silence	1
-5533	scamming	1
-5534	scam	1
-5535	responsive	1
-5536	stacy	3
-5537	dana	2
-5538	glenn	2
-5539	cramp	1
-5540	becomes	1
-5541	outrage	1
-5542	kendall	1
-5543	michigan	1
-5544	yearly	1
-5545	gill	5
-5546	columbo	2
-5547	portrayed	1
-5548	falk	2
-5549	hatred	1
-5550	oblivious	1
-5551	presence	1
-5552	burst	1
-5553	prevent	1
-5554	demise	1
-5555	ivan	4
-5556	mosquito	2
-5557	repellent	1
-5558	rely	1
+4528	13
+2274	37
+3620	2
+3026	1
+332	176
+238	218
+219	128
+280	5
+213	120
+890	82
+3688	5
+173	68
+169	710
+635	25
+7249	1
+1581	5
+1157	8
+50	290
+7501	8
+1751	179
+1429	36
+55584	4
+408	123
+3298	7
+645	53
+1409	379
+165	89
+6038	55
+13418	21
+9612	3
+40747	3
+12455	2
+7232	22
+1816	16
+2400	2
+728	39
+48	432
+159	319
+1085	35
+15476	28
+16788	8
+55	85
+242	880
+4874	32
+2895	18
+528	67
+525	6
+62	135
+1229	132
+1753	42
+575	40
+1305	75
+607	22
+1029	3
+1143	20
+322	1
+531	25
+4944	1
+117	205
+494	30
+1174	36
+2099	567
+5750	2
+163	257
+483	96
+19175	159
+2962	21
+13816	6
+12985	1
+7370	4
+54	221
+3288	6
+596	109
+1797	17
+1	67
+11229	10
+7434	3
+3623	109
+232	20
+1033	28
+181	97
+10524	71
+3162	27
+455	173
+420	109
+512	8
+294	7
+883	16
+304	2
+775	25
+282	178
+31116	1
+7736	6
+334	60
+8965	1
+5366	2
+835	264
+21138	1
+4287	48
+16690	20
+5473	5
+300	97
+511	44
+7547	23
+2603	11
+355	28
+166	170
+122	506
+1203	72
+2401	13
+822	142
+569	165
+720	66
+6232	2
+308	125
+182	110
+4449	8
+678	33
+2015	59
+167	106
+17586	1
+3534	14
+2389	5
+10632	3
+24825	3
+1092	92
+8372	4
+204	75
+3299	10
+27938	1
+3119	16
+9023	1
+794	8
+4649	2
+190	351
+79	281
+1835	31
+324	7
+4450	24
+465	175
+664	153
+79278	1
+373	52
+13077	10
+690	140
+3710	74
+161	291
+24471	42
+1361	24
+39747	1
+669	37
+4758	20
+1326	1
+21751	4
+9662	1
+1624	40
+1819	4
+199	31
+53814	1
+143	131
+88	30
+1040	30
+484	37
+49365	1
+279	96
+4785	22
+399	114
+8441	1
+4178	14
+29948	6
+2322	19
+2950	26
+499	49
+1977	4
+505	4
+688	12
+16967	10
+2797	4
+16546	1
+14165	1
+4254	50
+9494	8
+1283	27
+749	2
+164	190
+605	97
+2833	18
+4355	15
+389	21
+30448	12
+754	23
+806	39
+168	62
+1280	32
+46233	2
+5625	96
+5716	10
+1176	30
+273	78
+2120	34
+753	25
+1181	64
+31789	1
+326	165
+1863	2
+1746	7
+560	9
+20186	1
+9549	5
+2385	151
+13510	6
+10934	2
+851	15
+1856	10
+16197	11
+4363	4
+1349	164
+6956	2
+7849	5
+1676	20
+33798	8
+1653	27
+9122	3
+8254	20
+1904	28
+4130	30
+6242	13
+460	57
+1712	146
+365	72
+7856	9
+203	107
+2772	13
+22211	3
+3950	3
+1022	15
+816	25
+3513	6
+28201	14
+565	95
+9634	10
+2201	2
+837	83
+65943	24
+83949	2
+733	20
+359	90
+147	123
+154	170
+1778	21
+9956	6
+2063	12
+58	143
+4567	2
+3704	62
+9211	3
+1188	32
+11551	4
+1275	5
+534	11
+1370	1
+218	97
+20138	34
+2561	6
+16368	5
+303	415
+1935	12
+108	38
+11798	3
+841	172
+8722	40
+145	91
+2178	8
+2407	4
+700	16
+320	29
+126	22
+241	51
+1891	1
+1638	2
+5912	14
+1775	166
+2377	13
+1482	13
+10627	3
+572	19
+254	57
+1795	23
+4294	44
+1962	58
+7933	7
+2432	32
+9559	4
+15110	5
+19955	7
+26638	96
+10002	5
+951	25
+1522	59
+520	9
+333	53
+2472	78
+943	18
+255	8
+21241	4
+8579	18
+1936	8
+486	6
+394	34
+557	15
+7644	1
+1027	13
+1791	6
+57595	1
+272	1
+1333	24
+364	127
+3366	39
+156	65
+642	32
+3957	2
+3915	1
+2229	26
+7339	6
+1239	3
+1606	62
+1749	80
+773	59
+3143	4
+659	5
+129	16
+12441	19
+2529	39
+625	71
+3724	1
+15956	3
+9179	2
+1129	21
+25266	13
+587	68
+14566	1
+17267	2
+1400	49
+6153	5
+1334	15
+229	62
+2901	17
+173370	2
+1264	71
+51464	2
+756	24
+927	74
+24088	14
+7077	12
+5948	63
+638	12
+1421	75
+5717	22
+7099	15
+1167	19
+808	137
+580	113
+15475	27
+137	155
+3400	42
+1443	9
+6096	1
+4318	12
+10326	10
+40260	3
+14033	16
+61021	1
+5632	29
+1005	81
+253	156
+591	26
+1402	60
+538	9
+3991	4
+5670	10
+660	5
+1716	115
+201	39
+99574	7
+49317	3
+5142	49
+129397	3
+6701	40
+2905	58
+7299	36
+1115	33
+3416	12
+7381	5
+33452	1
+212	65
+149	37
+95	7
+1135	3
+10264	3
+987	112
+30957	4
+1122	1
+925	11
+5337	14
+2214	43
+8700	15
+10462	6
+1454	7
+250	44
+2082	49
+978	65
+172	18
+5783	2
+246382	1
+9030	2
+152	36
+1512	16
+4212	11
+10417	9
+75380	6
+1921	34
+23189	5
+941	16
+5198	13
+6676	3
+3539	2
+3265	60
+5077	1
+550	23
+4716	30
+1885	9
+2555	27
+357	41
+5596	11
+3837	25
+7213	7
+662	187
+3451	21
+6642	18
+1560	24
+2088	22
+2231	19
+726	29
+5604	9
+5651	6
+1257	49
+363	17
+2567	15
+208	45
+1644	3
+3219	12
+1914	16
+873	56
+861	1
+6315	38
+269	39
+1880	4
+248	41
+13170	4
+3424	42
+39890	1
+2321	19
+8349	11
+11239	4
+339	100
+3754	6
+4769	33
+7753	2
+76	98
+19073	4
+621	18
+30171	1
+1596	12
+60316	1
+1177	39
+4210	6
+1566	12
+6920	1
+8709	2
+4811	29
+288	43
+11895	1
+7018	3
+4223	83
+1925	15
+179	67
+8731	4
+2551	36
+1984	94
+26895	3
+2637	17
+845	40
+1038	33
+3918	4
+9107	13
+6850	10
+1679	18
+7174	1
+10111	2
+20786	3
+4950	2
+8233	9
+804	106
+59513	2
+8705	4
+90853	3
+1895	84
+2611	2
+3765	2
+747	23
+92	17
+234	95
+8320	5
+4313	72
+5279	45
+1871	6
+540	71
+33299	11
+8629	31
+11820	4
+16288	2
+1627	29
+4147	3
+16105	8
+3030	11
+886	41
+7521	5
+12217	14
+346	57
+5547	36
+48020	4
+111231	2
+2615	20
+1539	3
+1083	28
+1888	48
+498	44
+3285	57
+383	29
+3453	29
+60309	3
+1175	25
+12274	12
+240	7
+14135	4
+1339	15
+1929	9
+2503	1
+6415	16
+3387	21
+1327	28
+5510	20
+1862	117
+5408	14
+2349	3
+5015	17
+6557	19
+2070	18
+26324	2
+9388	39
+2855	37
+87	45
+2853	5
+1689	12
+1613	6
+3805	2
+744	11
+310	48
+1123	8
+960	12
+1687	7
+353	111
+422	16
+51493	1
+2926	109
+328	30
+35449	6
+637	2
+4158	48
+626	13
+2309	2
+3317	49
+1072	4
+1228	9
+7350	9
+1618	2
+20191	1
+1243	24
+174	24
+1214	34
+3553	24
+19776	5
+5578	3
+7013	8
+2191	5
+12073	4
+298	16
+50184	1
+10076	1
+11923	30
+1290	47
+7696	48
+3342	34
+1201	44
+362	35
+766	52
+530	106
+3709	27
+416	43
+1137	11
+4877	7
+3914	10
+2005	5
+5055	35
+12723	5
+12109	16
+2449	1
+39652	1
+15391	1
+588	87
+41597	1
+684	25
+4662	7
+6000	2
+185	20
+3330	52
+1077	63
+214	57
+7392	46
+667	51
+3161	12
+34329	4
+6075	131
+8551	19
+1612	114
+16062	4
+1930	22
+998	61
+6114	5
+1065	15
+561	22
+2873	5
+19715	1
+1825	3
+49353	1
+9013	5
+9616	6
+12281	1
+4000	32
+9331	1
+5098	16
+3130	8
+403	32
+5647	11
+50754	4
+3186	71
+6963	4
+3223	39
+9019	2
+78285	1
+5980	24
+55474	1
+7124	14
+19186	3
+19192	27
+115	18
+3031	21
+2137	30
+3960	4
+5335	21
+1497	51
+966	53
+2185	17
+21335	5
+10230	9
+26922	1
+2647	19
+17876	2
+6205	2
+11048	5
+15035	1
+5042	14
+600	71
+5054	25
+702	59
+3591	47
+3907	2
+921	13
+905	84
+17448	1
+90	3
+1265	17
+743	12
+21622	1
+69	74
+22696	14
+16434	5
+53505	1
+367	6
+5909	8
+7333	1
+682	34
+10814	9
+5521	9
+7687	1
+2854	8
+13595	1
+3163	13
+5429	5
+5045	15
+5450	86
+1705	18
+40978	1
+1623	4
+22387	9
+1154	5
+1647	11
+4320	15
+94	151
+2271	9
+2933	38
+2857	30
+3392	11
+5864	5
+32708	2
+12611	21
+4166	8
+47660	3
+172626	1
+22701	3
+20721	2
+1090	9
+558	6
+1715	1
+2194	22
+6467	3
+658	19
+25246	1
+85	7
+10049	1
+3079	9
+2184	5
+9017	1
+6231	5
+28540	1
+974	32
+5163	4
+21675	2
+186	115
+10353	2
+275	100
+10433	2
+3631	10
+3433	27
+4635	42
+142	30
+2655	3
+2282	6
+4236	8
+3827	55
+757	26
+15917	5
+4603	36
+13071	2
+2019	17
+5964	19
+7463	12
+48138	2
+13086	13
+4906	20
+6858	28
+7688	24
+7925	6
+1241	20
+740	40
+891	47
+9205	1
+21977	1
+992	13
+13975	2
+586	24
+938	16
+1702	7
+2958	11
+20623	4
+153	13
+3849	8
+9096	1
+22287	2
+286	8
+44627	1
+88745	1
+432	6
+2818	7
+461	30
+787	22
+2586	17
+307	62
+22559	1
+1845	21
+6710	1
+6579	1
+6304	5
+1185	18
+2090	19
+8190	3
+981	4
+83434	1
+2654	38
+1695	9
+8525	2
+3445	18
+9147	6
+964	57
+5715	7
+6043	3
+13243	10
+3792	117
+4923	9
+39251	18
+12125	1
+4625	4
+1610	9
+2289	5
+170	48
+2164	5
+12654	4
+2706	49
+109	64
+11358	4
+141	1
+4699	1
+14207	9
+674	17
+13415	10
+10593	10
+1152	93
+36561	1
+4204	7
+20594	2
+4265	12
+28900	1
+3431	7
+4031	10
+2451	2
+3745	16
+11539	7
+15570	7
+1471	4
+1655	12
+7997	6
+4413	3
+15147	14
+7670	6
+426	24
+11407	33
+6763	11
+93029	11
+152924	1
+151	67
+495	12
+13359	1
+10602	23
+2179	41
+3013	30
+487	1
+435	10
+4798	4
+9007	8
+2068	11
+2332	6
+6233	2
+17843	3
+2651	13
+780	6
+6568	2
+912	9
+4600	1
+770	10
+16458	3
+2455	2
+8958	12
+7969	1
+31059	3
+3515	18
+3250	7
+5903	8
+7722	1
+4228	2
+2518	2
+15134	1
+11568	10
+414	9
+198	7
+2010	3
+15087	15
+1693	4
+13438	9
+8371	12
+3899	22
+13162	1
+17703	2
+5591	8
+1221	10
+55831	2
+4555	1
+6597	5
+2232	56
+14707	2
+224	4
+25366	1
+1287	5
+1324	24
+7931	24
+3450	23
+46183	2
+5121	18
+4153	37
+22958	2
+6107	15
+3872	17
+922	11
+23732	2
+12582	4
+9367	4
+13875	18
+2431	35
+1583	21
+18264	3
+9623	8
+25939	2
+18950	1
+7362	1
+2133	1
+34887	5
+7562	11
+7330	13
+1053	8
+1131	53
+8841	31
+237	8
+5112	8
+2661	18
+2361	25
+99926	1
+4650	3
+17548	2
+2069	37
+25073	1
+9600	5
+296	40
+16790	10
+2261	39
+23781	3
+22680	2
+46859	1
+70169	1
+7746	12
+19827	1
+2563	3
+999	17
+1164	11
+3482	12
+1418	5
+206	9
+14077	3
+1389	3
+2025	12
+19405	1
+16954	1
+3146	80
+10057	7
+60182	8
+924	6
+39542	3
+4374	18
+630	37
+6448	19
+788	8
+44314	8
+16971	14
+34773	1
+6428	1
+944	6
+7886	1
+53137	1
+1464	1
+270	8
+3028	6
+12588	7
+7024	5
+1836	18
+26050	2
+1435	35
+6662	18
+5182	11
+6226	2
+7555	2
+807	31
+1096	31
+18196	1
+12378	38
+46565	1
+45190	1
+2847	24
+366	7
+26274	1
+14973	1
+13367	1
+10718	2
+8366	5
+70027	5
+4892	21
+54420	1
+5186	13
+7843	16
+1390	4
+1479	7
+8353	7
+3841	10
+1340	4
+5513	21
+962	31
+258	7
+865	21
+5071	3
+1906	13
+3133	9
+4680	44
+777	3
+1605	29
+10407	14
+3018	8
+7646	18
+97430	2
+9155	6
+1313	26
+325	10
+13708	23
+14907	4
+4657	26
+4238	6
+15204	42
+411	15
+1502	20
+9651	9
+22497	21
+51112	2
+3975	3
+1509	8
+2724	2
+3082	39
+10284	3
+2487	26
+2921	18
+1089	11
+7543	1
+13299	5
+25426	9
+10056	11
+8811	4
+5387	3
+8813	54
+4457	18
+36480	11
+245	4
+1276	70
+2368	73
+6921	11
+31404	6
+1140	10
+5281	22
+22108	7
+15026	1
+4979	4
+8013	2
+5839	4
+3512	14
+37243	1
+410	5
+897	22
+4966	4
+10891	6
+13504	3
+23016	6
+13149	7
+30465	9
+6892	15
+18132	9
+6292	11
+5024	16
+3670	7
+1965	6
+4477	10
+4937	5
+7387	10
+40490	1
+1134	3
+1036	8
+1747	1
+1595	7
+524	3
+4780	24
+7084	5
+3747	2
+30286	1
+10500	1
+578	33
+311	46
+27696	12
+6399	56
+1322	6
+1470	23
+22614	1
+39655	1
+16429	5
+11395	1
+5348	1
+2632	25
+3711	13
+142325	1
+57354	1
+11346	9
+1893	6
+1318	26
+2083	10
+13384	5
+4895	1
+338	8
+14402	2
+5574	2
+28124	3
+32359	1
+171	3
+6025	4
+8896	18
+7959	2
+661	32
+30355	2
+4992	13
+4712	3
+832	3
+16490	18
+10945	36
+1422	10
+401	3
+2065	36
+18716	17
+352	6
+1750	4
+1555	6
+856	9
+1141	9
+6602	2
+1032	7
+371	2
+8427	3
+38916	1
+22866	13
+5141	21
+29593	1
+853	6
+809	37
+13905	3
+5508	8
+12105	1
+8788	1
+1468	30
+21229	5
+2530	7
+894	7
+6496	6
+571	3
+4891	3
+1292	39
+415	18
+451	11
+195	10
+7680	88
+6328	4
+1019	12
+707	5
+612	10
+1726	11
+133	13
+29839	2
+2307	6
+12710	1
+9536	21
+9249	13
+7019	7
+9091	11
+7492	12
+29506	3
+31562	1
+44663	2
+3329	8
+581	6
+55887	3
+2354	9
+9740	8
+5390	5
+15506	1
+991	13
+1444	12
+11173	14
+407	7
+9878	4
+15634	3
+34612	1
+409	10
+539	65
+7611	15
+1481	2
+1720	6
+17298	1
+5641	3
+19237	12
+2513	60
+7400	10
+5293	15
+1707	9
+30755	2
+2417	11
+5309	19
+34821	1
+3664	10
+5449	18
+33971	8
+128	30
+4676	9
+6294	2
+458	26
+4974	10
+3540	3
+228	17
+6870	2
+20745	1
+16720	5
+34396	1
+4499	2
+546	4
+16901	3
+9136	5
+31803	2
+1614	63
+4159	1
+2575	21
+3731	2
+3361	8
+7334	5
+772	7
+3215	37
+2984	3
+9314	13
+9872	5
+13987	5
+6289	7
+760	19
+376	15
+949	8
+5148	2
+3952	5
+2097	7
+23310	4
+3419	17
+3921	2
+22837	12
+11050	11
+636	14
+823	47
+4883	2
+26540	11
+3995	68
+33087	3
+5161	30
+6969	17
+4755	10
+25469	2
+2502	34
+1441	5
+18159	5
+7461	1
+7435	14
+19379	7
+567	11
+771	2
+283	27
+875	5
+12984	2
+8882	2
+3596	3
+611	34
+767	7
+2694	28
+3487	2
+6779	16
+3375	21
+14377	4
+1078	18
+2956	7
+901	28
+13061	9
+297	1
+19201	10
+4325	13
+9311	1
+72703	2
+25109	2
+9358	22
+693	1
+923	14
+2117	15
+10620	4
+7259	5
+31211	5
+4474	3
+64258	1
+535	23
+648	20
+13376	6
+1543	7
+6138	1
+2367	1
+18671	1
+16615	1
+65612	1
+2375	20
+7460	16
+639	18
+16406	1
+2801	4
+19416	5
+70421	1
+2357	19
+1883	9
+9923	4
+1633	13
+51193	4
+8370	18
+372	13
+40092	1
+47327	2
+3719	2
+9200	1
+11610	1
+349	4
+4594	8
+2486	13
+6056	7
+16349	8
+5275	3
+2522	6
+3266	3
+4013	2
+1006	4
+4088	5
+43336	2
+3985	10
+4790	31
+5792	2
+8560	18
+28458	1
+1927	18
+2365	14
+12880	14
+13360	2
+936	13
+12203	10
+691	3
+13602	4
+2726	5
+712	10
+3535	1
+2017	31
+22507	2
+18452	3
+3301	12
+3052	2
+53250	1
+64962	1
+65101	4
+1568	9
+15051	1
+2131	11
+12147	4
+5803	13
+20974	1
+610	21
+155670	3
+2061	6
+52	32
+430	70
+1708	29
+46824	1
+6331	3
+17243	4
+2573	6
+683	2
+26708	1
+956	4
+268	9
+3763	8
+174940	1
+37844	5
+1067	1
+9705	5
+13263	4
+22003	2
+2846	5
+12767	31
+6678	5
+1673	9
+3467	24
+3050	10
+5618	15
+4333	1
+50380	4
+387	3
+453	4
+2252	1
+4391	1
+715	9
+22742	2
+2364	6
+5246	2
+3823	15
+2003	59
+436	8
+2037	1
+89730	4
+2266	2
+7634	6
+4041	38
+817	23
+8941	3
+764	7
+2930	21
+5065	3
+795	2
+62306	1
+573	8
+47184	8
+5158	13
+2173	4
+4458	2
+14981	2
+46090	1
+26077	1
+6060	12
+1320	4
+2663	52
+3200	4
+6988	8
+2125	9
+28082	1
+144055	1
+13566	1
+10124	1
+24326	1
+3292	13
+31959	3
+2642	46
+2609	4
+48146	5
+30835	1
+11612	3
+12714	11
+1448	5
+53955	1
+13422	12
+52248	6
+16564	7
+6982	2
+25404	4
+4188	10
+1042	5
+8219	5
+29686	1
+1974	6
+1088	4
+2047	1
+29211	1
+725	11
+2434	2
+299	10
+13710	15
+231	10
+11003	1
+3405	1
+1704	1
+2542	10
+21042	1
+9315	9
+50058	1
+46405	2
+1988	9
+351	3
+783	1
+2569	22
+1530	6
+3791	20
+8597	33
+45615	1
+1963	13
+116632	2
+3192	1
+13196	7
+11195	7
+3892	12
+1788	22
+20282	21
+3796	2
+12425	3
+1580	2
+17321	5
+6527	14
+12682	9
+13768	3
+16111	3
+19844	1
+6721	5
+1403	9
+3484	3
+9758	1
+3302	2
+424	6
+13476	2
+5747	11
+6699	14
+65025	3
+1357	6
+16200	8
+3665	4
+264	14
+2193	13
+21573	13
+2149	22
+1784	2
+2140	5
+5881	1
+153819	4
+7033	45
+14006	2
+1266	7
+13683	3
+15426	5
+224079	3
+46195	1
+5689	9
+3061	1
+4478	30
+2715	20
+15468	4
+29986	1
+17731	7
+5362	7
+1121	9
+447	14
+4792	2
+14007	10
+9246	16
+1823	3
+34829	1
+649	5
+24548	2
+549	27
+2827	7
+4434	4
+704	7
+15927	5
+2909	5
+2844	8
+24896	1
+73098	2
+8776	2
+80676	1
+4132	3
+13291	6
+1136	29
+24574	2
+16873	5
+12048	1
+1860	5
+4093	3
+26033	6
+5226	1
+1841	4
+17230	3
+14302	1
+838	11
+1289	4
+3806	5
+7149	9
+1975	1
+360	3
+23900	1
+1058	8
+18155	2
+4686	9
+15161	6
+634	4
+3742	5
+2215	11
+3793	1
+6046	13
+3692	3
+5988	5
+20198	12
+1250	2
+17359	1
+7513	12
+26475	4
+22454	40
+1087	25
+10678	16
+58047	5
+18445	2
+30664	1
+692	11
+3605	9
+12326	4
+23381	7
+11745	2
+9248	4
+1594	19
+32670	3
+5358	3
+5125	14
+821	7
+16560	1
+3255	3
+70912	2
+4845	19
+502	6
+8005	2
+1335	1
+11005	11
+17980	6
+699	8
+13620	1
+19468	4
+1106	5
+33413	1
+18741	9
+18917	1
+4627	11
+14502	7
+34925	3
+1563	18
+22357	2
+7960	1
+4917	43
+1973	4
+2658	8
+7617	11
+12857	1
+398	5
+3941	1
+1210	4
+24446	2
+1153	1
+67322	1
+62443	2
+9332	22
+6271	7
+990	11
+6135	1
+8392	1
+2737	4
+48019	1
+579	2
+5022	3
+6833	11
+4927	20
+3492	15
+17096	4
+10672	2
+3289	11
+3981	3
+425	8
+5774	1
+30168	5
+983	6
+2428	5
+2762	1
+2763	5
+15888	1
+593	19
+1991	13
+22595	1
+8567	3
+21432	2
+20917	2
+15830	2
+6830	11
+51622	1
+28481	2
+4364	5
+21220	1
+54451	1
+21724	3
+5051	22
+94891	1
+657	3
+5973	13
+7425	2
+4651	3
+5622	12
+4385	17
+17173	1
+25708	2
+58572	1
+5128	2
+3017	42
+25051	3
+9517	15
+32023	1
+437	10
+1466	1
+1015	12
+40759	5
+10212	9
+155990	4
+29307	7
+30253	2
+8836	1
+2004	17
+6878	3
+5943	7
+3093	6
+2304	3
+7742	10
+22855	3
+343	19
+223	12
+1465	32
+9454	1
+632	3
+20405	6
+10272	1
+4298	14
+8172	1
+870	26
+1801	19
+7233	2
+10506	9
+31428	4
+5220	4
+6929	2
+14204	12
+2815	2
+1282	16
+8460	1
+3773	1
+9432	15
+18310	4
+6861	7
+11094	4
+8558	2
+14633	6
+3106	8
+7930	14
+6593	25
+9777	2
+652	9
+7014	10
+4259	11
+5764	17
+28959	3
+3034	1
+7398	2
+2362	9
+1008	7
+2587	4
+22004	9
+21474	11
+746	10
+6658	31
+419	5
+1294	18
+11999	9
+5737	2
+10542	10
+17943	6
+9933	2
+3020	24
+6067	7
+3323	11
+456	21
+629	31
+1857	3
+30911	1
+32737	1
+341457	1
+1589	40
+277	16
+5767	2
+1156	1
+12238	3
+18544	2
+28881	11
+6879	1
+12561	2
+7258	3
+4444	11
+29445	2
+1718	43
+1485	23
+4119	7
+6161	7
+1495	4
+5757	3
+13729	2
+17159	5
+9717	13
+9999	3
+8866	5
+4118	2
+6383	2
+1120	6
+368	1
+3308	2
+5648	1
+13176	1
+3241	5
+440	12
+15962	2
+2298	15
+184	2
+2582	6
+931	3
+2876	1
+2808	5
+3518	5
+17578	3
+4050	9
+4002	12
+14362	3
+16996	8
+12155	1
+14570	1
+1252	9
+3046	3
+6743	12
+10061	7
+3749	1
+10805	4
+13541	5
+3118	8
+12209	2
+7322	1
+2768	6
+91723	1
+6964	3
+3895	6
+7162	4
+665	2
+27470	2
+3287	1
+11356	5
+26907	1
+13948	3
+75701	2
+1960	8
+1876	6
+1431	4
+2387	9
+6055	2
+2498	2
+38416	4
+3588	3
+5952	4
+27757	1
+2669	12
+470	2
+12574	3
+3315	5
+61667	1
+8808	2
+11654	1
+15366	3
+39689	9
+11979	7
+6613	27
+6479	29
+1620	9
+3516	7
+29567	1
+47389	1
+22769	15
+2350	4
+763	1
+1364	5
+2571	2
+3703	4
+30795	9
+3232	8
+14528	2
+1903	6
+29504	1
+399133	4
+33565	2
+5828	5
+1100	22
+801	1
+3204	9
+3822	14
+34385	2
+3222	7
+18188	1
+1915	3
+1899	3
+3352	1
+301	7
+25688	3
+3734	2
+3860	11
+1698	3
+11937	2
+1759	5
+7635	5
+17489	1
+32059	1
+331	16
+19568	1
+30822	3
+21753	2
+176	2
+93	2
+2077	4
+10233	1
+8364	5
+11015	1
+15096	1
+6283	3
+25876	2
+7394	3
+1969	3
+19248	1
+8339	1
+71584	1
+8659	1
+41997	1
+4403	9
+6742	1
+1395	7
+9201	3
+900	5
+33486	3
+15630	3
+15936	5
+9085	1
+17472	5
+93670	1
+5137	1
+4980	2
+14755	11
+445	10
+16678	2
+1133	11
+12855	12
+21697	2
+3657	1
+3564	5
+103010	3
+12845	4
+10833	7
+1461	5
+12138	1
+12691	1
+18838	2
+14267	13
+13477	1
+42360	2
+11408	3
+9323	4
+4137	12
+211	9
+12270	31
+57680	2
+1662	10
+1474	8
+9419	1
+4336	10
+5703	13
+8955	1
+26391	2
+10482	7
+13326	10
+21181	3
+4368	4
+302561	4
+3216	20
+6542	4
+35795	9
+1506	3
+11732	4
+5598	3
+3178	4
+57888	10
+4641	2
+18865	1
+4586	8
+10712	2
+25870	3
+9232	1
+7331	4
+3758	7
+5205	14
+6128	2
+9104	7
+16289	3
+1601	7
+314	12
+8247	1
+385	17
+29946	4
+2155	5
+31715	1
+950	10
+3839	1
+7397	2
+1619	8
+220	11
+10667	5
+1293	10
+13338	2
+4858	2
+3954	1
+523	16
+44076	2
+17585	1
+32223	1
+4522	3
+583	5
+6456	1
+30181	1
+8023	3
+5178	4
+19302	4
+5507	1
+13639	5
+23659	3
+89995	1
+6672	1
+7089	2
+21901	3
+2516	2
+1002	6
+16648	3
+5778	2
+64386	1
+9415	3
+40819	1
+19598	5
+4595	4
+867	2
+313	9
+713	7
+1301	6
+5491	10
+3755	50
+1248	16
+7063	13
+7894	11
+16682	4
+6647	2
+219861	1
+68521	1
+57384	1
+10768	4
+14748	4
+7546	2
+719	6
+1158	3
+5310	3
+11628	2
+2372	1
+7917	1
+8213	8
+27380	2
+4117	8
+2442	1
+34628	1
+2867	9
+2787	1
+68457	2
+66808	4
+1611	13
+8301	5
+27924	1
+3045	5
+1587	14
+57378	2
+30386	2
+39625	3
+75379	1
+831	1
+139	2
+603	3
+803	1
+1295	3
+4251	1
+9741	2
+1600	7
+45993	1
+11887	5
+628	2
+16955	12
+7796	2
+2264	6
+257	9
+9865	1
+6151	2
+7264	3
+5466	4
+15072	6
+2791	11
+12965	2
+8259	8
+66407	1
+413	18
+18534	3
+35745	1
+13216	3
+820	2
+8433	8
+8476	6
+4161	17
+62468	4
+14242	5
+17443	2
+17565	3
+32558	1
+6549	1
+1207	2
+12877	2
+3491	11
+7987	3
+2161	1
+85034	2
+21921	4
+9473	7
+38817	1
+5005	9
+2968	7
+9526	1
+15880	5
+1346	14
+104	2
+123	12
+563	5
+136	6
+11442	1
+140	3
+2525	1
+6042	10
+9144	10
+6572	1
+8908	16
+20524	2
+393	3
+5551	3
+10983	1
+62145	1
+55716	2
+7929	7
+14228	2
+122631	1
+42422	1
+17329	2
+18392	1
+1047	3
+7470	3
+2358	10
+3856	1
+995	7
+12911	2
+16634	1
+2384	3
+3425	3
+10156	1
+2996	25
+3911	2
+1159	18
+1304	4
+793	2
+893	10
+2548	15
+6636	7
+32276	2
+709	1
+2696	1
+45479	1
+7251	2
+3583	1
+824	10
+4439	1
+45820	3
+5273	5
+16697	2
+26666	2
+38603	1
+33645	3
+562	8
+3391	9
+4442	2
+11613	1
+10055	2
+23617	1
+15358	2
+24105	1
+11498	3
+107	17
+1733	9
+9052	1
+6523	2
+125356	3
+2753	21
+20790	4
+18459	5
+491	21
+6588	4
+1189	26
+6504	22
+3404	6
+396	1
+1650	5
+1508	2
+2944	8
+13746	8
+2716	5
+4621	6
+11712	14
+13745	4
+19628	5
+26490	1
+15779	2
+428	4
+79212	1
+31340	1
+60643	1
+3436	3
+9034	17
+3575	1
+13024	1
+6288	2
+34044	1
+6081	2
+26501	2
+481	7
+6192	3
+681	9
+1396	2
+13594	1
+3240	10
+5536	21
+46873	2
+1483	4
+7214	11
+289	3
+774	2
+2105	5
+1013	10
+16531	5
+1551	7
+10053	8
+5583	3
+18877	2
+18389	4
+4324	4
+26648	1
+18428	1
+19391	1
+3992	17
+96032	1
+12580	1
+1388	6
+6252	7
+2941	1
+183	4
+5120	1
+47642	4
+1219	6
+3243	2
+6947	1
+13079	13
+592	6
+3137	1
+48882	1
+121	2
+800	3
+5489	3
+4289	1
+1377	10
+35299	3
+19275	1
+27260	1
+26560	1
+16691	3
+17095	6
+10458	2
+11401	7
+3251	3
+3377	2
+20532	2
+4129	7
+36180	2
+51242	2
+12969	3
+2900	5
+42195	1
+16816	1
+4881	8
+5514	1
+1811	16
+79633	2
+4706	2
+10255	3
+4422	1
+3917	1
+19246	1
+11127	3
+620	4
+10364	2
+8979	4
+28563	1
+43406	3
+1492	5
+6201	9
+81024	3
+1544	13
+6611	7
+5332	1
+5530	1
+9114	2
+3998	4
+26783	4
+29386	2
+15680	4
+22025	1
+27774	1
+152503	2
+7981	7
+3496	9
+18420	3
+8895	1
+1459	2
+22261	2
+4138	19
+802	6
+164630	1
+70160	1
+954	1
+16326	1
+31982	1
+80008	1
+6314	11
+9287	2
+11234	3
+196	7
+899	19
+1484	7
+3267	7
+4307	4
+1942	2
+23273	4
+814	6
+319	7
+6287	1
+12565	3
+9012	1
+58327	4
+6235	4
+7280	2
+7983	6
+75591	2
+38204	3
+74792	1
+2564	5
+20388	3
+4471	3
+172413	1
+45248	1
+9515	12
+24821	1
+7604	2
+6798	6
+103509	1
+2960	7
+14157	7
+20837	2
+12139	1
+56628	1
+1060	5
+4152	7
+464	4
+7926	1
+3275	2
+14988	4
+6167	5
+1590	1
+3717	1
+27493	1
+1989	1
+6686	1
+22941	1
+22859	4
+1082	2
+38556	1
+14226	1
+5061	2
+3316	1
+11267	1
+2536	6
+9362	7
+5292	1
+6019	2
+18309	4
+3927	7
+9508	4
+16528	6
+6952	1
+316	7
+1139	9
+26889	1
+49387	1
+623	2
+8250	6
+5030	2
+8400	4
+12796	4
+10184	2
+3457	9
+22395	2
+21088	3
+3993	2
+2613	5
+5729	7
+1672	2
+14736	2
+2811	3
+4359	6
+1866	22
+2160	1
+40250	1
+6321	3
+1567	14
+9622	12
+18952	3
+13055	2
+947	1
+2959	1
+2711	6
+41446	1
+15365	6
+8907	9
+13153	1
+2729	2
+3933	1
+18343	1
+12865	1
+2965	5
+6614	3
+23363	1
+3732	3
+4862	3
+41533	1
+1907	1
+10908	2
+4242	3
+35679	2
+202	9
+10145	2
+9436	1
+3571	1
+5526	2
+22409	2
+22346	1
+35942	1
+34217	2
+29119	2
+1045	4
+2626	2
+76438	1
+9300	1
+12427	1
+6944	6
+19414	3
+5835	2
+1366	3
+4303	4
+3851	12
+14766	5
+871	6
+2268	1
+36886	1
+8747	2
+5049	8
+20947	2
+6675	8
+18341	2
+23091	2
+12474	2
+3100	8
+2199	12
+348	8
+49094	2
+1922	19
+1035	2
+15525	6
+6801	3
+4345	2
+6308	4
+2147	4
+1959	2
+290969	1
+4743	1
+3683	3
+26739	2
+305	8
+12879	3
+2800	2
+19084	26
+34102	5
+3064	7
+3488	1
+2397	1
+23072	1
+4885	3
+7260	10
+48528	3
+1415	1
+10799	1
+19134	3
+8874	2
+1812	4
+2324	6
+32422	2
+3547	16
+8352	3
+6044	1
+7209	2
+6628	4
+15967	2
+7978	2
+7228	2
+6436	1
+12456	4
+2055	15
+2983	12
+2180	25
+2906	2
+11869	2
+12243	9
+18493	1
+4280	3
+10819	3
+8695	4
+6149	1
+10146	33
+1162	10
+27509	1
+7177	7
+1258	20
+5505	1
+6807	8
+52473	6
+10764	3
+399527	1
+21037	1
+1557	1
+41198	1
+38331	2
+6033	3
+716	6
+5278	1
+5456	4
+4375	7
+17447	1
+8911	2
+1278	2
+7016	5
+3937	9
+1574	1
+20531	1
+5623	19
+3520	4
+17550	17
+6794	9
+27944	1
+54954	1
+22022	2
+20961	1
+47140	1
+7734	1
+69401	3
+26790	2
+2168	12
+3920	6
+5191	3
+18751	1
+3456	1
+1247	3
+3228	1
+12294	1
+968	6
+16286	8
+23162	6
+119538	1
+22591	1
+25003	5
+72562	1
+21210	1
+91225	1
+2554	2
+164789	1
+4777	1
+1941	5
+34042	1
+1299	6
+1387	3
+2874	2
+5565	6
+15673	5
+16048	2
+9723	15
+54015	3
+31954	1
+24951	3
+36748	1
+5440	1
+29242	5
+515	12
+29973	11
+2466	1
+221	2
+55536	12
+24807	1
+49557	1
+7529	3
+76208	1
+3845	8
+6267	4
+3422	7
+5795	7
+58926	1
+5872	9
+3930	2
+2123	3
+879	4
+2668	8
+3676	1
+16765	7
+5776	1
+1654	16
+11793	2
+17504	1
+15531	5
+3546	1
+2450	3
+2378	4
+2540	1
+10266	5
+42419	2
+13699	1
+6074	2
+1926	16
+3473	1
+2426	1
+5705	10
+1269	2
+2614	3
+1336	6
+5868	3
+6062	2
+1307	20
+6423	6
+14828	2
+42168	1
+3423	2
+13344	1
+18719	7
+27165	1
+7329	9
+10705	13
+54085	2
+32180	1
+44367	1
+4838	2
+10265	18
+4270	1
+36700	3
+2195	1
+2598	4
+937	4
+7070	7
+87548	1
+7740	5
+5452	4
+76782	3
+35946	1
+34698	12
+1675	4
+1999	4
+40713	3
+12268	7
+384	14
+6179	2
+6180	2
+2728	2
+6040	5
+8144	3
+31491	1
+7278	1
+4926	3
+6829	2
+813	21
+25893	2
+4058	5
+25416	1
+32487	4
+12000	3
+7277	4
+10321	2
+9794	5
+18975	2
+38829	2
+3979	1
+5006	1
+161638	1
+17122	1
+27023	2
+18355	1
+13160	3
+12961	3
+49961	2
+25030	2
+14962	1
+9373	6
+13298	10
+70343	3
+5942	2
+9028	2
+53567	2
+10231	1
+62702	1
+685	2
+24975	1
+14234	1
+40248	1
+3098	3
+4709	5
+22209	1
+4177	16
+799	33
+7151	2
+6143	1
+2468	3
+4753	1
+32226	6
+38473	3
+6384	8
+18043	1
+7318	8
+5769	4
+480	53
+6472	8
+5614	1
+2305	1
+4589	12
+289894	1
+10686	3
+1217	3
+53394	3
+38604	2
+16826	3
+159860	3
+4010	12
+80155	1
+3134	1
+4048	1
+19094	1
+4503	2
+421	5
+21002	2
+19298	1
+18399	2
+866	2
+36577	1
+4856	1
+7273	1
+469	6
+7913	3
+438	6
+6026	3
+4160	4
+1553	4
+10425	9
+7092	4
+19083	2
+20533	1
+5009	2
+51147	1
+2789	8
+7193	13
+31459	1
+10112	2
+9428	2
+5730	13
+4568	6
+14017	1
+1452	14
+7472	4
+35094	1
+20665	2
+31088	2
+5726	4
+3537	3
+8094	3
+3281	1
+213110	1
+8396	7
+6120	1
+70303	1
+1762	4
+5476	1
+3832	1
+7491	2
+55379	1
+46691	1
+7446	2
+4284	11
+4123	2
+80485	3
+11917	2
+29335	1
+18911	1
+39482	1
+3505	12
+17602	3
+56	3
+24461	11
+58802	2
+6488	5
+4203	1
+4110	1
+1472	3
+3370	3
+8987	8
+5818	11
+2296	4
+3926	10
+19728	1
+2491	6
+30362	4
+39994	1
+59681	2
+4809	15
+6355	9
+17616	6
+21853	2
+10915	2
+17224	7
+13187	1
+863	8
+10598	5
+8563	2
+15049	1
+11369	15
+9000	3
+5646	1
+10911	4
+20660	1
+84553	2
+474	5
+11746	3
+15992	2
+14888	1
+5047	16
+21545	2
+5326	2
+1359	5
+16869	4
+53775	1
+1071	7
+1727	4
+44081	1
+2745	2
+20557	1
+2081	4
+13554	1
+350	5
+2924	4
+9137	10
+4275	1
+12234	1
+12122	4
+12248	10
+29909	1
+4779	2
+19668	1
+12071	7
+8961	1
+24119	6
+689	2
+4805	3
+5837	2
+7503	1
+32760	4
+22632	1
+358	7
+13738	3
+555	4
+7235	1
+86612	1
+745	6
+10982	4
+2733	2
+3305	13
+329	1
+15324	7
+2170	4
+10359	4
+54448	1
+15969	1
+52932	7
+8069	3
+4197	1
+504	5
+14115	3
+25927	1
+13538	2
+18066	4
+15073	1
+104945	1
+9197	4
+7861	1
+82006	1
+24953	1
+1507	14
+16279	6
+4187	9
+1196	1
+2553	2
+3464	3
+13058	1
+14124	4
+545	2
+7812	1
+2631	11
+5354	6
+66231	5
+194	8
+2453	1
+4513	8
+59550	1
+8679	12
+7633	3
+86739	1
+6461	2
+2708	9
+227129	1
+7642	2
+330	4
+2690	5
+31909	1
+1505	4
+7571	6
+8221	2
+29086	2
+39608	1
+412	2
+3439	1
+576	8
+8919	3
+12626	1
+9942	1
+13271	2
+1629	4
+521	14
+2045	2
+1109	8
+10032	1
+9006	2
+24674	2
+35325	2
+2743	1
+1911	1
+119451	1
+29385	1
+1147	1
+35850	2
+7311	1
+47442	1
+15007	22
+4925	10
+6477	1
+5708	10
+76260	1
+3254	21
+2237	9
+13634	1
+15606	1
+2333	2
+15660	1
+5152	5
+9342	5
+91130	1
+7203	8
+14151	1
+359703	1
+32955	1
+45779	1
+22936	5
+1368	2
+904	1
+18257	2
+16317	3
+11035	4
+8079	4
+4366	1
+2210	1
+4929	3
+55038	1
+17349	1
+2382	4
+11410	2
+27706	2
+3478	6
+20553	2
+6325	1
+1350	4
+15079	5
+14540	1
+22975	3
+23753	2
+14760	1
+27736	2
+21880	1
+675	11
+26360	4
+4064	12
+24558	1
+7743	1
+13142	1
+30594	3
+2480	1
+15557	3
+7309	7
+1367	7
+19678	15
+11532	1
+30514	3
+34512	1
+228376	3
+70758	2
+13589	4
+2813	1
+7962	4
+6412	4
+53070	1
+19200	2
+11804	2
+4919	4
+12146	1
+7407	10
+21961	1
+2633	1
+24286	1
+42501	1
+30658	3
+4756	8
+390	5
+14639	1
+8555	2
+77851	4
+51163	1
+65737	1
+10544	4
+3543	1
+7517	3
+6871	3
+1533	2
+16313	1
+6249	1
+24293	2
+21599	1
+61048	2
+13845	1
+2939	1
+16160	8
+3493	6
+2248	10
+2114	8
+1110	2
+15066	2
+6427	1
+12416	1
+43656	1
+22937	4
+11690	1
+43633	2
+42472	1
+10926	5
+1362	7
+30441	1
+1255	2
+10267	3
+6410	1
+44310	2
+14784	6
+5613	1
+19382	7
+15749	1
+36595	1
+25997	1
+8324	4
+5577	10
+1404	4
+78	1
+872	1
+4745	7
+1451	1
+722	1
+1745	2
+1979	2
+32572	1
+23130	1
+66	2
+10691	2
+1559	2
+11621	1
+7088	2
+11043	1
+39547	1
+21068	1
+5261	1
+4217	1
+30873	4
+339748	1
+21621	2
+88708	1
+6521	2
+6571	2
+9610	2
+2226	4
+9665	2
+244037	1
+22152	3
+92834	3
+2280	4
+3420	1
+12064	2
+2788	2
+341	9
+3658	5
+9569	1
+1855	3
+6765	1
+52210	1
+67802	1
+37077	1
+790	5
+8208	2
+8760	1
+72771	2
+19113	1
+12305	1
+70967	5
+15340	1
+34410	1
+553	4
+4022	3
+7766	2
+23918	1
+9316	3
+9615	7
+7588	6
+7852	1
+31961	1
+4715	1
+2093	2
+12876	7
+33753	1
+39920	2
+31152	1
+53331	1
+5751	5
+5210	2
+2044	4
+19454	4
+8998	5
+51204	1
+1869	6
+48233	1
+72	1
+449	19
+7752	2
+7010	3
+15876	2
+27090	1
+2259	4
+5369	1
+34407	2
+9451	2
+1830	1
+21499	1
+26313	3
+16347	1
+4361	3
+318	6
+14832	3
+4541	3
+7877	3
+4711	1
+151901	1
+7186	1
+3881	5
+11196	2
+34141	5
+9748	1
+35717	3
+35467	1
+261	6
+6970	3
+57051	3
+1068	5
+4526	1
+13946	5
+10336	2
+8166	3
+8749	1
+1397	1
+13791	4
+6881	3
+4201	19
+3476	3
+4606	1
+5285	25
+2386	5
+7368	1
+4352	3
+6451	3
+17530	5
+4666	2
+6724	10
+17310	4
+19467	3
+11069	4
+16276	1
+2508	7
+28084	1
+1966	10
+16363	1
+5683	1
+8522	1
+7665	2
+5115	2
+41718	1
+17171	2
+1711	2
+9749	2
+9844	1
+11844	1
+19648	3
+5556	3
+37769	2
+10129	2
+2653	1
+82164	6
+112119	2
+5439	2
+6280	2
+21013	3
+25219	8
+34188	1
+6194	8
+13911	1
+6422	4
+13780	1
+2292	2
+43079	2
+64990	1
+1671	3
+5560	2
+28270	1
+6997	4
+10784	1
+8308	6
+38063	2
+14960	5
+14086	5
+4587	3
+5945	2
+9863	2
+9440	3
+11382	5
+2398	2
+4672	12
+5827	1
+84559	1
+1713	6
+2829	5
+10817	5
+15480	4
+71428	1
+9180	1
+14034	1
+1325	3
+14606	1
+78466	1
+1049	1
+5386	10
+23435	2
+2174	3
+9827	1
+2288	4
+35786	1
+14785	3
+18027	2
+79697	5
+156655	1
+10732	1
+25784	1
+31942	6
+7774	10
+2535	4
+4131	1
+7932	1
+2624	6
+80506	1
+8150	2
+4232	1
+19494	1
+2102	12
+7455	3
+2937	6
+46102	1
+14227	2
+1363	1
+9293	6
+74807	1
+3191	3
+1755	11
+4794	4
+11232	1
+53306	1
+6586	2
+2089	1
+23836	1
+2686	4
+2807	2
+20155	1
+52127	1
+6554	3
+7380	5
+4082	1
+31206	1
+50707	1
+35956	1
+30681	1
+1360	1
+9241	3
+3622	3
+32136	2
+2913	2
+10073	3
+11486	1
+2866	1
+8495	1
+11058	1
+9450	5
+3390	2
+608	2
+9328	2
+3644	3
+12745	1
+10435	1
+9426	2
+42132	3
+15310	3
+83852	1
+3406	1
+12428	1
+423	10
+4808	2
+205	2
+6083	1
+33554	4
+37552	1
+94739	1
+36102	2
+33530	1
+1496	3
+8415	1
+2884	2
+121505	1
+23311	2
+34130	7
+306	1
+8531	3
+278	5
+7008	1
+110685	1
+288983	2
+6113	1
+17638	1
+6338	3
+3919	1
+2841	4
+14876	2
+10949	6
+6296	3
+28430	2
+10607	4
+20436	2
+21178	1
+9140	1
+25547	2
+14547	1
+40554	2
+4144	10
+17146	2
+75705	1
+3873	4
+5111	8
+29390	3
+1882	2
+11911	2
+312	2
+92568	4
+74021	1
+17040	8
+8750	2
+34221	10
+19301	1
+11168	1
+34651	1
+6400	1
+28068	1
+8910	1
+11036	1
+66151	1
+19131	2
+11868	3
+25048	1
+23546	1
+1511	1
+1190	9
+14843	1
+119530	1
+2124	3
+2557	6
+548	6
+145065	1
+60458	1
+7636	6
+1752	2
+2218	1
+6744	4
+25754	4
+30218	1
+181238	5
+3360	3
+4602	1
+11061	2
+56545	5
+37758	1
+64592	5
+12358	1
+11163	1
+13502	9
+5223	4
+41930	2
+9112	7
+9325	3
+10655	3
+3217	2
+6127	1
+4963	1
+3712	7
+6484	1
+18501	1
+3916	2
+3843	1
+14564	1
+908	1
+10609	1
+2515	3
+32613	1
+3008	7
+35924	1
+6100	2
+13208	1
+7857	3
+26854	1
+501	3
+1113	2
+60590	1
+4149	2
+53497	1
+34300	2
+1319	3
+10192	7
+20716	1
+28893	1
+4704	3
+5317	2
+42720	2
+6459	2
+11418	1
+16285	1
+3314	1
+189133	1
+46535	1
+66326	1
+13605	1
+19601	4
+80251	1
+14240	6
+2317	1
+9931	1
+5011	2
+6266	2
+6681	2
+8862	6
+118520	3
+215064	1
+61766	2
+7404	10
+1160	2
+8566	4
+31996	3
+8878	1
+7836	1
+8199	4
+56882	4
+13642	2
+151841	1
+8561	3
+11580	3
+73363	1
+17137	7
+9788	1
+4563	3
+1173	3
+13673	3
+6429	1
+761	2
+19170	1
+12623	2
+11633	1
+64765	1
+15707	1
+6825	3
+18368	2
+1365	1
+8530	3
+9718	3
+82019	1
+31327	6
+80711	1
+2380	2
+25141	1
+12060	2
+112427	1
+20736	2
+10730	1
+13591	3
+29514	1
+15237	2
+35867	1
+30455	2
+267743	2
+15511	1
+706	7
+25917	1
+8483	10
+9857	4
+28447	3
+1635	3
+48428	1
+3666	2
+15938	1
+5217	1
+1793	8
+19079	1
+33537	8
+7275	1
+12390	1
+2138	2
+8420	5
+13878	4
+76003	1
+56753	1
+7536	2
+7741	16
+9599	1
+18318	3
+2393	7
+14230	1
+3525	1
+9158	1
+14684	1
+26518	1
+5968	6
+8051	2
+7263	2
+5184	4
+3601	2
+63337	2
+177	1
+104836	1
+444	3
+15556	3
+1887	1
+1714	5
+12824	3
+44703	3
+27301	1
+1017	1
+18980	2
+8626	2
+41238	4
+16287	3
+2488	1
+6832	6
+9403	1
+1773	2
+8410	3
+18925	1
+8038	1
+10748	1
+110929	1
+65059	1
+16726	3
+24501	2
+36790	1
+18081	1
+2934	2
+5209	1
+35287	1
+52703	2
+15701	1
+47445	1
+23175	1
+60945	1
+39138	1
+10733	2
+15895	2
+2424	2
+341116	2
+6202	3
+63696	2
+1063	4
+6674	1
+24897	1
+14356	1
+3394	1
+5099	2
+49587	1
+47888	1
+5728	1
+28375	1
+15698	1
+1554	6
+16886	1
+10944	6
+24128	1
+23386	2
+17315	1
+1678	1
+55956	1
+24928	1
+8718	1
+9664	1
+40825	1
+19642	1
+18186	1
+5134	2
+157411	1
+72960	3
+3014	16
+81419	1
+6474	12
+25174	2
+3372	2
+4249	5
+6090	2
+63834	5
+22135	2
+220324	2
+56930	1
+25641	1
+4081	5
+8375	1
+30656	1
+55976	2
+16849	2
+26703	1
+1786	1
+10636	4
+676	1
+2148	2
+16461	1
+32723	2
+104899	1
+9127	7
+13843	4
+21420	1
+8991	4
+11947	2
+29967	3
+5123	4
+12744	2
+11399	1
+3797	1
+23092	1
+4875	1
+25808	1
+3126	2
+3185	4
+56050	4
+46928	2
+9798	1
+996	1
+4565	1
+4562	1
+5151	1
+7106	6
+41304	2
+61064	1
+21205	2
+4953	2
+73830	1
+12330	1
+19689	1
+4972	6
+8619	1
+36472	1
+74376	1
+11521	10
+21430	1
+31065	3
+2977	2
+3300	1
+25186	3
+3076	3
+5160	1
+281	1
+24044	1
+12813	5
+17860	1
+39710	1
+39296	2
+40036	4
+10783	2
+985	1
+285334	1
+6851	2
+58252	8
+212566	1
+4019	1
+132673	1
+46683	6
+8929	1
+40516	1
+14969	3
+514	4
+509	1
+37895	1
+16246	1
+30940	3
+10950	1
+2796	5
+16586	6
+1790	4
+2440	3
+1972	2
+9838	1
+1657	2
+1475	4
+24022	1
+1916	3
+2422	1
+997	4
+1056	1
+1875	1
+19938	1
+70087	1
+25453	3
+2092	3
+19641	2
+5165	4
+28381	2
+13166	3
+42256	1
+10797	2
+8769	4
+67383	1
+36969	1
+6951	1
+59656	1
+1007	1
+22254	1
+33902	1
+14103	1
+4069	4
+24504	5
+14446	2
+7763	4
+37692	6
+86738	1
+21468	1
+3007	1
+3974	1
+1500	1
+906	1
+267620	1
+34121	3
+21673	1
+7872	2
+11039	2
+93169	1
+1818	4
+8299	4
+1111	2
+3006	1
+26641	3
+13354	1
+12769	1
+61085	1
+22793	4
+14015	1
+1950	3
+9706	3
+598	1
+10034	1
+36983	1
+13915	3
+13748	7
+236728	2
+21643	1
+5820	16
+3565	1
+5170	1
+28947	1
+4518	1
+10293	1
+653	8
+20233	1
+24856	3
+20929	1
+7897	7
+3466	1
+5854	2
+11297	1
+1809	7
+5414	1
+3189	1
+12182	3
+6004	1
+15744	1
+20218	5
+24836	1
+23570	6
+7936	3
+7528	4
+31312	2
+327	7
+42001	1
+21654	2
+14160	3
+28830	3
+10884	1
+3714	5
+13285	1
+785	9
+22718	19
+49292	4
+20609	1
+6769	1
+17781	1
+2348	2
+2165	2
+13545	1
+4370	3
+172645	2
+28461	1
+14174	1
+6481	3
+2162	1
+104258	1
+10082	3
+2725	2
+1254	3
+204226	1
+8600	1
+1230	3
+43864	3
+19526	3
+25400	15
+34495	1
+51298	1
+36735	1
+3603	2
+13040	4
+4640	2
+26577	3
+4849	3
+16587	1
+10568	2
+12202	2
+3611	2
+8924	4
+2893	2
+4406	1
+49076	1
+7977	1
+8086	1
+12756	6
+1062	1
+42980	1
+14794	2
+19918	1
+55878	5
+7053	2
+9837	4
+30510	1
+17660	6
+19916	1
+929	2
+4372	4
+3293	4
+17556	1
+41773	1
+44386	3
+9058	5
+2887	1
+1513	1
+5692	1
+126749	1
+18285	1
+488	3
+19308	1
+4610	2
+6958	1
+17100	1
+12272	2
+18184	3
+9781	4
+26186	1
+3523	1
+12328	4
+12191	3
+3291	4
+1105	2
+916	2
+55576	1
+3850	3
+27627	2
+16010	1
+61370	1
+14846	1
+5001	1
+9302	8
+18559	1
+15251	1
+477	1
+22739	1
+3164	5
+1385	2
+15267	1
+24093	2
+6373	1
+8124	3
+5188	2
+7732	4
+2832	2
+6918	2
+30601	1
+75298	1
+17773	3
+18198	1
+6508	2
+418	1
+12501	2
+19036	2
+28013	2
+5395	2
+6535	1
+4614	3
+12220	1
+36453	3
+33539	1
+13119	1
+2106	3
+6155	10
+193642	1
+6342	17
+4527	1
+1314	3
+59031	3
+11478	1
+5419	1
+9916	1
+69016	2
+44303	1
+20634	4
+5815	4
+85064	1
+4247	1
+11711	2
+1820	1
+24695	1
+12090	3
+5277	1
+7303	1
+10766	1
+5998	1
+26869	2
+21481	2
+475	2
+8671	2
+5740	2
+395	1
+9020	6
+9154	4
+5095	1
+8575	1
+2395	1
+9347	3
+6344	1
+9036	4
+1244	1
+2234	1
+16703	1
+119847	6
+3089	3
+12642	1
+3224	1
+14740	1
+8277	1
+18696	1
+40394	1
+5084	3
+13693	1
+65719	1
+8852	1
+11871	1
+27175	1
+22264	1
+44286	1
+6891	1
+154029	1
+5855	1
+154113	3
+33543	4
+29035	1
+2410	4
+9399	3
+28933	5
+1545	4
+23544	3
+27248	1
+2607	3
+30525	3
+1034	2
+48126	3
+34361	1
+21812	1
+10825	1
+17669	6
+10395	12
+39287	1
+393302	1
+34973	2
+12302	1
+40065	1
+792	1
+13997	2
+14690	1
+13603	2
+902	1
+4290	3
+2659	1
+33974	3
+22007	1
+21815	1
+13393	1
+6990	1
+21553	5
+3444	2
+29627	1
+32668	2
+15284	2
+8444	1
+16856	3
+37511	1
+25567	4
+4975	7
+22914	2
+3120	1
+5989	1
+20427	1
+7824	2
+156593	1
+11225	1
+18446	2
+11375	2
+8231	2
+6816	9
+13005	1
+124981	2
+5549	7
+6560	1
+3117	3
+842	2
+9492	1
+20312	1
+9208	2
+11205	1
+29083	1
+1515	1
+3779	1
+144150	1
+8284	1
+9422	1
+12556	4
+13388	1
+4347	3
+24957	1
+379438	1
+1031	3
+12617	4
+8517	6
+6406	12
+2501	1
+12887	4
+25500	1
+4036	4
+22146	2
+5093	2
+1838	5
+11701	1
+8297	1
+2359	1
+71945	1
+17771	1
+47238	1
+45324	2
+21456	2
+6284	4
+1050	2
+4827	1
+1476	5
+9541	4
+2978	1
+1130	1
+6213	1
+3858	1
+40321	4
+643	5
+13408	2
+56772	1
+24133	1
+11879	7
+10449	2
+27203	1
+75393	1
+1729	1
+1518	8
+22687	3
+24475	1
+19389	3
+14786	1
+247176	3
+12327	9
+180296	1
+41241	1
+20656	1
+8202	1
+19625	1
+3699	3
+3321	14
+4695	1
+13943	5
+5994	1
+17914	1
+1132	3
+1565	1
+16198	2
+28438	1
+14976	3
+67015	1
+89303	1
+17317	2
+2007	2
+253439	1
+16294	7
+448	1
+20271	1
+4255	1
+7518	1
+9833	5
+49541	2
+953	2
+13060	3
+44669	1
+3825	4
+1754	3
+4027	4
+37293	1
+14783	1
+18391	2
+12260	8
+5028	1
+18069	5
+9602	1
+15703	4
+16236	1
+4192	4
+34128	1
+5391	3
+9442	2
+17533	1
+16101	1
+1547	2
+4770	7
+6024	4
+68735	3
+159502	1
+29604	1
+7441	1
+11273	1
+7582	1
+14164	4
+16866	1
+36568	1
+8283	4
+19726	1
+167617	1
+50175	3
+1423	4
+940	1
+3627	4
+6211	4
+90650	1
+6237	1
+145035	1
+67486	1
+46566	1
+2675	2
+1556	1
+44896	2
+85327	3
+2588	8
+2617	1
+1541	1
+2049	2
+3570	1
+86762	1
+13111	1
+5725	2
+8304	1
+32694	1
+4134	3
+13622	3
+7499	1
+19427	1
+6191	6
+25290	5
+36317	1
+22725	1
+18082	2
+3214	1
+100006	1
+9335	1
+7706	4
+1504	2
+1646	4
+16315	1
+10143	1
+12276	3
+2935	5
+533	2
+7127	2
+4248	2
+9259	1
+6633	1
+6668	1
+109849	1
+13724	5
+76522	4
+16028	1
+44723	3
+2514	1
+16677	6
+5263	1
+14094	3
+12677	1
+37905	1
+6657	4
+102203	1
+1677	2
+54489	6
+23709	1
+19148	1
+8785	2
+3559	1
+11865	4
+4720	1
+33194	2
+63049	4
+2052	2
+42884	1
+46579	1
+19624	3
+2290	1
+17842	1
+1116	1
+8790	1
+1197	2
+4679	3
+24516	1
+14128	1
+1834	1
+276	1
+14452	1
+164518	1
+3388	1
+85531	2
+1996	1
+1442	4
+3549	2
+46524	1
+5381	1
+3532	5
+6052	1
+42981	1
+13544	1
+86389	5
+31457	2
+38530	7
+47548	1
+5265	1
+9123	4
+10031	1
+6336	2
+216	2
+5813	1
+6145	1
+732	1
+22053	1
+8806	3
+22919	1
+6919	2
+31860	1
+133364	1
+6624	1
+5804	1
+1128	15
+2677	1
+12622	2
+11433	2
+2982	2
+1524	4
+3350	1
+7040	2
+66235	1
+23178	1
+1737	1
+61574	1
+2408	1
+14672	1
+25881	1
+45263	2
+68524	1
+18959	3
+379	3
+18990	2
+15167	12
+12944	1
+26860	1
+9219	2
+397	1
+6649	1
+4393	3
+13873	1
+1918	1
+12314	1
+4993	3
+56156	3
+45156	1
+2949	1
+38770	1
+9303	1
+84950	1
+14277	3
+7540	3
+6645	1
+10286	1
+4281	1
+19644	3
+5657	1
+2759	1
+2838	6
+20720	2
+452	3
+1886	1
+1462	2
+4789	2
+386	2
+13075	2
+5500	1
+158092	1
+27776	1
+5416	1
+42967	1
+11584	1
+1779	3
+28482	1
+97664	2
+11362	1
+2556	1
+13758	1
+4070	2
+3636	2
+2511	1
+13890	1
+5847	3
+292	3
+9550	1
+26350	6
+3038	2
+7780	7
+6131	1
+4941	1
+32970	1
+3977	1
+9069	2
+18617	1
+19613	3
+10216	3
+17568	1
+5553	1
+7179	1
+126642	2
+2986	2
+1766	1
+13904	6
+27623	2
+24289	1
+75650	1
+12587	2
+17454	1
+25669	2
+4339	1
+13615	3
+51734	2
+43852	2
+14421	1
+30488	1
+151809	1
+14559	1
+25144	1
+532	1
+1352	2
+917	1
+2760	5
+8784	2
+31035	3
+12740	1
+53420	1
+32769	1
+62995	2
+17062	1
+450	1
+80533	1
+13774	1
+31962	5
+11135	1
+13202	1
+5083	1
+5114	3
+2612	1
+13876	1
+71966	2
+2225	2
+510	1
+5902	1
+15401	1
+129707	1
+132483	1
+624	1
+17193	1
+8818	1
+11342	6
+25260	3
+4810	1
+26776	1
+7100	1
+106166	2
+4873	1
+142768	7
+8737	2
+1463	1
+7212	1
+16128	3
+106964	1
+53528	1
+5349	5
+16061	2
+19961	2
+18319	1
+12765	2
+2506	3
+210619	1
+4935	1
+26823	1
+23969	1
+103238	1
+647	1
+759	1
+8390	1
+4377	1
+6257	4
+7823	1
+55531	1
+18996	3
+739	2
+2427	5
+16994	2
+34048	1
+113539	1
+7985	5
+614	1
+2008	1
+16454	2
+26004	1
+13174	2
+5995	2
+8423	3
+51784	8
+54202	2
+2242	1
+5576	4
+46728	2
+11693	2
+6595	2
+7349	3
+1598	1
+11673	2
+18834	1
+2121	3
+4282	1
+28742	2
+45142	1
+109530	1
+9679	2
+25704	3
+10778	3
+1223	1
+2998	1
+5239	2
+32533	4
+5018	2
+46797	1
+1854	1
+2635	2
+67079	1
+21995	1
+3989	1
+37607	1
+25503	1
+13099	9
+11714	1
+62428	4
+4571	2
+1119	2
+10322	4
+21505	1
+7375	4
+3953	2
+5412	1
+88743	1
+135239	1
+53021	1
+1967	2
+24196	1
+41143	1
+1688	1
+4735	1
+21350	1
+28738	1
+10334	2
+66430	1
+38943	1
+37915	1
+83214	2
+4418	2
+9093	1
+24163	4
+32921	1
+23344	3
+38622	1
+1146	3
+2512	1
+291	1
+40894	1
+22754	1
+41253	1
+50656	3
+10888	2
+8117	3
+13286	3
+29218	1
+22662	3
+1021	1
+27554	2
+13733	1
+52811	2
+5203	1
+18844	3
+8104	1
+44824	1
+91218	1
+9035	2
+11107	3
+4087	1
+20801	3
+22424	2
+7778	2
+519	2
+223307	1
+10952	1
+22968	1
+36274	1
+12392	1
+16592	5
+43	1
+47626	2
+9390	1
+37935	2
+24136	2
+146421	2
+14802	1
+66266	1
+85434	1
+12668	5
+4559	1
+44751	1
+926	1
+8092	3
+26124	1
+10033	1
+7577	3
+13543	2
+9955	2
+52656	4
+112637	1
+64068	1
+7171	1
+27860	4
+22613	1
+6667	1
+18407	2
+24823	1
+44657	3
+4446	2
+1894	4
+10920	1
+8287	1
+10728	1
+32485	1
+2798	1
+17710	5
+18245	2
+5379	1
+33100	1
+29094	2
+673	1
+9460	1
+33674	6
+1194	1
+7254	1
+36959	1
+83015	1
+1824	1
+3923	1
+50756	4
+72686	3
+32686	1
+10576	2
+19947	2
+23701	2
+4398	1
+11527	1
+26554	1
+77676	1
+16733	1
+11790	1
+10959	5
+6215	1
+22484	1
+4090	1
+5062	1
+100308	2
+20343	3
+31150	1
+1806	1
+3503	1
+13574	1
+12506	1
+742	1
+6239	3
+18347	4
+24244	1
+61074	1
+2482	1
+14214	4
+161985	1
+5928	1
+38420	1
+7054	2
+2014	3
+60040	1
+17599	1
+59637	1
+48910	2
+19009	1
+8426	1
+12284	1
+145230	2
+3058	1
+1971	1
+40313	4
+1416	1
+3309	1
+47218	1
+16724	3
+28355	1
+23447	3
+1117	1
+42016	3
+47067	1
+18585	1
+19615	1
+17389	1
+10700	6
+3276	6
+5230	1
+2018	1
+2693	1
+375	1
+9780	1
+21479	1
+29797	1
+24190	3
+54601	1
+13898	1
+35486	1
+5389	1
+36588	4
+149794	1
+7006	1
+4533	9
+23603	1
+9067	1
+3986	2
+1291	1
+714	1
+18908	4
+86925	1
+2955	3
+17694	3
+13751	1
+3584	1
+15181	4
+6910	2
+16750	1
+67627	1
+14798	1
+25344	2
+5227	2
+81221	1
+858	3
+9972	1
+52368	1
+38536	1
+16519	1
+114998	2
+10372	1
+49303	1
+71154	1
+52332	1
+7181	4
+52658	1
+7271	1
+6351	1
+246112	1
+205842	1
+5520	1
+2943	1
+38014	3
+59488	1
+38615	1
+10183	1
+79704	2
+143789	1
+7735	2
+2166	3
+21233	4
+119022	3
+811	1
+32009	2
+18211	1
+12317	1
+1380	2
+21448	6
+32286	1
+133802	1
+5636	1
+32690	1
+191527	4
+1427	8
+20657	1
+26650	1
+24204	1
+7620	2
+243525	1
+23208	1
+12986	2
+43935	4
+4898	1
+16177	1
+15178	1
+23922	1
+11185	1
+140337	1
+7904	2
+8380	1
+5863	1
+10554	2
+2072	2
+4629	1
+47869	1
+989	1
+74927	1
+21382	1
+3475	1
+16186	2
+1306	1
+10168	5
+2751	1
+77268	1
+37715	1
+8829	1
+14178	1
+5190	6
+1477	1
+10251	1
+70747	1
+31329	1
+10693	1
+73690	1
+3634	1
+112836	1
+52751	4
+15946	1
+95493	1
+8167	1
+23842	4
+59583	1
+3345	1
+5675	1
+25993	1
+2843	1
+11336	3
+12826	5
+13351	1
+6065	1
+3096	1
+9500	3
+18561	1
+10922	3
+2098	1
+34400	1
+141327	1
+16970	6
+711	1
+10625	1
+14161	3
+13467	1
+13117	4
+11924	1
+86057	1
+819	1
+7332	1
+2621	3
+4624	1
+4441	4
+12298	1
+5845	3
+20646	1
+10953	1
+45011	3
+16732	1
+27911	1
+17009	1
+54009	1
+3311	2
+4224	2
+11325	4
+9883	2
+1641	3
+14203	1
+11364	3
+21272	1
+26430	1
+8198	2
+29687	2
+27177	1
+37210	1
+39839	1
+31737	3
+44947	4
+10447	1
+10472	6
+86554	1
+7950	7
+6028	1
+9553	2
+17271	1
+54160	2
+67867	2
+17368	1
+60039	1
+24602	2
+78884	1
+22959	1
+5843	3
+142323	3
+5422	1
+1810	1
+22875	1
+23835	1
+12773	1
+9503	2
+1546	2
+6697	4
+4367	1
+9456	4
+11025	1
+26713	4
+14075	1
+45665	1
+47946	1
+6518	1
+9817	1
+21146	3
+3567	2
+3333	1
+20751	1
+11830	1
+98195	6
+336	1
+4277	3
+6627	1
+43714	1
+631	4
+14924	1
+91374	1
+44285	2
+3531	1
+33626	2
+7648	1
+4155	1
+4604	1
+7875	1
+18337	1
+119321	1
+12906	1
+10592	3
+4171	2
+4580	1
+2043	2
+6130	1
+16645	3
+23620	4
+12438	1
+22043	3
+65888	1
+34040	1
+80433	1
+16935	4
+20371	1
+3586	1
+6098	1
+3108	1
+12357	1
+7829	4
+57122	1
+2071	1
+132	1
+15855	1
+97376	1
+5351	3
+8212	1
+30046	1
+5882	1
+13841	7
+26799	4
+42590	1
+7426	1
+2928	1
+14100	1
+2671	1
+20820	1
+597	1
+129844	1
+12970	1
+2667	1
+14255	1
+12007	1
+55477	1
+13050	1
+15156	3
+11649	3
+6458	3
+106307	3
+14449	1
+6109	2
+16571	2
+21114	3
+38802	1
+2371	1
+8457	1
+2936	1
+779	1
+5590	1
+75839	4
+2747	1
+12063	2
+4186	2
+1473	1
+13375	1
+41046	1
+15582	1
+91181	1
+26026	1
+13629	2
+352609	1
+24960	2
+28876	1
+796	1
+930	1
+9126	2
+40832	1
+14789	1
+139287	1
+70808	1
+5405	1
+5180	2
+6313	1
+64908	1
+10873	1
+12051	1
+23005	4
+4581	1
+2636	1
+21604	3
+12704	1
+11739	1
+33854	4
+27557	1
+1274	1
+75646	1
+25038	1
+21284	5
+14567	3
+69449	1
+168850	1
+497	1
+93562	4
+6374	1
+32799	2
+4781	2
+18357	3
+3750	1
+13211	1
+4846	1
+53292	1
+73700	1
+142891	1
+42110	1
+5169	1
+1943	1
+12674	1
+43644	1
+11436	1
+6397	1
+1739	1
+66627	5
+42181	1
+24266	1
+18510	1
+3528	3
+19594	1
+17883	1
+30104	1
+11236	3
+6020	1
+952	2
+1179	1
+86	1
+11010	1
+70773	1
+58098	1
+76207	2
+50326	1
+45294	1
+11068	1
+4327	13
+178	1
+9811	1
+14700	1
+6638	2
+18470	3
+26963	1
+22525	1
+29240	1
+94335	1
+4067	3
+10987	1
+18553	1
+32121	1
+14445	1
+8591	1
+43845	1
+5694	2
+1446	1
+378330	1
+4481	4
+2465	1
+38479	1
+31624	1
+9212	1
+117701	1
+2718	1
+336801	1
+82412	1
+67335	1
+19879	1
+16037	1
+74219	1
+27205	1
+67546	3
+21566	1
+30714	1
+30267	1
+8674	1
+8243	1
+5658	2
+8459	3
+38299	1
+7512	1
+27153	1
+5177	1
+15829	2
+180923	1
+12521	2
+18393	1
+10474	1
+2485	4
+58886	1
+13194	1
+542	3
+1604	1
+2916	1
+3348	1
+27268	4
+55617	1
+22465	1
+117828	1
+327645	1
+210427	1
+1155	3
+56942	1
+27263	1
+51420	1
+50980	2
+10021	4
+12821	2
+21736	1
+1853	1
+93112	1
+26824	4
+8082	1
+3235	1
+9097	1
+26456	1
+94667	1
+21496	2
+56029	1
+3624	1
+21698	1
+40691	2
+15783	1
+16399	1
+8845	1
+188010	4
+12236	8
+12616	1
+7354	2
+39615	4
+12333	3
+62692	1
+40872	1
+17972	1
+2392	2
+10142	1
+4836	2
+718	1
+11634	3
+10827	1
+1961	1
+73907	3
+12529	2
+5320	1
+10191	1
+1519	3
+7768	1
+10419	3
+48933	2
+92120	1
+473	1
+49031	1
+32585	1
+113206	4
+19461	1
+5589	1
+87286	1
+14553	3
+2314	2
+22651	2
+3830	1
+14236	3
+2999	1
+5215	1
+18766	1
+81530	1
+64360	1
+9214	3
+18127	1
+6124	1
+11593	1
+71005	1
+19691	6
+20624	1
+26810	1
+30956	2
+27640	1
+7629	1
+5237	1
+10248	1
+9145	1
+2291	1
+119701	1
+1303	1
+22420	1
+18049	1
+4544	1
+73324	1
+1528	1
+4239	3
+15276	1
+111555	1
+8840	2
+3639	2
+5775	1
+42138	2
+20034	1
+161994	1
+14743	1
+25190	1
+39086	1
+42386	1
+10383	1
+20631	1
+2100	2
+15965	1
+2245	1
+516	2
+6849	1
+14404	1
+14121	1
+18085	2
+17644	1
+7142	1
+37471	1
+21295	1
+20543	1
+4012	1
+3862	1
+9327	1
+29455	1
+6979	1
+14150	1
+8964	3
+21519	2
+4473	1
+5978	1
+7803	1
+8276	1
+41812	1
+6787	1
+13457	1
+86643	2
+109475	1
+61015	2
+8787	1
+21092	1
+20249	1
+165514	3
+21409	1
+5213	2
+10859	1
+3205	1
+33126	1
+22818	1
+3757	1
+14047	1
+50740	3
+3402	1
+16332	1
+3455	1
+7439	1
+28329	1
+4864	1
+17702	1
+27107	1
+11705	1
+53304	1
+16093	1
+10410	1
+5677	1
+66455	4
+556	5
+2544	2
+566	1
+20571	2
+3177	1
+2898	1
+1312	1
+32245	1
+54772	1
+14897	1
+10109	1
+21010	1
+33300	1
+5749	2
+54936	1
+2806	1
+63903	1
+6174	1
+8843	1
+30887	1
+33706	1
+20690	4
+12363	1
+100272	1
+7682	1
+56161	1
+36519	1
+7797	1
+10520	2
+23364	1
+3123	3
+42960	1
+7382	1
+16689	1
+158615	1
+17752	3
+66563	1
+8331	1
+616	4
+22966	1
+3430	1
+16680	1
+3946	2
+38970	1
+19243	1
+10170	1
+79651	1
+22644	2
+23093	1
+1652	1
+42135	2
+3799	1
+8026	1
+15907	1
+39714	1
+56924	4
+17955	5
+4719	1
+44881	1
+17479	1
+5857	1
+44734	1
+7085	1
+5904	5
+382	2
+12059	1
+88140	1
+6311	3
+577	1
+10820	3
+9849	2
+8654	1
+11978	2
+88032	1
+78961	2
+21900	1
+8201	1
+215170	1
+14601	1
+8263	1
+2496	1
+32129	1
+87327	1
+39282	1
+14244	1
+4124	1
+11026	1
+12483	1
+99316	1
+6810	1
+6961	1
+4545	1
+2319	1
+16804	1
+4092	1
+10029	1
+15307	1
+38129	1
+39486	1
+903	2
+78786	1
+15811	1
+189496	1
+38226	1
+2213	1
+5136	1
+13633	1
+8870	1
+32296	1
+71778	1
+15075	3
+1440	1
+9506	1
+5540	1
+12078	2
+34806	1
+21498	1
+14427	1
+6416	1
+33573	1
+14317	1
+23767	2
+19763	1
+127279	1
+2039	3
+6480	3
+4360	1
+15347	1
+1170	1
+10105	3
+18972	1
+333864	4
+12144	1
+14689	1
+6802	2
+69035	3
+12169	1
+51484	1
+242817	1
+1700	2
+17949	2
+54141	1
+15048	3
+13687	1
+13108	1
+5236	1
+119545	1
+14671	1
+16352	1
+21317	3
+9521	2
+6376	2
+44791	1
+2462	1
+7681	1
+14532	1
+2254	1
+8946	1
+12080	5
+64316	2
+5887	1
+26375	2
+8936	1
+25342	1
+1721	1
+6305	1
+1449	1
+9935	1
+6017	4
+15332	2
+41395	1
+5656	1

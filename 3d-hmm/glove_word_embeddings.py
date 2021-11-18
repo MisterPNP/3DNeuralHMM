@@ -12,6 +12,11 @@ def download_glove_embeddings():
 
     print("extracting GLOVE embeddings")
     with zipfile.ZipFile(filename, 'r') as zip_ref:
+        # for fileinfo in zip_ref.infolist():
+        #     filename = fileinfo.filename
+        #     outputfile = open(filename, "wb")
+        #     with zip_ref.open(filename) as inputfile:
+        #         outputfile.write(inputfile.read())
         zip_ref.extractall('../data/glove')
 
 

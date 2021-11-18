@@ -1,6 +1,8 @@
 from pprint import pprint
 import string
 import json
+import pickle
+import os
 
 import pandas as pd
 
@@ -49,17 +51,15 @@ def lemmatize(sentence):
 
 # gets the data from file and pre-processes it
 def preprocess_cloze_test(data_name, output_name):
+    word2index = get_word2index()
     filepath = '../data/' + data_name
     df = pd.read_csv(filepath)
-
-    # TODO use validation file in constructing vocabulary?
-    #      (kind of depends on if we're going to use pretrained word embeddings...)
     sequences = []  # each set of six sentences
     vocab = {}      # vocab counts across dataset
     for i in range(len(df)):
         sentences = []
         for sentence in df.iloc[i, 1:5]:
-            lemmas = lemmatize(sentence)
+            lemmas = list(map(word2index.get, lemmatize(sentence)))
             for lemma in lemmas:
                 if lemma not in vocab:
                     vocab[lemma] = 0
@@ -68,7 +68,7 @@ def preprocess_cloze_test(data_name, output_name):
         # make the correct ending come before the incorrect one
         last_two = df.iloc[i, 5:7] if df.iloc[i, 7] == 1 else [df.iloc[i, 6], df.iloc[i, 5]]
         for sentence in last_two:
-            lemmas = lemmatize(sentence)
+            lemmas = list(map(word2index.get, lemmatize(sentence)))
             for lemma in lemmas:
                 if lemma not in vocab:
                     vocab[lemma] = 0
@@ -76,18 +76,9 @@ def preprocess_cloze_test(data_name, output_name):
             sentences.append(lemmas)
         sequences.append(sentences)
 
-    # map from lemmas to indexes
-    lemma_to_i = {}
-    for i, lemma in enumerate(vocab):
-        lemma_to_i[lemma] = i
-    for sentences in sequences:
-        for lemmas in sentences:
-            for i, lemma in enumerate(lemmas):
-                lemmas[i] = lemma_to_i[lemma]
-
     with open("../data/" + output_name + "_vocab.voc", "w") as out:
-        for i, (lemma, count) in enumerate(vocab.items()):
-            out.write("{}\t{}\t{}\n".format(i, lemma, count))
+        for lemma, count in vocab.items():
+            out.write(f"{lemma}\t{count}\n")
 
     with open("../data/" + output_name + ".json", "w") as out:
         json.dump(sequences, out, separators=(",", ":"))
@@ -110,6 +101,7 @@ def load_cloze_file(filename):
 
 # gets the data from file and pre-processes it
 def preprocess_ROC_test(data_name, output_name):
+    word2index = get_word2index()
     filepath = '../data/' + data_name
     df = pd.read_csv(filepath)
 
@@ -118,7 +110,7 @@ def preprocess_ROC_test(data_name, output_name):
     for i in range(len(df)):
         sentences = []
         for sentence in df.iloc[i, 2:7]:
-            lemmas = lemmatize(sentence)
+            lemmas = list(map(word2index.get, lemmatize(sentence)))
             for lemma in lemmas:
                 if lemma not in vocab:
                     vocab[lemma] = 0
@@ -126,18 +118,9 @@ def preprocess_ROC_test(data_name, output_name):
             sentences.append(lemmas)
         sequences.append(sentences)
 
-    # map from lemmas to indexes
-    lemma_to_i = {}
-    for i, lemma in enumerate(vocab):
-        lemma_to_i[lemma] = i
-    for sentences in sequences:
-        for lemmas in sentences:
-            for i, lemma in enumerate(lemmas):
-                lemmas[i] = lemma_to_i[lemma]
-
-    with open("../data/" + output_name + "_vocab.voc", "w", encoding="utf-8") as out:
-        for i, (lemma, count) in enumerate(vocab.items()):
-            out.write("{}\t{}\t{}\n".format(i, lemma, count))
+    with open("../data/" + output_name + "_vocab.voc", "w") as out:
+        for lemma, count in vocab.items():
+            out.write(f"{lemma}\t{count}\n")
     print("done with vocab")
 
     with open("../data/" + output_name + ".json", "w", encoding="utf-8") as out:
@@ -148,9 +131,33 @@ def preprocess_ROC_test(data_name, output_name):
 def load_roc_test():
     return load_cloze_file("ROC_stories_2016.json")
 
+
 def load_cloze_test():
     return load_cloze_file("story_cloze_2016_test.json")
 
 
 def load_cloze_valid():
     return load_cloze_file("story_cloze_2016_val.json")
+
+def make_vocab():
+    filename = "../data/glove/glove.6B.100d.txt"
+    # TODO if not os.path.exists(filename):
+    #     download_glove_embeddings()
+
+    word2index = {}
+    with open(filename, "r", encoding="utf-8") as file:
+        for i, line in enumerate(file):
+            word2index[line.split()[0]] = i
+
+    with open("../data/word2index.pkl", "wb") as file:
+        pickle.dump(word2index, file)
+
+def get_word2index():
+    filename = "../data/word2index.pkl"
+    if not os.path.exists(filename):
+        make_vocab()
+
+    with open(filename, "rb") as file:
+        w2i = pickle.load(file)
+        w2i[None] = 1  # TODO use an averaged vector for unk
+        return w2i

@@ -111,13 +111,9 @@ def load_cloze_test():
         return torch.tensor(stories)
 
 
+def load_cloze_test():
+    return load_cloze_file("story_cloze_2016_test.json")
 
 
-
-
-
-
-
-
-
-
+def load_cloze_valid():
+    return load_cloze_file("story_cloze_2016_val.json")

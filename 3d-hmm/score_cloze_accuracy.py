@@ -13,8 +13,8 @@ def score_prediction_batch(model, first=0, last=-2):
     false_stories = test_stories[:, torch.tensor([0, 1, 2, 3, 5])]
 
     # score true and false stories
-    score_true = model.score(true_stories, 5)
-    score_false = model.score(false_stories, 5)
+    score_true = model.score(true_stories, 5) - model.emission_log_p(true_stories[:, -1]).logsumexp(-1)
+    score_false = model.score(false_stories, 5) - model.emission_log_p(false_stories[:, -1]).logsumexp(-1)
     # print("prediction scoring done.")
 
     # return a boolean to check if accurate prediction

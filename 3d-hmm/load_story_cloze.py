@@ -12,8 +12,11 @@ import torch
 import torchtext
 
 def get_processed_data():
-    # TODO need this?
-    return load_cloze_test()
+
+    preprocess_ROC_test('ROCStories__spring2016 - ROCStories_spring2016.csv', 'ROC_stories_2016')
+    #preprocess_ROC_test('ROCStories_winter2017 - ROCStories_winter2017.csv', 'ROC_stories_2017')
+    print('done!')
+    return
 
     #preprocess_cloze_test('cloze_test_test__spring2016 - cloze_test_ALL_test.csv', 'story_cloze_2016_test')
     #preprocess_cloze_test('cloze_test_val__spring2016 - cloze_test_ALL_val.csv', 'story_cloze_2016_val')
@@ -110,8 +113,40 @@ def load_cloze_test():
                 story[i] += [-1] * (sentence_length - len(sentence))
         return torch.tensor(stories)
 
+# gets the data from file and pre-processes it
+def preprocess_ROC_test(data_name, output_name):
+    filepath = '../data/' + data_name
+    df = pd.read_csv(filepath)
 
+    sequences = []  # each set of six sentences
+    vocab = {}  # vocab counts across dataset
+    for i in range(len(df)):
+        sentences = []
+        for sentence in df.iloc[i, 2:7]:
+            lemmas = lemmatize(sentence)
+            for lemma in lemmas:
+                if lemma not in vocab:
+                    vocab[lemma] = 0
+                vocab[lemma] += 1
+            sentences.append(lemmas)
 
+    # map from lemmas to indexes
+    lemma_to_i = {}
+    for i, lemma in enumerate(vocab):
+        lemma_to_i[lemma] = i
+    for sentences in sequences:
+        for lemmas in sentences:
+            for i, lemma in enumerate(lemmas):
+                lemmas[i] = lemma_to_i[lemma]
+
+    with open("../data/" + output_name + "_vocab.voc", "w", encoding="utf-8") as out:
+        for i, (lemma, count) in enumerate(vocab.items()):
+            out.write("{}\t{}\t{}\n".format(i, lemma, count))
+    print("done with vocab")
+
+    with open("../data/" + output_name + ".json", "w", encoding="utf-8") as out:
+        json.dump(sequences, out, separators=(",", ":"))
+    print("done with json")
 
 
 

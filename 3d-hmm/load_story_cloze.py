@@ -128,6 +128,7 @@ def preprocess_ROC_test(data_name, output_name):
                     vocab[lemma] = 0
                 vocab[lemma] += 1
             sentences.append(lemmas)
+        sequences.append(sentences)
 
     # map from lemmas to indexes
     lemma_to_i = {}

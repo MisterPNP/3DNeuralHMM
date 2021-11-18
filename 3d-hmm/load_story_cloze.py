@@ -99,9 +99,9 @@ def preprocess_cloze_test(data_name, output_name):
     print("done")
 
 # load the data from file if it has already been written by preprocess_cloze_test()
-def load_cloze_test():
+def load_cloze_file(filename):
     # load _correct_ five sentences instead
-    with open("../data/test.json") as file:
+    with open("../data/"+filename) as file:
         stories = json.load(file)
         sentence_length = 0
         for story in stories:

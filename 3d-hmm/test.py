@@ -7,8 +7,6 @@ from gradient_3d_hmm_model import Gradient3DHMM
 from neural_3d_hmm_model import Neural3DHMM
 
 
-get_processed_data() # YOU CAN COMMENT THIS OUT AFTER THE FIRST RUN!!!
-
 index2word = pickle.load(open("../data/index2word.pkl", 'rb'))
 
 stories = load_roc_test()

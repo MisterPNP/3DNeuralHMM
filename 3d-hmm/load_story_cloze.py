@@ -13,7 +13,7 @@ import torchtext
 
 def get_processed_data():
 
-    preprocess_cloze_test('ROCStories__spring2016 - ROCStories_spring2016.csv', 'ROC_stories_2016')
+    preprocess_ROC_test('ROCStories__spring2016 - ROCStories_spring2016.csv', 'ROC_stories_2016')
     return
 
 

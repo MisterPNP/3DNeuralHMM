@@ -2,3 +2,5 @@ __pycache__
 wandb_checkpoints
 .data
 .idea
+/data/glove/
+/data/glove.6B.zip

@@ -20,4 +20,4 @@ with torch.no_grad():
         model.emissions = emissions
         print(model.score(stories_correct, 5).mean())
 
-    print(score_prediction_batch(model, 0, 1000))
+    print(score_prediction_batch(model, first=0, last=1000))

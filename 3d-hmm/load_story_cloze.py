@@ -113,6 +113,10 @@ def load_cloze_file(filename):
         return torch.tensor(stories)
 
 
+def load_roc_test():
+    return load_cloze_file("ROC_stories_2016.json")
+
+
 def load_cloze_test():
     return load_cloze_file("story_cloze_2016_test.json")
 

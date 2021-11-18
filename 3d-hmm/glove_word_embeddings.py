@@ -5,16 +5,18 @@ import urllib.request
 
 
 def download_glove_embeddings():
-    print("downloading GLOVE embeddings")
-    urllib.request.urlretrieve("http://nlp.stanford.edu/data/glove.6B.zip", "../data/glove.6B.zip")
+    filename = '../data/glove.6B.zip'
+    if not os.path.exists(filename):
+        print("downloading GLOVE embeddings")
+        urllib.request.urlretrieve("http://nlp.stanford.edu/data/glove.6B.zip", filename)
 
     print("extracting GLOVE embeddings")
-    with zipfile.ZipFile('../data/glove.6B.zip', 'r') as zip_ref:
+    with zipfile.ZipFile(filename, 'r') as zip_ref:
         zip_ref.extractall('../data/glove')
+
 
 def get_embeddings():
     filename = '../data/glove/glove.6B.100d.txt'
-
     if not os.path.exists(filename):
         download_glove_embeddings()
 

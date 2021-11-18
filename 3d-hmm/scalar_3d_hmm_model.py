@@ -1,7 +1,9 @@
+import time
+from functools import partial
 
+import numpy as np
 import torch
 from torch import nn
-# from torch import tensor
 
 
 class Scalar3DHMM(nn.Module):
@@ -125,10 +127,12 @@ class Scalar3DHMM(nn.Module):
 
         t = self.transition_log_p()  # Z x Z
         e = self.emission_log_p(
-                stories_tensor.view(num_stories * story_length, -1)
+                stories_tensor.contiguous().view(num_stories * story_length, -1)
             ).view(num_stories, story_length, -1)  # N x L x Z
         a = self.forward_log_p(stories_tensor, story_length).transpose(0, 1)  # N x L x Z
+        print("finished forward pass")
         b = self.backward_log_p(stories_tensor, story_length).transpose(0, 1)  # N x L x Z
+        print("finished backward pass")
 
         # print("TRANS", t.exp())
         # print("EMITS", e.exp())
@@ -148,15 +152,21 @@ class Scalar3DHMM(nn.Module):
         # print("p(STEP,PAIR) ", p_pair_given_story.exp())
         # print(p_pair_given_story.logsumexp((-1, -2)).exp())  # this should be all ones
 
-        priors = p_state_given_story[:, 0].exp().mean(0)  # Z x 1
-        emissions = torch.zeros(self.num_states, self.num_tokens)  # Z x K
-        # TODO vectorize?
-        for story in stories_tensor:
-            for i, sentence in enumerate(story):
-                sentence_length = (sentence > -1).sum()
-                for token in sentence[sentence > -1]:
-                    emissions[:, token] += p_state_given_story[:, i].squeeze(1).logsumexp(0).exp() / sentence_length
-        emissions = (emissions.T / num_stories / p_state_given_story.logsumexp((0, 1)).exp()).T
+        log_num_stories = torch.tensor([num_stories]).log()
+
+        priors = (p_state_given_story[:, 0].logsumexp(0) - log_num_stories).exp()  # Z x 1
+
+        sentence_lengths = (stories_tensor > -1).sum(-1)  # N x L
+        sentence_lengths[sentence_lengths == 0] = 1
+        token_counts = torch.from_numpy(np.apply_along_axis(
+            partial(np.bincount, minlength=self.num_tokens + 1),
+            axis=-1, arr=(stories_tensor + 1).numpy()))[:, :, 1:]  # N x L x K
+        token_hists = (token_counts.float().T / sentence_lengths.T).T.sum(0)  # L x K
+        p_state_mean = p_state_given_story.logsumexp(0) - log_num_stories  # L x Z
+        emissions = ((p_state_mean.T.view(-1, 1, story_length)
+                      + token_hists.T.view(1, -1, story_length).log()).logsumexp(-1).T
+                     - p_state_given_story.logsumexp((0, 1)).T).T.exp()  # Z x K
+
         transitions = (p_pair_given_story.logsumexp((0, 1)) - p_state_given_story.logsumexp((0, 1))).exp()  # Z x Z
 
         # TODO this normalization shouldn't be necessary

@@ -1,7 +1,7 @@
 import pandas as pd
 import torch
 
-from load_story_cloze import load_cloze_test
+from load_story_cloze import *
 from train import train
 from score_cloze_accuracy import score_prediction_batch
 from glove_word_embeddings import get_embeddings

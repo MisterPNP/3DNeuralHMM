@@ -22,7 +22,7 @@ def get_embeddings():
 
     print("loading GLOVE embeddings from file")
     embeddings = {}
-    with open(filename) as f:
+    with open(filename, "r", encoding="utf-8") as f:
         for line in f:
             values = line.split()
             word = values[0]

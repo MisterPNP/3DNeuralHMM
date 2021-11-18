@@ -23,7 +23,7 @@ class ResidualLayer(nn.Module):
 
 
 class Neural3DHMM(nn.Module):
-    def __init__(self, xy_size, z_size, num_tokens):
+    def __init__(self, xy_size, z_size, num_tokens, token_embeddings=None):
         super(Neural3DHMM, self).__init__()
         num_states = xy_size * xy_size * z_size
         state_embedding_dim = 256
@@ -33,7 +33,12 @@ class Neural3DHMM(nn.Module):
         # self.token_embeddings = nn.Embedding(num_tokens, token_embedding_dim)
 
         self.state_embeddings = nn.Parameter(torch.randn(num_states, state_embedding_dim))
-        self.token_embeddings = nn.Parameter(torch.randn(num_tokens, token_embedding_dim))
+        if token_embeddings is None:
+            self.token_embeddings = nn.Parameter(torch.randn(num_tokens, token_embedding_dim))
+        else:
+            assert(len(token_embeddings) == num_tokens)
+            token_embedding_dim = token_embeddings.shape[1]
+            self.token_embeddings = nn.Parameter(token_embeddings)
 
         # p(z0)
         intermediate_dim = 256

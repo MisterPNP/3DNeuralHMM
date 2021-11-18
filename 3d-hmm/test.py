@@ -38,7 +38,7 @@ token_embeddings = torch.stack(token_embeddings)
 
 model = Neural3DHMM(6, 6, len(token_embeddings), token_embeddings=token_embeddings)
 learning_rate = 1e-6
-num_epochs = 10
+num_epochs = 2
 
 
 analysis = train(model, batches, lr=learning_rate, num_epochs=num_epochs,

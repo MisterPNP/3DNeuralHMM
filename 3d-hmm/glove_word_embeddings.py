@@ -26,10 +26,12 @@ def get_embeddings():
         download_glove_embeddings()
 
     print("loading GLOVE embeddings from file")
-    embeddings = {}
     with open(filename, "r", encoding="utf-8") as f:
-        for line in f:
-            values = line.split()
-            word = values[0]
-            embeddings[word] = torch.tensor(list(map(float, values[1:])))
-    return embeddings
+        def line2tensor(line):
+            return torch.tensor(list(map(float, line.split()[1:])))
+        return list(map(line2tensor, f))
+    #     for line in f:
+    #         values = line.split()
+    #         word = values[0]
+    #         embeddings[word] = torch.tensor(list(map(float, values[1:])))
+    # return embeddings

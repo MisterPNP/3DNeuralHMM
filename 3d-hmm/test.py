@@ -23,19 +23,11 @@ batches = stories[:, torch.tensor([0, 1, 2, 3, 4])].split(batch_size)
 # num_epochs = 3
 
 
-token_embeddings = []
-# vocab = pd.read_csv("../data/vocab_test.voc", sep="\t", names=('idx', 'word', 'count'))
-vocab = pd.read_csv("../data/ROC_stories_2016_vocab.voc", sep="\t", names=('idx', 'word', 'count'))
+# token_embeddings = []
+# vocab = pd.read_csv("../data/vocab_test.voc", sep="\t", names=('idx', 'count'))
+vocab = pd.read_csv("../data/ROC_stories_2016_vocab.voc", sep="\t", names=('idx', 'count'))
 
-embeddings = get_embeddings()
-for _, row in vocab.iterrows():
-    if row['word'] not in embeddings:
-        print(row['word'])
-        token_embeddings.append(embeddings['the'])
-        continue
-    emb = embeddings[row['word']]
-    token_embeddings.append(emb)
-token_embeddings = torch.stack(token_embeddings)
+token_embeddings = torch.stack(get_embeddings())
 
 model = Neural3DHMM(6, 6, len(token_embeddings), token_embeddings=token_embeddings)
 learning_rate = 1e-6

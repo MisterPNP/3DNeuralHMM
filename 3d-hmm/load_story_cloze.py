@@ -13,10 +13,9 @@ import torchtext
 
 def get_processed_data():
 
-    preprocess_ROC_test('ROCStories__spring2016 - ROCStories_spring2016.csv', 'ROC_stories_2016')
-    #preprocess_ROC_test('ROCStories_winter2017 - ROCStories_winter2017.csv', 'ROC_stories_2017')
-    print('done!')
+    preprocess_cloze_test('ROCStories__spring2016 - ROCStories_spring2016.csv', 'ROC_stories_2016')
     return
+
 
     #preprocess_cloze_test('cloze_test_test__spring2016 - cloze_test_ALL_test.csv', 'story_cloze_2016_test')
     #preprocess_cloze_test('cloze_test_val__spring2016 - cloze_test_ALL_val.csv', 'story_cloze_2016_val')
@@ -100,9 +99,9 @@ def preprocess_cloze_test(data_name, output_name):
     print("done")
 
 # load the data from file if it has already been written by preprocess_cloze_test()
-def load_cloze_test():
+def load_cloze_file(filename):
     # load _correct_ five sentences instead
-    with open("../data/test.json") as file:
+    with open("../data/"+filename) as file:
         stories = json.load(file)
         sentence_length = 0
         for story in stories:
@@ -149,10 +148,12 @@ def preprocess_ROC_test(data_name, output_name):
     print("done with json")
 
 
+def load_roc_test():
+    return load_cloze_file("ROC_stories_2016.json")
+
+def load_cloze_test():
+    return load_cloze_file("story_cloze_2016_test.json")
 
 
-
-
-
-
-
+def load_cloze_valid():
+    return load_cloze_file("story_cloze_2016_val.json")

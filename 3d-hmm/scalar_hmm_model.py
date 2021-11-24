@@ -12,19 +12,18 @@ class ScalarHMM(nn.Module):
         self.num_states = num_states
         self.num_tokens = num_tokens
 
-        self.transitions = nn.functional.softmax(torch.randn(self.num_states, self.num_states), dim=-1)
-        self.emissions = nn.functional.softmax(torch.randn(self.num_states, self.num_tokens), dim=-1)
-        self.priors = nn.functional.softmax(torch.randn(self.num_states), dim=-1)
+        self.transitions = nn.functional.log_softmax(torch.randn(self.num_states, self.num_states), dim=-1)
+        self.emissions = nn.functional.log_softmax(torch.randn(self.num_states, self.num_tokens), dim=-1)
+        self.priors = nn.functional.log_softmax(torch.randn(self.num_states), dim=-1)
 
     def prior_log_p(self):
-        return self.priors.log()
+        return self.priors
 
     def transition_log_p(self):
-        return self.transitions.log()
+        return self.transitions
 
     def emission_log_p(self, sentences_tensor):
-        emission_matrix = self.emissions.log()
-        emission_matrix = torch.cat((emission_matrix, torch.zeros(emission_matrix.shape[0], 1)), 1)
+        emission_matrix = torch.cat((self.emissions, torch.zeros(self.num_states, 1)), 1)
         emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)
         return emissions.sum(-1)  # TODO normalize??
 
@@ -117,7 +116,7 @@ class ScalarHMM(nn.Module):
 
         log_num_stories = torch.tensor([num_stories]).log()
 
-        priors = (p_state_given_story[:, 0].logsumexp(0) - log_num_stories).exp()  # Z x 1
+        priors = p_state_given_story[:, 0].logsumexp(0) - log_num_stories  # Z x 1
 
         sentence_lengths = (stories_tensor > -1).sum(-1)  # N x L
         sentence_lengths[sentence_lengths == 0] = 1
@@ -128,19 +127,16 @@ class ScalarHMM(nn.Module):
         p_state_mean = p_state_given_story.logsumexp(0) - log_num_stories  # L x Z
         emissions = ((p_state_mean.T.view(-1, 1, story_length)
                       + token_hists.T.view(1, -1, story_length).log()).logsumexp(-1).T
-                     - p_state_given_story.logsumexp((0, 1)).T).T.exp()  # Z x K
+                     - p_state_given_story.logsumexp((0, 1)).T).T  # Z x K
 
-        print(p_pair_given_story.logsumexp((0, 1)).shape, p_state_given_story.logsumexp((0, 1)).shape)
-        transitions = (p_pair_given_story.logsumexp((0, 1)) - p_state_given_story.logsumexp((0, 1)).view(-1, 1)).exp()  # Z x Z
-
-        # # TODO this normalization shouldn't be necessary
-        # transitions = (transitions.T / transitions.sum(-1).T).T
+        transitions = p_pair_given_story.logsumexp((0, 1)) - p_state_given_story.logsumexp((0, 1)).view(-1, 1)  # Z x Z
+        transitions = (transitions.T - transitions.logsumexp(-1).T).T  # TODO this normalization shouldn't be necessary
 
         # print("PRIOR", priors)
-        # print(priors.sum(-1))  # should be one
+        # print(priors.logsumexp(-1).exp())  # should be one
         # print("EMITS", emissions)
-        # print(emissions.sum(-1))  # should be ones
-        print("TRANS", transitions)
-        print(transitions.sum(-1))  # should be ones
+        # print(emissions.logsumexp(-1).exp())  # should be ones
+        # print("TRANS", transitions)
+        # print(transitions.logsumexp(-1).exp())  # should be ones
 
         return priors, transitions, emissions

@@ -23,9 +23,11 @@ class ScalarHMM(nn.Module):
         return self.transitions
 
     def emission_log_p(self, sentences_tensor):
-        emission_matrix = torch.cat((self.emissions, torch.zeros(self.num_states, 1)), 1)
-        emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)
-        return emissions.sum(-1)  # TODO normalize??
+        emission_matrix = torch.cat((self.emissions, torch.zeros(self.num_states, 1)), 1)  # Z x K+1
+        emissions = emission_matrix[:, sentences_tensor].transpose(0, 1)  # N x Z x T
+        emissions_sum = emissions.sum(-1)  # N x Z TODO normalize??
+        # return emissions_sum
+        return (emissions_sum.T / (sentences_tensor > -1).sum(-1)).T
 
     def score(self, stories_tensor, story_length):
         return self.forward_log_p(stories_tensor, story_length)[-1].logsumexp(-1)

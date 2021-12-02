@@ -15,16 +15,17 @@ batch_size = 1000
 batches = stories[:, torch.tensor([0, 1, 2, 3, 4])].split(batch_size)
 
 
-# model = Gradient3DHMM(6, 6, len(index2word))
-# learning_rate = 1e-2
-# num_epochs = 1
+model = Gradient3DHMM(6, 6, len(index2word))
+learning_rate = 1e-2
+num_epochs = 2
 
-model = Neural3DHMM(6, 6, len(index2word), token_embeddings=torch.load("../data/word_tensors.tensor"))
-learning_rate = 3e-6
-num_epochs = 1
+# model = Neural3DHMM(6, 3, len(index2word), token_embeddings=torch.load("../data/word_tensors.tensor"))
+# learning_rate = 1e-5
+# num_epochs = 2
 
 
 analysis = train(model, batches, lr=learning_rate, num_epochs=num_epochs,
+                 # negative_batches=stories[:, torch.tensor([0, 1, 2, 3, 5])].split(batch_size),
                  valid_batches=[load_cloze_valid()[:, :5]], accuracy_function=None)
 
 print()

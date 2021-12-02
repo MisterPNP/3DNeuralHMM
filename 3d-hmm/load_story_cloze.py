@@ -13,7 +13,6 @@ import nltk.stem
 import nltk.tokenize
 
 import torch
-import torchtext
 
 
 def get_processed_data():

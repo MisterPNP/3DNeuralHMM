@@ -23,13 +23,14 @@ class ResidualLayer(nn.Module):
 
 
 class Neural3DHMM(nn.Module):
-    def __init__(self, xy_size, z_size, num_tokens, token_embeddings=None):
+    def __init__(self, xy_size, z_size, num_tokens, win_size=2, token_embeddings=None):
         super(Neural3DHMM, self).__init__()
         self.xy_size = xy_size
         self.z_size = z_size
         self.num_states = xy_size * xy_size * z_size
         self.num_tokens = num_tokens
-        state_embedding_dim = 10
+        self.win_size = win_size
+        state_embedding_dim = 256
         token_embedding_dim = 100
 
         # self.state_embeddings = nn.Embedding(self.num_states, state_embedding_dim)
@@ -71,6 +72,20 @@ class Neural3DHMM(nn.Module):
             out_dim=token_embedding_dim,
         )
 
+    def compute_windowed_log_mean(self, matrix, dims):
+        win_length = 1 + 2 * self.win_size
+        log_win_length = torch.tensor(win_length, device=matrix.device).log()
+        shape = matrix.shape
+        n_dims = len(shape)
+        for dim in dims:
+            assert -n_dims <= dim <= n_dims - 1
+            dim = (dim + n_dims) % n_dims
+            pad = (n_dims - 1 - dim) * (0, 0) + (win_length - 1, win_length - 1)
+            matrix = nn.functional.pad(matrix, pad, mode='replicate')
+            matrix = matrix.unfold(dimension=dim, size=win_length, step=1).logsumexp(-1) - log_win_length
+            matrix = matrix.view(-1, *matrix.shape[dim:])[:, self.win_size:-self.win_size].view(shape)
+        return matrix
+
     def prior_log_p(self):
         priors = self.mlp_start(self.state_embeddings).squeeze(-1)
         return nn.functional.log_softmax(priors, dim=-1)
@@ -88,17 +103,19 @@ class Neural3DHMM(nn.Module):
         emission_matrix = nn.functional.log_softmax(emissions, dim=1)
         # smoothing?
         emission_matrix = emission_matrix.view(self.z_size, self.xy_size, self.xy_size, self.num_tokens)
-        lvert, rvert = emission_matrix[:, :, :1, :], emission_matrix[:, :, -1:, :]
-        lhorz, rhorz = emission_matrix[:, :1, :, :], emission_matrix[:, -1:, :, :]
-        c = torch.zeros(self.z_size, 1, 1, self.num_tokens)
-        t = torch.cat
-        up = t((t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2), t((c, rhorz, c), 2)), 1)
-        dn = t((t((c, lhorz, c), 2), t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2)), 1)
-        lf = t((t((lhorz, c, c), 2), t((emission_matrix, rvert, rvert), 2), t((rhorz, c, c), 2)), 1)
-        rt = t((t((c, c, lhorz), 2), t((lvert, lvert, emission_matrix), 2), t((c, c, rhorz), 2)), 1)
-        cr = t((t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2)), 1)
-        mean = torch.stack((up, dn, lf, rt, cr)).logsumexp(0) - torch.tensor(5).log()
-        emission_matrix = mean[:, 1:-1, 1:-1].contiguous().view(self.num_states, self.num_tokens)
+        # lvert, rvert = emission_matrix[:, :, :1, :], emission_matrix[:, :, -1:, :]
+        # lhorz, rhorz = emission_matrix[:, :1, :, :], emission_matrix[:, -1:, :, :]
+        # c = torch.zeros(self.z_size, 1, 1, self.num_tokens)
+        # t = torch.cat
+        # up = t((t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2), t((c, rhorz, c), 2)), 1)
+        # dn = t((t((c, lhorz, c), 2), t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2)), 1)
+        # lf = t((t((lhorz, c, c), 2), t((emission_matrix, rvert, rvert), 2), t((rhorz, c, c), 2)), 1)
+        # rt = t((t((c, c, lhorz), 2), t((lvert, lvert, emission_matrix), 2), t((c, c, rhorz), 2)), 1)
+        # cr = t((t((c, lhorz, c), 2), t((lvert, emission_matrix, rvert), 2), t((c, rhorz, c), 2)), 1)
+        # mean = torch.stack((up, dn, lf, rt, cr)).logsumexp(0) - torch.tensor(5).log()
+        # emission_matrix = mean[:, 1:-1, 1:-1].contiguous().view(self.num_states, self.num_tokens)
+        emission_matrix = self.compute_windowed_log_mean(emission_matrix, dims=(-2, -3))
+        emission_matrix = emission_matrix.contiguous().view(self.num_states, self.num_tokens)
         self.emission_matrix = emission_matrix
 
     def emission_log_p(self, sentences_tensor):

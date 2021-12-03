@@ -8,7 +8,7 @@ def loss(model):
     return f
 
 
-def train(model, batches, lr=1e-3, num_epochs=3, valid_batches=None, accuracy_function=None):
+def train(model, batches, lr=1e-3, num_epochs=3, negative_batches=None, valid_batches=None, accuracy_function=None):
     analysis = {'test_loss': []}
     if valid_batches is not None:
         analysis['valid_loss'] = []
@@ -28,6 +28,9 @@ def train(model, batches, lr=1e-3, num_epochs=3, valid_batches=None, accuracy_fu
 
         for idx, batch in enumerate(batches):
             print("batch", idx)
+            if negative_batches is not None:
+                p = -model.score(negative_batches[idx], 5)
+                p.sum(-1).backward()
             p = model.score(batch, 5)  # - model.emission_log_p(batch[:, -1]).logsumexp(-1)
             p.sum(-1).backward()
 

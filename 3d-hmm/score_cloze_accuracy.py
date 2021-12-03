@@ -5,7 +5,7 @@ from load_story_cloze import load_cloze_valid
 
 
 def score_prediction_batch(model, first=0, last=-2):
-    test_stories = load_cloze_valid()[first:(last + 1)].to(model.priors.device)
+    test_stories = load_cloze_valid()[first:(last + 1)].to(next(model.parameters()).device)
     # print("number of stories:", len(test_stories))
 
     # get true and false stories

@@ -72,6 +72,11 @@ class Neural3DHMM(nn.Module):
             out_dim=token_embedding_dim,
         )
 
+    def index2coord(self, state):
+        z, state = divmod(state, self.xy_size * self.xy_size)
+        y, x = divmod(state, self.xy_size)
+        return torch.tensor([x, y, z])
+
     def compute_windowed_log_mean(self, matrix, dims):
         win_length = 1 + 2 * self.win_size
         log_win_length = torch.tensor(win_length, device=matrix.device).log()
@@ -91,10 +96,30 @@ class Neural3DHMM(nn.Module):
         return nn.functional.log_softmax(priors, dim=-1)
 
     def transition_log_p(self):
-        h_in = self.mlp_in(self.state_embeddings)
-        h_out = self.mlp_out(self.state_embeddings)
+        h_in = self.mlp_in(self.state_embeddings)  # Z x h
+        h_out = self.mlp_out(self.state_embeddings)  # Z x h
+
+        # # pad h_out with log zeros
+        # h_out = h_out.view(self.z_size, self.xy_size, self.xy_size, -1)  # z x xy x xy x h
+        # h_out = nn.functional.pad(h_out, (0, 0, 1, 1, 1, 1, 0, 2),
+        #                           mode='constant', value=torch.tensor(0).log())  # z+2 x xy+2 x xy+2 x h
+        # # index h_out at neighborhoods
+        # xy_size =
+        # neighbors = torch.arange(self.num_states) + torch.tensor([
+        #     0, 1, -1, self.xy_size, -self.xy_size,
+        #     (self.xy_size + 2) * self.xy_size, 2 * self.xy_size * self.xy_size])  # Z x 7
+        # h_out = h_out[neighbors]  # Z x 7 x h
+        #
+        # transitions = (h_out @ h_in.unsqueeze(-1)).squeeze(-1)  # Z x 7
+
         transitions = h_in @ h_out.T
-        # TODO restrict to neighborhood
+
+        neighbors = torch.arange(self.num_states).unsqueeze(-1) + torch.tensor([
+            0, 1, -1, self.xy_size, -self.xy_size,
+            self.xy_size * self.xy_size, 2 * self.xy_size * self.xy_size])  # Z x 7
+        mask = (torch.arange(self.num_states).unsqueeze(-1).unsqueeze(-1) != neighbors).all(dim=-1)  # Z x Z
+        transitions[mask.T] = torch.tensor(0).log()
+
         return nn.functional.log_softmax(transitions, dim=-1)
 
     def compute_emission_matrix(self):

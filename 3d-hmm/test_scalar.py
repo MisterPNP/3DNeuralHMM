@@ -18,7 +18,7 @@ index2word = pickle.load(open("../data/index2word.pkl", 'rb'))
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # device = torch.device('cpu')
-model = Scalar3DHMM(2, 6, len(index2word)).to(device)
+model = Scalar3DHMM(6, 6, len(index2word), win_size=1).to(device)
 # model = ScalarHMM(15, len(index2word))
 # stories_correct = load_cloze_test()[:, torch.tensor([0, 1, 2, 3, 4])]
 stories_correct = load_roc_test()[:].to(device)
@@ -40,11 +40,15 @@ with torch.no_grad():
                 torch.Tensor.item
             ])),
         ]), highest.flatten(end_dim=-2))
+        words = list(words)
         print("EMISSIONS")
-        for i, word in enumerate(words):
-            x, y, z = map(torch.Tensor.item, model.index2coord(i))
-            print(f"<state ({z}){y},{x}> {word}")
-
+        for z in range(model.z_size):
+            for y in range(model.xy_size):
+                for x in range(model.xy_size):
+                    index = x + model.xy_size * y + model.xy_size * model.xy_size * z
+                    print("{:<32}".format(words[index]), end="")
+                print()
+            print()
 
     print(model.score(stories_correct, 5).mean())
     print_emissions()
@@ -66,5 +70,5 @@ with torch.no_grad():
         last_parameters = parameters
         last_score = score
 
-    print(score_prediction_batch(model, last=100))
+    print(score_prediction_batch(model))
     print_emissions()

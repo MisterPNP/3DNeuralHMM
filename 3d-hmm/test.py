@@ -1,3 +1,6 @@
+from functools import partial
+from itertools import accumulate
+
 import numpy as np
 
 from load_story_cloze import *
@@ -15,13 +18,13 @@ batch_size = 1000
 batches = stories[:, torch.tensor([0, 1, 2, 3, 4])].split(batch_size)
 
 
-model = Gradient3DHMM(6, 6, len(index2word))
-learning_rate = 1e-2
-num_epochs = 2
-
-# model = Neural3DHMM(6, 3, len(index2word), token_embeddings=torch.load("../data/word_tensors.tensor"))
-# learning_rate = 1e-5
+# model = Gradient3DHMM(6, 6, len(index2word))
+# learning_rate = 1e-2
 # num_epochs = 2
+
+model = Neural3DHMM(6, 6, len(index2word), win_size=1)#, token_embeddings=torch.load("../data/word_tensors.tensor"))
+learning_rate = 1e-5
+num_epochs = 2
 
 
 analysis = train(model, batches, lr=learning_rate, num_epochs=num_epochs,
@@ -36,14 +39,35 @@ print("TEST_LOSS", analysis['test_loss'])
 print("VALID_LOSS", analysis['valid_loss'])
 print("ACCURACY", score_prediction_batch(model))
 
-model.compute_emission_matrix()
-emission_matrix = model.emission_matrix.view(model.z_size, model.xy_size, model.xy_size, model.num_tokens)
-highest = emission_matrix.topk(3, dim=-1).indices.numpy()
-words = np.apply_along_axis(lambda r: ",".join(map(index2word.get, r)), -1, highest)
-print("EMISSIONS")
-for i, layer in enumerate(words):
-    print(f"(layer {i})")
-    for row in layer:
-        for col in row:
-            print(col, end="\t")
+
+def compose(funcs):
+    return list(accumulate(funcs, lambda f, g: lambda x: f(g(x))))[-1]
+
+
+def pad(n, s):
+    return s + " " * (n - len(s))
+
+
+def print_emissions():
+    model.compute_emission_matrix()
+    emissions = model.emission_matrix
+    highest = emissions.topk(3, dim=-1).indices
+    words = map(compose([
+        ",".join,
+        partial(map, compose([
+            index2word.get,
+            torch.Tensor.item
+        ])),
+    ]), highest.flatten(end_dim=-2))
+    words = list(words)
+    print("EMISSIONS")
+    for z in range(model.z_size):
+        for y in range(model.xy_size):
+            for x in range(model.xy_size):
+                index = x + model.xy_size * y + model.xy_size * model.xy_size * z
+                print("{:<32}".format(words[index]), end="")
+            print()
         print()
+
+
+print_emissions()
